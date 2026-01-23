@@ -1,31 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import img1 from '../assets/1.png.jpg';
+import img2 from '../assets/2.png.jpg';
+import img3 from '../assets/3.png.jpg';
 
 const slides = [
     {
         id: 1,
-        tag: 'Sustainable Energy',
-        title: 'Fueling industries empowering sustainable solutions',
-        desc: 'Leading the global transition to clean, efficient, and reliable energy through innovative technology.',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80',
-        highlight: 'sustainable'
+        tag: 'Solar Energy',
+        title: 'Shaping the future through solar innovation',
+        desc: 'Advanced solar solutions designed for maximum efficiency and sustainable growth.',
+        img: img1,
+        highlight: 'innovation'
     },
     {
         id: 2,
-        tag: 'Renewable Power',
-        title: 'Harnessing the wind to power a cleaner world',
-        desc: 'Our terrestrial and offshore wind solutions provide consistent, clean energy for local and national grids.',
-        img: 'https://images.unsplash.com/photo-1466611653911-954ff21caaf0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', // Tall white windmill
-        highlight: 'cleaner'
+        tag: 'Electrical Engineering',
+        title: 'Premium engineering and consultancy services',
+        desc: 'Expert design and deployment of high-voltage power transmission and distribution networks.',
+        img: img2,
+        highlight: 'consultancy'
     },
     {
         id: 3,
-        tag: 'Energy Infrastructure',
-        title: 'Advanced petroleum solutions for global demand',
-        desc: 'Secure, efficient, and innovative offshore gasoline and oil extraction and distribution network.',
-        img: 'https://images.unsplash.com/photo-1538474705339-e85de812795c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80', // Offshore Gasoline/Oil
-        highlight: 'advanced'
+        tag: 'Renewable Power',
+        title: 'Sustainable energy for a resilient tomorrow',
+        desc: 'Harnessing renewable technologies to meet the diverse energy requirements of modern businesses.',
+        img: img3,
+        highlight: 'resilient'
     }
 ];
 
@@ -43,7 +46,7 @@ const Hero = () => {
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={current}
@@ -51,9 +54,13 @@ const Hero = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 1.5 }}
-                    className="absolute inset-0 z-0 bg-cover bg-center brightness-[0.4]"
-                    style={{ backgroundImage: `url("${slides[current].img}")` }}
-                />
+                    className="absolute inset-0 z-0 bg-cover bg-center"
+                    style={{
+                        backgroundImage: `url("${slides[current].img}")`,
+                    }}
+                >
+                    <div className="absolute inset-0 bg-brand-dark/60" /> {/* Dark overlay for readability, not white fade */}
+                </motion.div>
             </AnimatePresence>
 
             {/* Animated Overlay Circles */}

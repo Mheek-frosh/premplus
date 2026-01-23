@@ -1,14 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
 import Services from './components/Services';
+import ServiceSection from './components/ServiceSection';
 import Benefits from './components/Benefits';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
+import TeamPage from './pages/TeamPage';
+import CareersPage from './pages/CareersPage';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './pages/BlogDetailPage';
+import ServicesPage from './pages/ServicesPage';
+
+import officeImg from './assets/office.png';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -31,7 +39,7 @@ const HomePage = () => (
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse" />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4 pt-8">
-              <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=500&q=80" className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-white" />
+              <img src={officeImg} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-white" />
               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" className="rounded-3xl h-48 w-full object-cover shadow-lg" />
             </div>
             <div className="space-y-4">
@@ -61,14 +69,17 @@ const HomePage = () => (
               </div>
             ))}
           </div>
-          <button className="bg-brand-green text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-brand-green/20 hover:scale-105 hover:shadow-2xl transition-all duration-300">
-            Learn More About Us
-          </button>
+          <Link to="/about">
+            <button className="bg-brand-green text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-brand-green/20 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+              Learn More About Us
+            </button>
+          </Link>
         </div>
       </div>
     </section>
 
     <Benefits />
+    <ServiceSection />
     <Services />
     <Projects />
     <Blog />
@@ -85,6 +96,11 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/blog/:id" element={<BlogDetailPage />} />
+            <Route path="/services" element={<ServicesPage />} />
           </Routes>
         </main>
         <Footer />

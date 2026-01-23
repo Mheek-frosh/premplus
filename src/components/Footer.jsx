@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -8,9 +9,9 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Logo & Info */}
                     <div className="space-y-6">
-                        <span className="text-2xl font-bold tracking-tighter text-brand-dark">
+                        <Link to="/" className="text-2xl font-bold tracking-tighter text-brand-dark">
                             PREMPLUS
-                        </span>
+                        </Link>
                         <p className="text-brand-gray leading-relaxed text-sm">
                             Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.
                         </p>
@@ -27,10 +28,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6">Company</h4>
                         <ul className="space-y-4 text-sm text-brand-gray">
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">About Us</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Our History</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Our Team</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Careers</a></li>
+                            <li><Link to="/about" className="hover:text-brand-yellow transition-colors">About Us</Link></li>
+                            <li><Link to="/about#history" className="hover:text-brand-yellow transition-colors">Our History</Link></li>
+                            <li><Link to="/team" className="hover:text-brand-yellow transition-colors">Our Team</Link></li>
+                            <li><Link to="/careers" className="hover:text-brand-yellow transition-colors">Careers</Link></li>
                         </ul>
                     </div>
 

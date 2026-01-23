@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Target, Eye, ArrowUpRight, Play, X, ChevronRight } from 'lucide-react';
 
 const teamMembers = [
@@ -58,7 +59,7 @@ const AboutPage = () => {
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 z-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")',
+                        backgroundImage: 'url("https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1920")',
                     }}
                 />
                 <div className="absolute inset-0 bg-black/50 z-10" />
@@ -183,9 +184,11 @@ const AboutPage = () => {
                     </div>
 
                     <div className="mt-20 text-center">
-                        <button className="bg-brand-dark text-white px-12 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg">
-                            See all team members
-                        </button>
+                        <Link to="/team">
+                            <button className="bg-brand-dark text-white px-12 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-lg">
+                                See all team members
+                            </button>
+                        </Link>
                     </div>
                 </section>
 
