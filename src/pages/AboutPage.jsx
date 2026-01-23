@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Target, Eye, ArrowUpRight, Play, X, ChevronRight } from 'lucide-react';
+import officeImg from '../assets/office.png';
 
 const teamMembers = [
     {
@@ -59,7 +60,7 @@ const AboutPage = () => {
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 z-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url("https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1920")',
+                        backgroundImage: `url("${officeImg}")`,
                     }}
                 />
                 <div className="absolute inset-0 bg-black/50 z-10" />

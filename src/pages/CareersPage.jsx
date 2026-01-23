@@ -10,7 +10,7 @@ const jobs = [
         type: 'Full-time',
         department: 'Engineering',
         salary: 'Competitive',
-        icon: <Zap className="text-brand-yellow" />
+        icon: <Briefcase className="text-brand-dark" />
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const jobs = [
         type: 'Contract',
         department: 'Operations',
         salary: 'Negotiable',
-        icon: <Briefcase className="text-brand-green" />
+        icon: <Briefcase className="text-brand-dark" />
     },
     {
         id: 3,
@@ -28,7 +28,7 @@ const jobs = [
         type: 'Full-time',
         department: 'Advisory',
         salary: 'Competitive',
-        icon: <Globe className="text-blue-500" />
+        icon: <Briefcase className="text-brand-dark" />
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ const jobs = [
         type: 'Full-time',
         department: 'Technology',
         salary: 'Top tier',
-        icon: <Zap className="text-purple-500" />
+        icon: <Briefcase className="text-brand-dark" />
     }
 ];
 
