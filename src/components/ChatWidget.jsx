@@ -50,7 +50,7 @@ const ChatWidget = () => {
     };
 
     return (
-        <div className="absolute bottom-8 right-8 z-50 flex flex-col items-end pointer-events-auto">
+        <div className="fixed bottom-8 right-8 z-[9999] flex flex-col items-end pointer-events-auto">
 
             <AnimatePresence>
                 {isOpen && (
@@ -58,11 +58,17 @@ const ChatWidget = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="mb-4 w-[350px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans"
+                        className="mb-6 w-[350px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-gray-100"
                         style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.2)" }}
                     >
                         {/* Header */}
                         <div className="bg-brand-yellow p-6 text-white relative">
+                            <button
+                                onClick={() => setIsOpen(false)}
+                                className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+                            >
+                                <X size={20} />
+                            </button>
                             <div className="flex items-center gap-3 mb-1">
                                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                     <div className="w-6 h-6 bg-brand-dark rounded-full" /> {/* Robot Icon Placeholder */}
@@ -94,15 +100,6 @@ const ChatWidget = () => {
                                         <span className={`text-[10px] block mt-1 ${msg.isBot ? 'text-white/70' : 'text-gray-500'}`}>
                                             {msg.timestamp}
                                         </span>
-
-                                        {/* Bot Message Actions (Copy/Rate) */}
-                                        {msg.isBot && (
-                                            <div className="absolute bottom-0 right-0 translate-y-1/2 flex gap-1 bg-gray-800 p-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                                                <Copy size={12} className="text-white cursor-pointer hover:text-brand-yellow" />
-                                                <ThumbsUp size={12} className="text-white cursor-pointer hover:text-brand-yellow" />
-                                                <ThumbsDown size={12} className="text-white cursor-pointer hover:text-brand-yellow" />
-                                            </div>
-                                        )}
                                     </div>
                                 </div>
                             ))}
@@ -111,7 +108,6 @@ const ChatWidget = () => {
 
                         {/* Footer Input */}
                         <div className="p-4 bg-white border-t border-gray-100">
-                            {/* Quick Actions/FAQs could go here */}
                             <div className="flex gap-2 mb-3 overflow-x-auto pb-2 scrollbar-hide">
                                 <button className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-xs text-gray-600 hover:bg-gray-200">👋 What is Solar?</button>
                                 <button className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-xs text-gray-600 hover:bg-gray-200">💰 Pricing</button>
@@ -139,29 +135,17 @@ const ChatWidget = () => {
                 )}
             </AnimatePresence>
 
-            {/* Toggle Button / Floating Pill */}
-            {!isOpen ? (
-                <motion.div
-                    initial={{ scale: 0.9, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    className="flex items-center gap-4 cursor-pointer"
-                    onClick={() => setIsOpen(true)}
-                >
-                    <span className="bg-white px-4 py-2 rounded-full shadow-lg text-gray-500 font-medium text-sm animate-pulse">
-                        We are online!
-                    </span>
-                    <button className="bg-brand-yellow text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform flex items-center gap-2">
-                        Chat now
-                    </button>
-                </motion.div>
-            ) : (
-                <button
-                    onClick={() => setIsOpen(false)}
-                    className="w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors"
-                >
-                    <X size={24} />
-                </button>
-            )}
+            {/* Floating Action Button Trigger */}
+            <motion.button
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsOpen(!isOpen)}
+                className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-white transition-all duration-300 ${isOpen ? 'bg-gray-400 rotate-90' : 'bg-brand-yellow hover:bg-brand-dark'}`}
+            >
+                {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
+            </motion.button>
         </div>
     );
 };
