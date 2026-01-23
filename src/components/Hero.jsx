@@ -4,6 +4,7 @@ import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import img1 from '../assets/1.png.jpg';
 import img2 from '../assets/2.png.jpg';
 import img3 from '../assets/3.png.jpg';
+import ChatWidget from './ChatWidget';
 
 const slides = [
     {
@@ -155,6 +156,8 @@ const Hero = () => {
                     ))}
                 </div>
             </motion.div>
+
+            <ChatWidget />
         </section>
     );
 };
