@@ -15,7 +15,6 @@ import CareersPage from './pages/CareersPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import ServicesPage from './pages/ServicesPage';
-import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 
