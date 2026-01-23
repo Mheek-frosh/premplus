@@ -48,7 +48,7 @@ const ContactPage = () => {
                             <div className="space-y-4">
                                 <div className="flex items-start gap-4">
                                     <MapPin className="text-green-500 w-6 h-6 mt-1 flex-shrink-0" />
-                                    <p className="text-brand-dark text-lg">71a Molade Okoya thomas, Victoria Island Lagos Nigeria</p>
+                                    <p className="text-brand-dark text-lg">Area 11, Annex, Suite 32, Takum St, Garki, Abuja 900103, Federal Capital Territory</p>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <Phone className="text-green-500 w-6 h-6 flex-shrink-0" />
@@ -61,13 +61,18 @@ const ContactPage = () => {
                             </div>
                         </div>
 
-                        {/* Map Placeholder */}
+                        {/* Live Map */}
                         <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100 h-[300px]">
-                            <img
-                                src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800&q=80"
-                                alt="Map Location"
-                                className="w-full h-full object-cover"
-                            />
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameBorder="0"
+                                scrolling="no"
+                                marginHeight="0"
+                                marginWidth="0"
+                                src="https://maps.google.com/maps?q=Area%2011%2C%20Annex%2C%20Suite%2032%2C%20Takum%20St%2C%20Garki%2C%20Abuja%20900103&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                title="Office Location"
+                            ></iframe>
                         </div>
                     </div>
                 </div>
