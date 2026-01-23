@@ -15,7 +15,9 @@ import CareersPage from './pages/CareersPage';
 import BlogPage from './pages/BlogPage';
 import BlogDetailPage from './pages/BlogDetailPage';
 import ServicesPage from './pages/ServicesPage';
+import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import ProjectsPage from './pages/ProjectsPage';
 
 import officeImg from './assets/office.png';
 
@@ -102,6 +104,7 @@ function App() {
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogDetailPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

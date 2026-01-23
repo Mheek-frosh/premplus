@@ -312,7 +312,7 @@ const AboutPage = () => {
                         >
                             <button
                                 onClick={() => setSelectedMember(null)}
-                                className="absolute top-8 right-8 z-30 w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-brand-dark hover:bg-brand-yellow transition-colors"
+                                className="absolute top-4 right-4 md:top-8 md:right-8 z-50 w-10 h-10 md:w-12 md:h-12 bg-gray-100/80 backdrop-blur rounded-full flex items-center justify-center text-brand-dark hover:bg-brand-yellow transition-colors shadow-lg"
                             >
                                 <X size={24} />
                             </button>
