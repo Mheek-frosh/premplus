@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -17,6 +20,14 @@ const Navbar = () => {
     }, []);
 
     const [isAboutOpen, setIsAboutOpen] = useState(false);
+
+    // Check if we are on the home page
+    const isHome = pathname === '/';
+
+    // Determine which logo and text color to use
+    // If scrolled OR not on home page -> Dark mode (White background, Dark Text, Logo 1)
+    // If on home page AND not scrolled -> Transparent mode (Dark overlay/background, White Text, Logo 2)
+    const isDarkText = scrolled || !isHome;
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -34,16 +45,16 @@ const Navbar = () => {
         { name: 'Blog', href: '/blog' },
     ];
 
-    const isDarkText = scrolled || pathname !== '/';
-
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex-shrink-0 flex items-center">
-                        <span className={`text-2xl font-bold tracking-tighter transition-colors ${isDarkText ? 'text-brand-dark' : 'text-white'}`}>
-                            PREMPLUS
-                        </span>
+                        <img
+                            src={isDarkText ? logo1 : logo2}
+                            alt="PREMPLUS"
+                            className="h-10 w-auto" // Adjust height as needed
+                        />
                     </Link>
 
                     {/* Desktop Links */}
@@ -93,9 +104,11 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
-                        <button className="bg-brand-yellow text-brand-dark px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-brand-yellow/20">
-                            Contact Us
-                        </button>
+                        <Link to="/contact">
+                            <button className="bg-brand-yellow text-brand-dark px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-brand-yellow/20">
+                                Contact Us
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Mobile menu button */}
@@ -142,9 +155,11 @@ const Navbar = () => {
                                 </React.Fragment>
                             ))}
                             <div className="pt-4">
-                                <button className="w-full bg-brand-yellow text-brand-dark px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
-                                    Contact Us <ArrowRight size={18} />
-                                </button>
+                                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                                    <button className="w-full bg-brand-yellow text-brand-dark px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                                        Contact Us <ArrowRight size={18} />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>
