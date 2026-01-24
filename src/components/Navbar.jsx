@@ -30,13 +30,15 @@ const Navbar = () => {
 
     const [isAboutOpen, setIsAboutOpen] = useState(false);
 
-    // Check if we are on the home page
-    const isHome = pathname === '/';
+
+    // Check if we are on the home or about page (transparent initially)
+    const isTransparentNav = pathname === '/' || pathname === '/about';
 
     // Determine which logo and text color to use
-    // If scrolled OR not on home page -> Dark mode (White background, Dark Text, Logo 1)
-    // If on home page AND not scrolled -> Transparent mode (Dark overlay/background, White Text, Logo 2)
-    const isDarkText = scrolled || !isHome;
+    // If scrolled OR not on a transparent-nav page -> Solid background mode (Dark Text in light mode, White text in dark mode)
+    // If on transparent-nav page AND not scrolled -> Transparent mode (White Text)
+    // NOTE: isDarkText refers to the "Solid Background" state where usually text is dark (in light mode).
+    const isSolidNav = scrolled || !isTransparentNav;
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -55,16 +57,16 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-app-overlay backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${isSolidNav ? 'bg-app-card shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                         <img
-                            src={isDarkText ? p1 : p2}
+                            src={(isSolidNav && !darkMode) ? p1 : p2}
                             alt="PREMPLUS"
                             className="h-10 w-auto"
                         />
-                        <span className={`text-2xl font-bold tracking-tighter ${isDarkText ? 'text-app-main' : 'text-white'}`}>
+                        <span className={`text-2xl font-bold tracking-tighter ${(isSolidNav && !darkMode) ? 'text-app-main' : 'text-white'}`}>
                             Premplus
                         </span>
                     </Link>
@@ -80,7 +82,7 @@ const Navbar = () => {
                             >
                                 <Link
                                     to={link.href}
-                                    className={`text-sm font-medium transition-colors hover:text-brand-yellow py-2 ${isDarkText ? 'text-app-main' : 'text-white/90'}`}
+                                    className={`text-sm font-medium transition-colors hover:text-brand-yellow py-2 ${(isSolidNav && !darkMode) ? 'text-app-main' : 'text-white/90'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -118,7 +120,7 @@ const Navbar = () => {
                         ))}
                         <button
                             onClick={() => setDarkMode(!darkMode)}
-                            className={`p-2 rounded-full transition-colors ${isDarkText ? 'hover:bg-app-secondary text-app-main' : 'hover:bg-white/10 text-white'}`}
+                            className={`p-2 rounded-full transition-colors ${(isSolidNav && !darkMode) ? 'hover:bg-app-secondary text-app-main' : 'hover:bg-white/10 text-white'}`}
                         >
                             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
                         </button>
@@ -133,7 +135,7 @@ const Navbar = () => {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`${isDarkText ? 'text-app-main' : 'text-white'}`}
+                            className={`${(isSolidNav && !darkMode) ? 'text-app-main' : 'text-white'}`}
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>

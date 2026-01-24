@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Calendar, ArrowUpRight } from 'lucide-react';
 
 const blogPosts = [
@@ -21,9 +22,10 @@ const blogPosts = [
     {
         id: 3,
         title: 'Global Scaling Renewables',
+        excerpt: 'How Premplus is driving international renewable growth through strategic partnerships.',
         date: 'Oct 08, 2025',
         category: 'Innovation',
-        img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&q=80'
+        img: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=200&q=80'
     }
 ];
 
@@ -36,9 +38,11 @@ const Blog = () => {
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Blog</span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">Latest News Article</h2>
                     </div>
-                    <button className="hidden sm:flex items-center gap-2 text-app-main font-bold hover:text-brand-green transition-colors">
-                        View All Posts <ArrowUpRight size={20} />
-                    </button>
+                    <Link to="/blog">
+                        <button className="hidden sm:flex items-center gap-2 text-app-main font-bold hover:text-brand-green transition-colors">
+                            View All Posts <ArrowUpRight size={20} />
+                        </button>
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -64,9 +68,11 @@ const Blog = () => {
                         <p className="text-app-muted text-lg mb-8 leading-relaxed">
                             {blogPosts[0].excerpt}
                         </p>
-                        <button className="flex items-center gap-2 text-app-main font-bold border-b-2 border-brand-yellow pb-1 hover:border-brand-green transition-all">
-                            Read Article
-                        </button>
+                        <Link to={`/blog/${blogPosts[0].id}`}>
+                            <button className="flex items-center gap-2 text-app-main font-bold border-b-2 border-brand-yellow pb-1 hover:border-brand-green transition-all">
+                                Read Article
+                            </button>
+                        </Link>
                     </motion.div>
 
                     {/* Side Posts */}
@@ -91,23 +97,6 @@ const Blog = () => {
                             </motion.div>
                         ))}
 
-                        {/* Global Scaling Renewables Block (New Requirement) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            className="p-8 bg-app-card border border-app rounded-3xl shadow-lg mt-12 relative overflow-hidden group hover:shadow-2xl transition-all"
-                        >
-                            <div className="flex gap-6 items-center">
-                                <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0">
-                                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=200&q=80" alt="Small Global scaling" className="w-full h-full object-cover" />
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold text-app-main mb-2">Global Scaling Renewables</h3>
-                                    <p className="text-app-muted text-xs line-clamp-2">How Premplus is driving international renewable growth through strategic partnerships.</p>
-                                </div>
-                            </div>
-                            <ArrowUpRight className="absolute top-6 right-6 text-brand-yellow opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </motion.div>
                     </div>
                 </div>
             </div>

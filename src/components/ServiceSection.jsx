@@ -6,7 +6,7 @@ const services = [
     {
         title: 'Renewable Energy Design and Deployment',
         icon: <Zap className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1466611653911-95281773ad90?w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80',
         desc: 'Providing end-to-end solar, wind, and hybrid energy solutions tailored to industrial and commercial needs.'
     },
     {
@@ -18,7 +18,7 @@ const services = [
     {
         title: 'Engineering, Procurement and Construction',
         icon: <HardHat className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80',
+        img: 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=800&q=80',
         desc: 'Delivering comprehensive EPC services for large-scale energy and infrastructure projects.'
     },
     {
