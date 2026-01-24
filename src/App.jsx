@@ -41,12 +41,12 @@ const HomePage = () => (
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse" />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4 pt-8">
-              <img src={officeImg} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-white" />
+              <img src={officeImg} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
               <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" className="rounded-3xl h-48 w-full object-cover shadow-lg" />
             </div>
             <div className="space-y-4">
               <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" className="rounded-3xl h-48 w-full object-cover shadow-lg" />
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-white" />
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
             </div>
           </div>
         </div>

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 
 const services = [
-    { id: '01', title: 'Petroleum Product Supply', desc: 'World-class supply of petroleum products.', theme: 'dark' },
-    { id: '02', title: 'Lubricant and Chemical Storage', desc: 'Secure and efficient storage solutions.', theme: 'light' },
-    { id: '03', title: 'Renewable Power Solutions', desc: 'Leading the green energy transition.', theme: 'light' },
-    { id: '04', title: 'Logistics and Distribution', desc: 'Seamless global energy logistics.', theme: 'light' },
+    { id: '01', title: 'Petroleum Product Supply', desc: 'World-class supply of petroleum products.' },
+    { id: '02', title: 'Lubricant and Chemical Storage', desc: 'Secure and efficient storage solutions.' },
+    { id: '03', title: 'Renewable Power Solutions', desc: 'Leading the green energy transition.' },
+    { id: '04', title: 'Logistics and Distribution', desc: 'Seamless global energy logistics.' },
 ];
 
 const Services = () => {
@@ -27,31 +27,27 @@ const Services = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 viewport={{ once: true }}
-                                className={`group flex items-center justify-between p-8 rounded-2xl border transition-all duration-500 cursor-pointer ${service.theme === 'dark'
-                                    ? 'bg-brand-dark border-brand-dark text-white shadow-2xl scale-[1.02]'
-                                    : 'bg-app-card border-app hover:border-brand-green/30 hover:bg-app-secondary hover:shadow-xl'
-                                    }`}
+                                className="group flex items-center justify-between p-8 rounded-2xl border border-app bg-app-card hover:border-brand-green/30 hover:bg-app-secondary hover:shadow-xl transition-all duration-500 cursor-pointer"
                             >
                                 <div className="flex items-center gap-8">
-                                    <span className={`text-xl font-bold ${service.theme === 'dark' ? 'text-brand-yellow' : 'text-brand-green'}`}>
+                                    <span className="text-xl font-bold text-brand-green">
                                         {service.id}
                                     </span>
                                     <div>
                                         <div>
-                                            <h3 className={`text-xl font-bold mb-1 ${service.theme === 'dark' ? 'text-white' : 'text-app-main'}`}>{service.title}</h3>
-                                            <p className={service.theme === 'dark' ? 'text-white/60' : 'text-app-muted'}>{service.desc}</p>
+                                            <h3 className="text-xl font-bold mb-1 text-app-main">{service.title}</h3>
+                                            <p className="text-app-muted">{service.desc}</p>
                                         </div>
                                     </div>
-                                    <div className={`p-3 rounded-full transition-all duration-300 ${service.theme === 'dark'
-                                        ? 'bg-brand-yellow text-brand-dark'
-                                        : 'bg-app-secondary text-app-main group-hover:bg-brand-green group-hover:text-white'
-                                        }`}>
-                                        <ChevronRight size={24} />
-                                    </div>
+                                </div>
+                                <div className="p-3 rounded-full transition-all duration-300 bg-app-secondary text-app-main group-hover:bg-brand-green group-hover:text-white">
+                                    <ChevronRight size={24} />
+                                </div>
                             </motion.div>
                         ))}
                     </div>
                 </div>
+            </div>
         </section>
     );
 };

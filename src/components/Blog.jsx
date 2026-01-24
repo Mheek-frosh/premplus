@@ -6,26 +6,25 @@ import { Calendar, ArrowUpRight } from 'lucide-react';
 const blogPosts = [
     {
         id: 1,
-        title: 'Modernizing Energy Infrastructure with IoT',
-        excerpt: 'How connected devices are transforming energy distribution and monitoring...',
-        date: 'Oct 12, 2025',
-        category: 'Technology',
-        img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80'
+        title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
+        excerpt: 'The newly envisioned hub will serve as a national center for technical training, applied research, and enterprise development in the renewable.',
+        date: 'August 15, 2024',
+        category: 'Innovation',
+        img: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=800&q=80'
     },
     {
         id: 2,
-        title: 'The Future of Green Petroleum',
-        date: 'Oct 10, 2025',
-        category: 'Environment',
-        img: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=400&q=80'
+        title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
+        date: 'July 10, 2024',
+        category: 'Renewable Energy',
+        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
     },
     {
         id: 3,
-        title: 'Global Scaling Renewables',
-        excerpt: 'How Premplus is driving international renewable growth through strategic partnerships.',
-        date: 'Oct 08, 2025',
+        title: 'Adamawa State Roundtable to Advance Renewable Energy Initiatives',
+        date: 'June 05, 2024',
         category: 'Innovation',
-        img: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=200&q=80'
+        img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80'
     }
 ];
 
@@ -78,23 +77,24 @@ const Blog = () => {
                     {/* Side Posts */}
                     <div className="lg:col-span-5 space-y-8">
                         {blogPosts.slice(1).map((post, index) => (
-                            <motion.div
-                                key={post.id}
-                                initial={{ opacity: 0, x: 50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.2 }}
-                                className="flex gap-6 group cursor-pointer"
-                            >
-                                <div className="flex-shrink-0 w-32 h-32 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-                                    <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                                </div>
-                                <div className="flex flex-col justify-center">
-                                    <span className="text-brand-green font-bold text-xs uppercase tracking-wider mb-2">{post.category}</span>
-                                    <h4 className="text-xl font-bold mb-2 group-hover:text-brand-green transition-colors text-app-main">{post.title}</h4>
-                                    <span className="text-app-muted text-xs">{post.date}</span>
-                                </div>
-                            </motion.div>
+                            <Link to={`/blog/${post.id}`} key={post.id}>
+                                <motion.div
+                                    initial={{ opacity: 0, x: 50 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.2 }}
+                                    className="flex gap-6 group cursor-pointer"
+                                >
+                                    <div className="flex-shrink-0 w-32 h-32 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                                        <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                    </div>
+                                    <div className="flex flex-col justify-center">
+                                        <span className="text-brand-green font-bold text-xs uppercase tracking-wider mb-2">{post.category}</span>
+                                        <h4 className="text-xl font-bold mb-2 group-hover:text-brand-green transition-colors text-app-main line-clamp-2">{post.title}</h4>
+                                        <span className="text-app-muted text-xs">{post.date}</span>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         ))}
 
                     </div>
