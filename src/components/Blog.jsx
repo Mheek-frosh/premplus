@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowUpRight } from 'lucide-react';
+import mouImg from '../assets/mou.png';
+import nextGenImg from '../assets/nextgen.png';
 
 const blogPosts = [
     {
@@ -10,14 +12,14 @@ const blogPosts = [
         excerpt: 'The newly envisioned hub will serve as a national center for technical training, applied research, and enterprise development in the renewable.',
         date: 'August 15, 2024',
         category: 'Innovation',
-        img: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=800&q=80'
+        img: mouImg
     },
     {
         id: 2,
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
         date: 'July 10, 2024',
         category: 'Renewable Energy',
-        img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80'
+        img: nextGenImg
     },
     {
         id: 3,
@@ -25,6 +27,13 @@ const blogPosts = [
         date: 'June 05, 2024',
         category: 'Innovation',
         img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80'
+    },
+    {
+        id: 4,
+        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
+        date: 'May 12, 2024',
+        category: 'Innovation',
+        img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
     }
 ];
 
@@ -44,7 +53,7 @@ const Blog = () => {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     {/* Main Post */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -74,29 +83,28 @@ const Blog = () => {
                         </Link>
                     </motion.div>
 
-                    {/* Side Posts */}
-                    <div className="lg:col-span-5 space-y-8">
+                    {/* Side Posts - Fixed spacing */}
+                    <div className="lg:col-span-5 flex flex-col gap-6">
                         {blogPosts.slice(1).map((post, index) => (
                             <Link to={`/blog/${post.id}`} key={post.id}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: index * 0.2 }}
-                                    className="flex gap-6 group cursor-pointer"
+                                    transition={{ delay: index * 0.15 }}
+                                    className="flex gap-5 group cursor-pointer"
                                 >
-                                    <div className="flex-shrink-0 w-32 h-32 rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
-                                        <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                                    <div className="flex-shrink-0 w-36 h-36 rounded-2xl overflow-hidden border border-app shadow-sm">
+                                        <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                                     </div>
-                                    <div className="flex flex-col justify-center">
+                                    <div className="flex flex-col justify-center flex-1 min-w-0">
                                         <span className="text-brand-green font-bold text-xs uppercase tracking-wider mb-2">{post.category}</span>
-                                        <h4 className="text-xl font-bold mb-2 group-hover:text-brand-green transition-colors text-app-main line-clamp-2">{post.title}</h4>
+                                        <h4 className="text-lg font-bold mb-2 group-hover:text-brand-green transition-colors text-app-main line-clamp-2 leading-tight">{post.title}</h4>
                                         <span className="text-app-muted text-xs">{post.date}</span>
                                     </div>
                                 </motion.div>
                             </Link>
                         ))}
-
                     </div>
                 </div>
             </div>

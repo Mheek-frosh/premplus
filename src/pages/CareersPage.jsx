@@ -50,7 +50,7 @@ const CareersPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        animate={{ opacity: 1, scale: 1 }}
+
                         className="text-6xl md:text-8xl font-black text-app-main tracking-tighter mb-8"
                     >
                         Join the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-yellow">Future</span>.

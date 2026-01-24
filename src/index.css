@@ -1,16 +1,12 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand-yellow: #FBB03B;
-  --color-brand-green: #00C853;
-  --color-brand-dark: #0F172A;
-  --color-brand-gray: #64748B;
-
-  --font-sans: "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
-}
-
 @layer base {
   :root {
+    --color-brand-yellow: #FBB03B;
+    --color-brand-green: #00C853;
+    --color-brand-dark: #0F172A;
+    --color-brand-gray: #64748B;
+
     --app-bg: #ffffff;
     --app-bg-secondary: #F8F9FA;
     --app-card: #ffffff;
@@ -30,9 +26,14 @@
     --app-overlay: rgba(2, 6, 23, 0.95);
   }
 
+  * {
+    font-family: "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
+  }
+
   body {
-    @apply bg-app-main text-app-main antialiased transition-colors duration-300;
-    font-family: var(--font-sans);
+    background-color: var(--app-bg);
+    color: var(--app-text-main);
+    @apply antialiased transition-colors duration-300;
   }
 
   h1,
@@ -47,11 +48,20 @@
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-brand-yellow text-brand-dark font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95;
+    @apply px-6 py-3 font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95;
+    background-color: var(--color-brand-yellow);
+    color: var(--color-brand-dark);
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 border-white text-white font-semibold rounded-full transition-all duration-300 hover:bg-white hover:text-brand-dark active:scale-95;
+    @apply px-6 py-3 border-2 font-semibold rounded-full transition-all duration-300 active:scale-95;
+    border-color: white;
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background-color: white;
+    color: var(--color-brand-dark);
   }
 
   .section-container {
@@ -82,5 +92,29 @@
 
   .border-app {
     border-color: var(--app-border);
+  }
+
+  .bg-brand-yellow {
+    background-color: var(--color-brand-yellow);
+  }
+
+  .bg-brand-green {
+    background-color: var(--color-brand-green);
+  }
+
+  .bg-brand-dark {
+    background-color: var(--color-brand-dark);
+  }
+
+  .text-brand-yellow {
+    color: var(--color-brand-yellow);
+  }
+
+  .text-brand-green {
+    color: var(--color-brand-green);
+  }
+
+  .text-brand-dark {
+    color: var(--color-brand-dark);
   }
 }

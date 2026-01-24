@@ -55,7 +55,7 @@ const ServicesPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            transition={{ delay: idx * 0.1 }}
+
                             className="bg-app-card group overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-[40px] border border-app"
                         >
                             {/* Card Image */}
