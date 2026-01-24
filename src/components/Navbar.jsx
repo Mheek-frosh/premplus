@@ -174,7 +174,16 @@ const Navbar = () => {
                                     ))}
                                 </React.Fragment>
                             ))}
-                            <div className="pt-4">
+                            <div className="pt-4 space-y-3">
+                                {/* Theme Toggle for Mobile */}
+                                <button
+                                    onClick={() => setDarkMode(!darkMode)}
+                                    className="w-full flex items-center justify-between px-6 py-3 rounded-xl font-bold bg-app-secondary text-app-main hover:bg-app-main transition-colors"
+                                >
+                                    <span>{darkMode ? 'Light Mode' : 'Dark Mode'}</span>
+                                    {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                                </button>
+
                                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                                     <button className="w-full bg-brand-yellow text-brand-dark px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2">
                                         Contact Us <ArrowRight size={18} />
