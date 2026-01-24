@@ -35,7 +35,7 @@ const HomePage = () => (
     <Partners />
 
     {/* Intro Section - What We Do */}
-    <section id="about-intro" className="section-container">
+    <section id="about-intro" className="section-container bg-app-main transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse" />
@@ -53,8 +53,8 @@ const HomePage = () => (
 
         <div className="lg:pl-8">
           <span className="text-brand-green font-bold text-sm uppercase tracking-[0.2em]">What We Do</span>
-          <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-8 leading-tight">Empowering Energy Solutions</h2>
-          <p className="text-brand-gray text-lg mb-10 leading-relaxed italic">
+          <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-8 leading-tight text-app-main">Empowering Energy Solutions</h2>
+          <p className="text-app-muted text-lg mb-10 leading-relaxed italic">
             Leading the global transition to clean, efficient, and reliable energy through innovative technology and strategic expertise.
           </p>
           <div className="space-y-6 mb-12">
@@ -67,7 +67,7 @@ const HomePage = () => (
                 <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
-                <span className="font-semibold text-brand-dark">{item}</span>
+                <span className="font-semibold text-app-main">{item}</span>
               </div>
             ))}
           </div>

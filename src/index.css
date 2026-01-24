@@ -5,17 +5,42 @@
   --color-brand-green: #00C853;
   --color-brand-dark: #0F172A;
   --color-brand-gray: #64748B;
-  
+
   --font-sans: "Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "sans-serif";
 }
 
 @layer base {
+  :root {
+    --app-bg: #ffffff;
+    --app-bg-secondary: #F8F9FA;
+    --app-card: #ffffff;
+    --app-text-main: #0F172A;
+    --app-text-muted: #64748B;
+    --app-border: #f3f4f6;
+    --app-overlay: rgba(15, 23, 42, 0.9);
+  }
+
+  .dark {
+    --app-bg: #0F172A;
+    --app-bg-secondary: #020617;
+    --app-card: #1E293B;
+    --app-text-main: #F8FAFC;
+    --app-text-muted: #94A3B8;
+    --app-border: #334155;
+    --app-overlay: rgba(2, 6, 23, 0.95);
+  }
+
   body {
-    @apply bg-white text-brand-dark antialiased;
+    @apply bg-app-main text-app-main antialiased transition-colors duration-300;
     font-family: var(--font-sans);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold tracking-tight;
   }
 }
@@ -31,5 +56,31 @@
 
   .section-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+}
+
+@layer utilities {
+  .bg-app-main {
+    background-color: var(--app-bg);
+  }
+
+  .bg-app-secondary {
+    background-color: var(--app-bg-secondary);
+  }
+
+  .bg-app-card {
+    background-color: var(--app-card);
+  }
+
+  .text-app-main {
+    color: var(--app-text-main);
+  }
+
+  .text-app-muted {
+    color: var(--app-text-muted);
+  }
+
+  .border-app {
+    border-color: var(--app-border);
   }
 }

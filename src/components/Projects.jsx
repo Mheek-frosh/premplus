@@ -10,11 +10,11 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-24 bg-white">
+        <section id="projects" className="py-24 bg-app-main transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Projects</span>
-                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">Completed Projects</h2>
-                <p className="text-brand-gray max-w-2xl mx-auto mb-16 text-lg">
+                <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-app-main">Completed Projects</h2>
+                <p className="text-app-muted max-w-2xl mx-auto mb-16 text-lg">
                     Explore our portfolio of successful energy transformations and infrastructure developments across the globe.
                 </p>
 

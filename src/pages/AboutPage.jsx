@@ -51,7 +51,7 @@ const AboutPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
 
     return (
-        <div className="pt-0 bg-white min-h-screen">
+        <div className="pt-0 bg-app-main min-h-screen transition-colors duration-300">
             {/* About Hero - Matching Home Hero Behavior */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <motion.div
@@ -104,9 +104,9 @@ const AboutPage = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    className="bg-gray-50 p-12 rounded-[50px] border border-gray-100 shadow-sm mb-24"
+                    className="bg-app-secondary p-12 rounded-[50px] border border-app shadow-sm mb-24 transition-colors duration-300"
                 >
-                    <p className="text-brand-gray text-xl leading-relaxed text-center font-medium italic">
+                    <p className="text-app-muted text-xl leading-relaxed text-center font-medium italic">
                         "We believe that the future of energy lies in sustainability. At Premplus, we are dedicated to building a world where progress and environmental stewardship go hand in hand."
                     </p>
                 </motion.div>
@@ -119,8 +119,8 @@ const AboutPage = () => {
                             <div className="w-16 h-16 bg-brand-yellow/10 rounded-2xl flex items-center justify-center text-brand-yellow mb-8">
                                 <Target size={32} />
                             </div>
-                            <h2 className="text-4xl font-bold mb-8">Our Mission</h2>
-                            <p className="text-brand-gray text-lg leading-relaxed mb-10">
+                            <h2 className="text-4xl font-bold mb-8 text-app-main">Our Mission</h2>
+                            <p className="text-app-muted text-lg leading-relaxed mb-10">
                                 To lead the global transition toward cleaner and more efficient energy systems. We provide state-of-the-art petroleum and renewable energy infrastructure that empowers businesses while preserving the environment for future generations.
                             </p>
                             <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-yellow pb-1 px-1 hover:border-brand-green transition-all">
@@ -141,8 +141,8 @@ const AboutPage = () => {
                             <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-8">
                                 <Eye size={32} />
                             </div>
-                            <h2 className="text-4xl font-bold mb-8">Our Vision</h2>
-                            <p className="text-brand-gray text-lg leading-relaxed mb-10">
+                            <h2 className="text-4xl font-bold mb-8 text-app-main">Our Vision</h2>
+                            <p className="text-app-muted text-lg leading-relaxed mb-10">
                                 To be the most innovative energy provider in the world, renowned for our commitment to sustainable development and operational excellence. We envision a planet powered entirely by safe, renewable, and infinitely reliable energy sources.
                             </p>
                             <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-green pb-1 px-1 hover:border-brand-yellow transition-all">
@@ -156,7 +156,7 @@ const AboutPage = () => {
                 <section className="py-24 border-t border-gray-100">
                     <div className="text-center mb-20">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Team</span>
-                        <h2 className="text-5xl font-bold mt-4">Meet Our Team Members</h2>
+                        <h2 className="text-5xl font-bold mt-4 text-app-main">Meet Our Team Members</h2>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -245,13 +245,13 @@ const AboutPage = () => {
                 <section className="py-24">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-5xl font-bold leading-tight mb-10">
+                            <h2 className="text-5xl font-bold leading-tight mb-10 text-app-main">
                                 Watch our <span className="text-brand-yellow underline decoration-brand-yellow/30">Story</span> in Action
                             </h2>
-                            <p className="text-xl font-bold text-brand-dark mb-6">
+                            <p className="text-xl font-bold text-app-main mb-6">
                                 Premplus helps people discover simple ways to live better every day through
                             </p>
-                            <p className="text-brand-gray text-lg mb-8 leading-relaxed">
+                            <p className="text-app-muted text-lg mb-8 leading-relaxed">
                                 Blending smart technology with personalized guidance, our platform helps people make small, meaningful changes that lead to lasting results. By combining data-driven insights and human support, we've created a...
                             </p>
                         </div>

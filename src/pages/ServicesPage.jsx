@@ -31,18 +31,18 @@ const ServicesPage = () => {
     ];
 
     return (
-        <div className="pt-32 pb-24 bg-[#F8F9FA] min-h-screen">
+        <div className="pt-32 pb-24 bg-app-secondary min-h-screen transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
                 <div className="mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Services</span>
-                        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark">
+                        <h1 className="text-4xl md:text-5xl font-bold text-app-main">
                             Professional Energy <br /> Solutions We Provide
                         </h1>
                     </div>
-                    <p className="text-brand-gray max-w-md leading-relaxed">
+                    <p className="text-app-muted max-w-md leading-relaxed">
                         Competently repurpose go forward benefits without goal-oriented conveniently target opportunities whereas parallel services.
                     </p>
                 </div>
@@ -55,7 +55,8 @@ const ServicesPage = () => {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
-                            className="bg-white group overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-[40px] border border-gray-100"
+                            transition={{ delay: idx * 0.1 }}
+                            className="bg-app-card group overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-[40px] border border-app"
                         >
                             {/* Card Image */}
                             <div className="h-64 overflow-hidden relative">
@@ -74,12 +75,12 @@ const ServicesPage = () => {
                                     {service.icon}
                                 </div>
 
-                                <h3 className="text-2xl font-bold text-brand-dark mb-4">{service.title}</h3>
-                                <p className="text-brand-gray mb-8 line-clamp-3 leading-relaxed">
+                                <h3 className="text-2xl font-bold text-app-main mb-4">{service.title}</h3>
+                                <p className="text-app-muted mb-8 line-clamp-3 leading-relaxed">
                                     {service.desc}
                                 </p>
 
-                                <button className="flex items-center gap-2 font-bold text-brand-dark group-hover:text-brand-yellow transition-colors">
+                                <button className="flex items-center gap-2 font-bold text-app-main group-hover:text-brand-yellow transition-colors">
                                     View Details <ArrowRight size={20} />
                                 </button>
                             </div>

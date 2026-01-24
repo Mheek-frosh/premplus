@@ -3,14 +3,14 @@ import { motion } from 'framer-motion';
 
 const Benefits = () => {
     return (
-        <section className="bg-gray-50 py-24 overflow-hidden">
+        <section className="bg-app-secondary py-24 overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mt-4">The Advantages of <br /> Partnering with <span className="text-brand-green">US</span></h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">The Advantages of <br /> Partnering with <span className="text-brand-green">US</span></h2>
                     </div>
-                    <p className="text-brand-gray lg:max-w-md text-lg italic border-l-4 border-brand-yellow pl-8 py-2">
+                    <p className="text-app-muted lg:max-w-md text-lg italic border-l-4 border-brand-yellow pl-8 py-2">
                         "Tailored energy solutions that maximize efficiency and sustainability for your global operations."
                     </p>
                 </div>

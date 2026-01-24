@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="bg-white pt-20 pb-10 border-t border-gray-100">
+        <footer className="bg-app-card pt-20 pb-10 border-t border-app transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Logo & Info */}
                     <div className="space-y-6">
-                        <Link to="/" className="text-2xl font-bold tracking-tighter text-brand-dark">
+                        <Link to="/" className="text-2xl font-bold tracking-tighter text-app-main">
                             PREMPLUS
                         </Link>
-                        <p className="text-brand-gray leading-relaxed text-sm">
+                        <p className="text-app-muted leading-relaxed text-sm">
                             Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.
                         </p>
                         <div className="flex space-x-4">
                             {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-brand-dark hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
+                                <a key={i} href="#" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
                                     <Icon size={18} />
                                 </a>
                             ))}
@@ -26,8 +26,8 @@ const Footer = () => {
 
                     {/* Company links */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6">Company</h4>
-                        <ul className="space-y-4 text-sm text-brand-gray">
+                        <h4 className="text-lg font-bold mb-6 text-app-main">Company</h4>
+                        <ul className="space-y-4 text-sm text-app-muted">
                             <li><Link to="/about" className="hover:text-brand-yellow transition-colors">About Us</Link></li>
                             <li><Link to="/about#history" className="hover:text-brand-yellow transition-colors">Our History</Link></li>
                             <li><Link to="/team" className="hover:text-brand-yellow transition-colors">Our Team</Link></li>
@@ -37,8 +37,8 @@ const Footer = () => {
 
                     {/* Services links */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6">Services</h4>
-                        <ul className="space-y-4 text-sm text-brand-gray">
+                        <h4 className="text-lg font-bold mb-6 text-app-main">Services</h4>
+                        <ul className="space-y-4 text-sm text-app-muted">
                             <li><a href="#" className="hover:text-brand-yellow transition-colors">Oil Supply</a></li>
                             <li><a href="#" className="hover:text-brand-yellow transition-colors">Renewable Energy</a></li>
                             <li><a href="#" className="hover:text-brand-yellow transition-colors">Gas Distribution</a></li>
@@ -48,13 +48,13 @@ const Footer = () => {
 
                     {/* Newsletter */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6">Newsletter</h4>
-                        <p className="text-sm text-brand-gray mb-6">Subscribe to receive the latest updates and news articles.</p>
+                        <h4 className="text-lg font-bold mb-6 text-app-main">Newsletter</h4>
+                        <p className="text-sm text-app-muted mb-6">Subscribe to receive the latest updates and news articles.</p>
                         <form className="relative">
                             <input
                                 type="email"
                                 placeholder="Your email address"
-                                className="w-full px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-yellow/20 focus:border-brand-yellow transition-all text-sm"
+                                className="w-full px-4 py-3 bg-app-secondary border border-app rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-yellow/20 focus:border-brand-yellow transition-all text-sm text-app-main placeholder:text-app-muted"
                             />
                             <button
                                 type="submit"
@@ -67,7 +67,7 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom bar */}
-                <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm text-brand-gray gap-4">
+                <div className="pt-8 border-t border-app flex flex-col md:flex-row justify-between items-center text-sm text-app-muted gap-4">
                     <p>© 2026 Premplus. All rights reserved.</p>
                     <div className="flex gap-8">
                         <a href="#" className="hover:text-brand-yellow transition-colors">Privacy Policy</a>

@@ -103,18 +103,18 @@ const ProjectsPage = () => {
     };
 
     return (
-        <div className="pt-32 pb-24 bg-[#F8F9FA] min-h-screen">
+        <div className="pt-32 pb-24 bg-app-secondary min-h-screen transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
                 <div className="mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Projects</span>
-                        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark">
+                        <h1 className="text-4xl md:text-5xl font-bold text-app-main">
                             Delivering Excellence <br /> Across Industries
                         </h1>
                     </div>
-                    <p className="text-brand-gray max-w-md leading-relaxed">
+                    <p className="text-app-muted max-w-md leading-relaxed">
                         Explore our portfolio of successful projects that demonstrate our commitment to innovation and sustainable development.
                     </p>
                 </div>
@@ -129,7 +129,7 @@ const ProjectsPage = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: idx * 0.1 }}
                             onClick={() => openProject(project)}
-                            className="bg-white group overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-[40px] border border-gray-100"
+                            className="bg-app-card group overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 rounded-[40px] border border-app"
                         >
                             {/* Card Image */}
                             <div className="h-72 overflow-hidden relative">
@@ -148,8 +148,8 @@ const ProjectsPage = () => {
 
                             {/* Card Content */}
                             <div className="p-8 relative">
-                                <motion.h3 layoutId={`project-title-${project.id}`} className="text-2xl font-bold text-brand-dark mb-4">{project.title}</motion.h3>
-                                <p className="text-brand-gray mb-8 line-clamp-2 leading-relaxed">
+                                <motion.h3 layoutId={`project-title-${project.id}`} className="text-2xl font-bold text-app-main mb-4">{project.title}</motion.h3>
+                                <p className="text-app-muted mb-8 line-clamp-2 leading-relaxed">
                                     {project.desc}
                                 </p>
 
@@ -175,7 +175,7 @@ const ProjectsPage = () => {
 
                             <motion.div
                                 layoutId={`project-card-${selectedProject.id}`}
-                                className="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row"
+                                className="relative w-full max-w-6xl max-h-[90vh] bg-app-card rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <button
@@ -222,30 +222,30 @@ const ProjectsPage = () => {
                                 </div>
 
                                 {/* Content Section (Right/Bottom) */}
-                                <div className="w-full lg:w-1/3 p-8 md:p-12 overflow-y-auto bg-white">
+                                <div className="w-full lg:w-1/3 p-8 md:p-12 overflow-y-auto bg-app-card">
                                     <div className="mb-2">
                                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">{selectedProject.category}</span>
                                     </div>
-                                    <motion.h2 layoutId={`project-title-${selectedProject.id}`} className="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
+                                    <motion.h2 layoutId={`project-title-${selectedProject.id}`} className="text-3xl md:text-4xl font-bold text-app-main mb-6">
                                         {selectedProject.title}
                                     </motion.h2>
 
                                     <div className="space-y-6">
                                         <div>
-                                            <h4 className="text-lg font-bold text-brand-dark mb-2">Project Overview</h4>
-                                            <p className="text-brand-gray leading-relaxed text-lg">
+                                            <h4 className="text-lg font-bold text-app-main mb-2">Project Overview</h4>
+                                            <p className="text-app-muted leading-relaxed text-lg">
                                                 {selectedProject.desc}
                                             </p>
                                         </div>
 
                                         <div>
-                                            <h4 className="text-lg font-bold text-brand-dark mb-2">Technical Details</h4>
-                                            <p className="text-brand-gray leading-relaxed">
+                                            <h4 className="text-lg font-bold text-app-main mb-2">Technical Details</h4>
+                                            <p className="text-app-muted leading-relaxed">
                                                 {selectedProject.details}
                                             </p>
                                         </div>
 
-                                        <div className="pt-8 border-t border-gray-100">
+                                        <div className="pt-8 border-t border-app">
                                             <div className="flex items-center gap-2 text-brand-green font-bold">
                                                 <CheckCircle size={20} />
                                                 <span>Project Completed</span>

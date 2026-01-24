@@ -12,9 +12,9 @@ const logos = [
 
 const Partners = () => {
     return (
-        <section className="py-16 bg-gray-50 overflow-hidden">
+        <section className="py-16 bg-app-secondary overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 text-center mb-10">
-                <p className="text-brand-gray text-xs font-bold uppercase tracking-[0.3em]">
+                <p className="text-app-muted text-xs font-bold uppercase tracking-[0.3em]">
                     Trusted by Industry Leaders
                 </p>
             </div>

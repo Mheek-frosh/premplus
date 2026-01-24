@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
-import logo1 from '../assets/logo1.png';
-import logo2 from '../assets/logo2.png';
+import p1 from '../assets/p1.png';
+import p2 from '../assets/p2.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const { pathname } = useLocation();
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [darkMode]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,15 +55,18 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-app-overlay backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
-                    <Link to="/" className="flex-shrink-0 flex items-center">
+                    <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                         <img
-                            src={isDarkText ? logo1 : logo2}
+                            src={isDarkText ? p1 : p2}
                             alt="PREMPLUS"
-                            className="h-10 w-auto" // Adjust height as needed
+                            className="h-10 w-auto"
                         />
+                        <span className={`text-2xl font-bold tracking-tighter ${isDarkText ? 'text-app-main' : 'text-white'}`}>
+                            Premplus
+                        </span>
                     </Link>
 
                     {/* Desktop Links */}
@@ -68,7 +80,7 @@ const Navbar = () => {
                             >
                                 <Link
                                     to={link.href}
-                                    className={`text-sm font-medium transition-colors hover:text-brand-yellow py-2 ${isDarkText ? 'text-brand-dark' : 'text-white/90'}`}
+                                    className={`text-sm font-medium transition-colors hover:text-brand-yellow py-2 ${isDarkText ? 'text-app-main' : 'text-white/90'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -81,7 +93,7 @@ const Navbar = () => {
                                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                                className="absolute left-0 mt-2 w-56 bg-white/80 backdrop-blur-xl border border-gray-100 rounded-2xl shadow-2xl overflow-hidden py-2"
+                                                className="absolute left-0 mt-2 w-56 bg-app-card/95 backdrop-blur-xl border border-app rounded-2xl shadow-2xl overflow-hidden py-2"
                                             >
                                                 {link.dropdown.map((sub, idx) => (
                                                     <motion.div
@@ -92,7 +104,7 @@ const Navbar = () => {
                                                     >
                                                         <Link
                                                             to={sub.href}
-                                                            className="block px-6 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-yellow/10 transition-colors"
+                                                            className="block px-6 py-3 text-sm font-semibold text-app-main hover:bg-brand-yellow/10 transition-colors"
                                                         >
                                                             {sub.name}
                                                         </Link>
@@ -104,6 +116,12 @@ const Navbar = () => {
                                 )}
                             </div>
                         ))}
+                        <button
+                            onClick={() => setDarkMode(!darkMode)}
+                            className={`p-2 rounded-full transition-colors ${isDarkText ? 'hover:bg-app-secondary text-app-main' : 'hover:bg-white/10 text-white'}`}
+                        >
+                            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
                         <Link to="/contact">
                             <button className="bg-brand-yellow text-brand-dark px-6 py-2 rounded-full font-semibold text-sm hover:scale-105 transition-transform shadow-lg shadow-brand-yellow/20">
                                 Contact Us
@@ -115,7 +133,7 @@ const Navbar = () => {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`${isDarkText ? 'text-brand-dark' : 'text-white'}`}
+                            className={`${isDarkText ? 'text-app-main' : 'text-white'}`}
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
@@ -130,14 +148,14 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
+                        className="md:hidden bg-app-card border-b border-app overflow-hidden"
                     >
                         <div className="px-4 pt-4 pb-6 space-y-2">
                             {navLinks.map((link) => (
                                 <React.Fragment key={link.name}>
                                     <Link
                                         to={link.href}
-                                        className="block px-3 py-3 text-base font-bold text-brand-dark hover:bg-gray-50 rounded-lg transition-colors"
+                                        className="block px-3 py-3 text-base font-bold text-brand-dark dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-lg transition-colors"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.name}

@@ -54,20 +54,20 @@ const BlogPage = () => {
     );
 
     return (
-        <div className="pt-32 pb-24 bg-white min-h-screen">
+        <div className="pt-32 pb-24 bg-app-main min-h-screen transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-brand-dark mb-4">Blog News</h1>
+                    <h1 className="text-5xl font-bold text-app-main mb-4">Blog News</h1>
                 </div>
 
                 {/* Search Bar */}
                 <div className="max-w-2xl mx-auto mb-12">
                     <div className="relative">
-                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-brand-gray" size={20} />
+                        <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-app-muted" size={20} />
                         <input
                             type="text"
                             placeholder="Search blog posts..."
-                            className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-100 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:bg-white transition-all shadow-sm"
+                            className="w-full pl-12 pr-4 py-4 rounded-xl border border-app bg-app-secondary focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:bg-app-card transition-all shadow-sm text-app-main placeholder:text-app-muted"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                         />
@@ -81,8 +81,8 @@ const BlogPage = () => {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`px-6 py-2 rounded-lg text-sm font-semibold transition-all ${activeCategory === cat
-                                    ? 'bg-brand-yellow text-brand-dark shadow-md'
-                                    : 'bg-gray-100 text-brand-dark hover:bg-gray-200'
+                                ? 'bg-brand-yellow text-brand-dark shadow-md'
+                                : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'
                                 }`}
                         >
                             {cat}
@@ -108,10 +108,10 @@ const BlogPage = () => {
                                         {post.category}
                                     </div>
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight">
+                                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
                                     {post.title}
                                 </h3>
-                                <p className="text-brand-gray text-base mb-6 line-clamp-2">
+                                <p className="text-app-muted text-base mb-6 line-clamp-2">
                                     {post.excerpt}
                                 </p>
                                 <button className="bg-brand-dark text-white px-8 py-3 rounded-lg font-bold text-sm hover:bg-brand-green transition-colors flex items-center gap-2 group/btn">
@@ -124,21 +124,21 @@ const BlogPage = () => {
 
                 {/* Pagination */}
                 <div className="flex justify-center items-center gap-4 mt-20">
-                    <button className="p-2 border border-gray-100 rounded-lg text-brand-gray hover:bg-gray-50">
+                    <button className="p-2 border border-app rounded-lg text-app-muted hover:bg-app-secondary">
                         <ChevronLeft size={20} />
                     </button>
                     {[1, 2, 3, '...', 10].map((page, i) => (
                         <button
                             key={i}
                             className={`w-10 h-10 rounded-lg text-sm font-bold transition-all ${page === 1
-                                    ? 'bg-brand-yellow text-brand-dark shadow-md'
-                                    : 'text-brand-gray hover:bg-gray-50'
+                                ? 'bg-brand-yellow text-brand-dark shadow-md'
+                                : 'text-app-muted hover:bg-app-secondary'
                                 }`}
                         >
                             {page}
                         </button>
                     ))}
-                    <button className="p-2 border border-gray-100 rounded-lg text-brand-gray hover:bg-gray-50">
+                    <button className="p-2 border border-app rounded-lg text-app-muted hover:bg-app-secondary">
                         <ChevronRight size={20} />
                     </button>
                 </div>
