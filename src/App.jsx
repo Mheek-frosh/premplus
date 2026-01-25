@@ -7,6 +7,7 @@ import Services from './components/Services';
 import ServiceSection from './components/ServiceSection';
 import Benefits from './components/Benefits';
 import Projects from './components/Projects';
+import VideoSection from './components/VideoSection';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
 import AboutPage from './pages/AboutPage';
@@ -84,6 +85,7 @@ const HomePage = () => (
     <ServiceSection />
     <Services />
     <Projects />
+    <VideoSection />
     <Blog />
   </>
 );
