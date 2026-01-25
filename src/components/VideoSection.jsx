@@ -101,7 +101,7 @@ const VideoSection = () => {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className={`relative rounded-[50px] overflow-hidden shadow-2xl ${isFullscreen ? 'bg-black' : ''
+                className={`relative overflow-hidden shadow-2xl ${isFullscreen ? 'bg-black w-full h-full rounded-none' : 'rounded-[50px]'
                     }`}
                 onMouseEnter={() => setShowControls(true)}
                 onMouseLeave={() => setShowControls(isPlaying ? false : true)}
@@ -109,7 +109,7 @@ const VideoSection = () => {
                 {/* Video Element */}
                 <video
                     ref={videoRef}
-                    className="w-full h-auto max-h-[600px] object-cover"
+                    className={`w-full object-cover ${isFullscreen ? 'h-full' : 'h-auto max-h-[600px]'}`}
                     poster={videoThumbnail}
                     preload="metadata"
                     onEnded={() => setIsPlaying(false)}
