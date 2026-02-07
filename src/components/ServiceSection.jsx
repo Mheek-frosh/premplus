@@ -42,13 +42,13 @@ const ServiceSection = () => {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16 text-center">
-                    <motion.span
+                    {/* <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4"
                     >
                         Our Core Offerings
-                    </motion.span>
+                    </motion.span> */}
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}

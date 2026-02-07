@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Link, Navigate } f
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
-import Services from './components/Services';
 import ServiceSection from './components/ServiceSection';
 import Benefits from './components/Benefits';
 import Projects from './components/Projects';
@@ -82,8 +81,7 @@ const HomePage = () => (
     </section>
 
     <Benefits />
-    <ServiceSection />
-    <Services />
+    {/* <ServiceSection /> */}
     <Projects />
     <VideoSection />
     <Blog />

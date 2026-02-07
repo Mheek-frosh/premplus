@@ -12,10 +12,14 @@ import auroraLogo from '../assets/auroralogo.avif';
 import beveLogo from '../assets/beve.jpg';
 import rea2Logo from '../assets/rea-2.png';
 import reanNewLogo from '../assets/rean-new-removebg.png';
+import p1Logo from '../assets/p1.png';
+import accessBank from '../assets/accessbank.png';
 
 
 const logoAssets = [
     zenithBank,
+    p1Logo,
+    accessBank,
     abiaLogo,
     arktikLogo,
     brunelLogo,
@@ -32,9 +36,9 @@ const Partners = () => {
         <section className="py-20 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
             <div className="max-w-7xl mx-auto px-4 text-center mb-12">
                 <p className="text-app-muted text-xs font-bold uppercase tracking-[0.4em] mb-2">
-                    Our Strategic Partners
+                    Our Clients & Partners
                 </p>
-                <h2 className="text-2xl font-bold text-app-main">Trusted by Industry Leaders</h2>
+                <h2 className="text-2xl font-bold text-app-main">Our Clients & Partners</h2>
             </div>
 
             <div className="flex overflow-hidden">

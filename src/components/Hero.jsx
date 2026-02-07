@@ -135,8 +135,8 @@ const Hero = () => {
                 ))}
             </div>
 
-            {/* Stats bar floating at bottom - Commented out as requested */}
-            {/* <motion.div
+            {/* Stats bar floating at bottom */}
+            <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -144,10 +144,10 @@ const Hero = () => {
             >
                 <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 flex justify-around items-center">
                     {[
-                        { label: 'Founded', value: '2015' },
-                        { label: 'Countries', value: '12+' },
-                        { label: 'Projects', value: '500+' },
-                        { label: 'Success Rate', value: '99%' }
+                        { label: 'Founded', value: '2024' },
+                        { label: 'Locations', value: '5' },
+                        { label: 'Megawatts Installed', value: '5' },
+                        { label: 'Projects', value: '5' }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
                             <p className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
@@ -155,7 +155,7 @@ const Hero = () => {
                         </div>
                     ))}
                 </div>
-            </motion.div> */}
+            </motion.div>
 
             <ChatWidget />
         </section>

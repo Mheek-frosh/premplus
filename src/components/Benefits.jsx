@@ -1,5 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Zap, Building2, HardHat } from 'lucide-react';
+
+const benefitItems = [
+    {
+        title: 'Renewable Energy Design and Deployment',
+        icon: <Zap className="w-8 h-8 text-brand-green" />,
+        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80',
+        desc: 'Providing end-to-end solar, wind, and hybrid energy solutions tailored to industrial and commercial needs.'
+    },
+    {
+        title: 'Sustainable Building Design',
+        icon: <Building2 className="w-8 h-8 text-brand-green" />,
+        img: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80',
+        desc: 'Integrating green architecture and energy-efficient systems into modern infrastructure.'
+    },
+    {
+        title: 'Engineering, Procurement and Construction',
+        icon: <HardHat className="w-8 h-8 text-brand-green" />,
+        img: 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=800&q=80',
+        desc: 'Delivering comprehensive EPC services for large-scale energy and infrastructure projects.'
+    }
+];
 
 const Benefits = () => {
     return (
@@ -15,39 +37,37 @@ const Benefits = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <motion.div
-                        whileHover={{ y: -10 }}
-                        className="group relative h-[450px] rounded-3xl overflow-hidden shadow-2xl"
-                    >
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80" alt="Solar" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent p-8 flex flex-col justify-end">
-                            <h3 className="text-white text-2xl font-bold mb-2">Sustainable Core</h3>
-                            <p className="text-white/70 text-sm">Committed to reduction of carbon footprint globally.</p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        whileHover={{ y: -10 }}
-                        className="group relative h-[450px] rounded-3xl overflow-hidden shadow-2xl md:translate-y-12"
-                    >
-                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=800&q=80" alt="Industry" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent p-8 flex flex-col justify-end">
-                            <h3 className="text-white text-2xl font-bold mb-2">Global Impact</h3>
-                            <p className="text-white/70 text-sm">Empowering industries across 4 continents.</p>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        whileHover={{ y: -10 }}
-                        className="group relative h-[450px] rounded-3xl overflow-hidden shadow-2xl"
-                    >
-                        <img src="https://images.unsplash.com/photo-1548333341-3893da82ccf1?w=800&q=80" alt="Wind" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent p-8 flex flex-col justify-end">
-                            <h3 className="text-white text-2xl font-bold mb-2">Reliable Supply</h3>
-                            <p className="text-white/70 text-sm">24/7 support and delivery infrastructure.</p>
-                        </div>
-                    </motion.div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {benefitItems.map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500"
+                        >
+                            <div className="relative h-56 overflow-hidden">
+                                <img
+                                    src={item.img}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
+                                <div className="absolute bottom-4 left-4 p-3 bg-app-main/90 backdrop-blur rounded-2xl shadow-lg">
+                                    {item.icon}
+                                </div>
+                            </div>
+                            <div className="p-8">
+                                <h3 className="text-xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
+                                    {item.title}
+                                </h3>
+                                <p className="text-app-muted text-sm leading-relaxed">
+                                    {item.desc}
+                                </p>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
