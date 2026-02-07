@@ -1,41 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const logos = [
-    'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg',
-    'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'
+// Import local logos
+import zenithBank from '../assets/zenithbank.png';
+import abiaLogo from '../assets/ABIA-WEB-WHITE-LOGO-1.png';
+import arktikLogo from '../assets/Arktik Logo copy.png';
+import brunelLogo from '../assets/Brunel-University-London.png';
+import midgardLogo from '../assets/Midgard.png';
+import adamawaLogo from '../assets/adamawalogo1.png';
+import auroraLogo from '../assets/auroralogo.avif';
+import beveLogo from '../assets/beve.jpg';
+import rea2Logo from '../assets/rea-2.png';
+import rea3Logo from '../assets/rea-3.jpg';
+import reanLogo from '../assets/rean-logo.png';
+import reanNewLogo from '../assets/rean-new-removebg.png';
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+import p1Logo from '../assets/p1.png';
+
+const logoAssets = [
+    zenithBank,
+    abiaLogo,
+    arktikLogo,
+    brunelLogo,
+    midgardLogo,
+    adamawaLogo,
+    auroraLogo,
+    beveLogo,
+    rea2Logo,
+    rea3Logo,
+    reanLogo,
+    reanNewLogo,
+    logo1,
+    logo2,
+    p1Logo
 ];
 
 const Partners = () => {
     return (
-        <section className="py-16 bg-app-secondary overflow-hidden transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 text-center mb-10">
-                <p className="text-app-muted text-xs font-bold uppercase tracking-[0.3em]">
-                    Trusted by Industry Leaders
+        <section className="py-20 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
+            <div className="max-w-7xl mx-auto px-4 text-center mb-12">
+                <p className="text-app-muted text-xs font-bold uppercase tracking-[0.4em] mb-2">
+                    Our Strategic Partners
                 </p>
+                <h2 className="text-2xl font-bold text-app-main">Trusted by Industry Leaders</h2>
             </div>
 
-            <div className="flex overflow-hidden group">
+            <div className="flex overflow-hidden">
                 <motion.div
-                    animate={{ x: [0, -1000] }}
+                    animate={{ x: ["0%", "-50%"] }}
                     transition={{
-                        duration: 30,
+                        duration: 40,
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="flex flex-nowrap gap-20 py-10"
+                    className="flex flex-nowrap gap-16 items-center"
+                    style={{ width: "fit-content" }}
                 >
-                    {[...logos, ...logos].map((logo, i) => (
-                        <img
-                            key={i}
-                            src={logo}
-                            alt="Partner Logo"
-                            className="h-10 w-auto opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                        />
+                    {[...logoAssets, ...logoAssets].map((logo, i) => (
+                        <div key={i} className="flex-shrink-0 flex items-center justify-center w-40">
+                            <img
+                                src={logo}
+                                alt="Partner Logo"
+                                className="h-12 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                            />
+                        </div>
                     ))}
                 </motion.div>
             </div>
