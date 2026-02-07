@@ -11,12 +11,8 @@ import adamawaLogo from '../assets/adamawalogo1.png';
 import auroraLogo from '../assets/auroralogo.avif';
 import beveLogo from '../assets/beve.jpg';
 import rea2Logo from '../assets/rea-2.png';
-import rea3Logo from '../assets/rea-3.jpg';
-import reanLogo from '../assets/rean-logo.png';
 import reanNewLogo from '../assets/rean-new-removebg.png';
-import logo1 from '../assets/logo1.png';
-import logo2 from '../assets/logo2.png';
-import p1Logo from '../assets/p1.png';
+
 
 const logoAssets = [
     zenithBank,
@@ -28,12 +24,7 @@ const logoAssets = [
     auroraLogo,
     beveLogo,
     rea2Logo,
-    rea3Logo,
-    reanLogo,
     reanNewLogo,
-    logo1,
-    logo2,
-    p1Logo
 ];
 
 const Partners = () => {

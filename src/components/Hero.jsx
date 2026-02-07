@@ -135,8 +135,8 @@ const Hero = () => {
                 ))}
             </div>
 
-            {/* Stats bar floating at bottom */}
-            <motion.div
+            {/* Stats bar floating at bottom - Commented out as requested */}
+            {/* <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -155,7 +155,7 @@ const Hero = () => {
                         </div>
                     ))}
                 </div>
-            </motion.div>
+            </motion.div> */}
 
             <ChatWidget />
         </section>
