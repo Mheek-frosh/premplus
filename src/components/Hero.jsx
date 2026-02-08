@@ -94,13 +94,13 @@ const Hero = () => {
                                 </React.Fragment>
                             ))}
                         </h1>
-                        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed md:leading-loose px-4">
+                        <p className="text-base md:text-xl text-white/70 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed md:leading-loose px-4">
                             {slides[current].desc}
                         </p>
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-12">
                     <button className="btn-primary flex items-center gap-2 group">
                         Get Started
                         <motion.span
@@ -125,7 +125,7 @@ const Hero = () => {
             </button>
 
             {/* Dash Indicators */}
-            <div className="absolute bottom-40 md:bottom-44 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            <div className="absolute bottom-[180px] left-1/2 -translate-x-1/2 z-20 flex gap-3">
                 {slides.map((_, i) => (
                     <button
                         key={i}
