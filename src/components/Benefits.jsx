@@ -37,7 +37,7 @@ const Benefits = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
                     {benefitItems.map((item, index) => (
                         <motion.div
                             key={index}
@@ -45,9 +45,11 @@ const Benefits = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500"
+                            className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
+                                }`}
                         >
-                            <div className="relative h-56 overflow-hidden">
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-64 lg:h-[500px]' : 'h-48 md:h-52'
+                                }`}>
                                 <img
                                     src={item.img}
                                     alt={item.title}
@@ -58,11 +60,13 @@ const Benefits = () => {
                                     {item.icon}
                                 </div>
                             </div>
-                            <div className="p-8">
-                                <h3 className="text-xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
+                            <div className="p-8 flex-1 flex flex-col justify-center">
+                                <h3 className={`font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'
+                                    }`}>
                                     {item.title}
                                 </h3>
-                                <p className="text-app-muted text-sm leading-relaxed">
+                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-base md:text-lg' : 'text-sm'
+                                    }`}>
                                     {item.desc}
                                 </p>
                             </div>
