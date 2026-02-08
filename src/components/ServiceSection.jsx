@@ -4,34 +4,28 @@ import { Zap, Building2, HardHat, ShieldCheck, GraduationCap } from 'lucide-reac
 
 const services = [
     {
-        title: 'Renewable Energy Design and Deployment',
+        title: 'Renewable Energy Solutions',
         icon: <Zap className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80',
-        desc: 'Providing end-to-end solar, wind, and hybrid energy solutions tailored to industrial and commercial needs.'
+        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
+        desc: 'Advanced solar, wind, and hybrid energy systems designed for long-term sustainability and efficiency.'
     },
     {
-        title: 'Sustainable Building Design',
-        icon: <Building2 className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80',
-        desc: 'Integrating green architecture and energy-efficient systems into modern infrastructure.'
+        title: 'Electricity Market and Energy Sector Advisory',
+        icon: <ShieldCheck className="w-8 h-8 text-brand-green" />,
+        img: 'https://images.unsplash.com/photo-1454165205732-d01140e59b73?w=800&q=80',
+        desc: 'Expert consulting on regulatory frameworks, market dynamics, and strategic energy planning.'
+    },
+    {
+        title: 'Capacity Development and Energy Innovation',
+        icon: <GraduationCap className="w-8 h-8 text-brand-green" />,
+        img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
+        desc: 'Empowering stakeholders through specialized training and fostering cutting-edge energy technologies.'
     },
     {
         title: 'Engineering, Procurement and Construction',
         icon: <HardHat className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=800&q=80',
-        desc: 'Delivering comprehensive EPC services for large-scale energy and infrastructure projects.'
-    },
-    {
-        title: 'Electricity Sector Advisory',
-        icon: <ShieldCheck className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1454165205732-d01140e59b73?w=800&q=80',
-        desc: 'Strategic consulting for regulatory compliance, market entry, and operational efficiency in power.'
-    },
-    {
-        title: 'Capacity Development',
-        icon: <GraduationCap className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
-        desc: 'Empowering the next generation of energy professionals through technical training and workshops.'
+        img: 'https://images.unsplash.com/photo-1538474705339-e85de812795c?w=800&q=80',
+        desc: 'Integrated EPC services ensuring seamless delivery of large-scale infrastructure and energy projects.'
     }
 ];
 

@@ -4,22 +4,22 @@ import { Zap, Building2, HardHat } from 'lucide-react';
 
 const benefitItems = [
     {
-        title: 'Renewable Energy Design and Deployment',
+        title: 'Excellence and professionalism',
         icon: <Zap className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80',
-        desc: 'Providing end-to-end solar, wind, and hybrid energy solutions tailored to industrial and commercial needs.'
+        img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+        desc: 'We uphold the highest standards of quality and professional ethics in every project we undertake.'
     },
     {
-        title: 'Sustainable Building Design',
+        title: 'Innovation with purpose',
         icon: <Building2 className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80',
-        desc: 'Integrating green architecture and energy-efficient systems into modern infrastructure.'
+        img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+        desc: 'Driving meaningful change through creative solutions that address real-world energy challenges.'
     },
     {
-        title: 'Engineering, Procurement and Construction',
+        title: 'Integrity and result orientation',
         icon: <HardHat className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?w=800&q=80',
-        desc: 'Delivering comprehensive EPC services for large-scale energy and infrastructure projects.'
+        img: 'https://images.unsplash.com/photo-1541888941257-e8bcad95d137?w=800&q=80',
+        desc: 'Commitment to transparency and delivering measurable value for our partners and clients.'
     }
 ];
 

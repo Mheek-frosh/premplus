@@ -81,7 +81,7 @@ const HomePage = () => (
     </section>
 
     <Benefits />
-    {/* <ServiceSection /> */}
+    <ServiceSection />
     <Projects />
     <VideoSection />
     <Blog />
