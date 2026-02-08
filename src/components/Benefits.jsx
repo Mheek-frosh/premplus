@@ -1,23 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Building2, HardHat } from 'lucide-react';
 
 const benefitItems = [
     {
         title: 'Excellence and professionalism',
-        icon: <Zap className="w-8 h-8 text-brand-green" />,
         img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
         desc: 'We uphold the highest standards of quality and professional ethics in every project we undertake.'
     },
     {
         title: 'Innovation with purpose',
-        icon: <Building2 className="w-8 h-8 text-brand-green" />,
         img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
         desc: 'Driving meaningful change through creative solutions that address real-world energy challenges.'
     },
     {
         title: 'Integrity and result orientation',
-        icon: <HardHat className="w-8 h-8 text-brand-green" />,
         img: 'https://images.unsplash.com/photo-1541888941257-e8bcad95d137?w=800&q=80',
         desc: 'Commitment to transparency and delivering measurable value for our partners and clients.'
     }
@@ -56,9 +52,6 @@ const Benefits = () => {
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
-                                <div className="absolute bottom-4 left-4 p-3 bg-app-main/90 backdrop-blur rounded-2xl shadow-lg">
-                                    {item.icon}
-                                </div>
                             </div>
                             <div className="p-8 flex-1 flex flex-col justify-center">
                                 <h3 className={`font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'
