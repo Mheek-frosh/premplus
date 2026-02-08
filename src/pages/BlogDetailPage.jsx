@@ -18,6 +18,8 @@ import b8Img from '../assets/b8.png';
 import b9Img from '../assets/b9.png';
 import b91Img from '../assets/b91.png';
 import b92Img from '../assets/b92.png';
+import micImg from '../assets/mic.png';
+import standImg from '../assets/stand.png';
 import b10Img from '../assets/b10.png';
 
 const blogPosts = [
@@ -39,15 +41,26 @@ const blogPosts = [
     },
     {
         id: 2,
-        title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
+        title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme to Strengthen Renewable Energy Workforce',
         category: 'Renewable Energy',
-        author: 'John Doe',
+        author: 'Corporate Communications',
         date: 'July 10, 2024',
         content: `
-            <p>Premplus Nig. Ltd was proud to attend the official launch of the NEXTGEN RESCO Programme on Friday, May 23, 2025, in Abuja. This forward-looking initiative, led by the Rural Electrification Agency (REA) in partnership with NAPTIN and Eco Innovation Empowerment Initiatives (EIEI) of Prado Power, aims to address a critical gap in Nigeria's renewable energy sector: the need for a highly skilled, future-ready workforce.</p>
-            <p>With the theme focused on "Building a Structured Talent Pipeline for the Renewable Energy Industry," the programme was introduced as a structured 12-month journey that will nurture 130 young Nigerian graduates into full-fledged renewable energy professionals. Participants will undergo classroom-based technical training, mentorship, and hands-on experience on real-world energy projects across the country.</p>
-            <p>At the launch, the REA emphasized its goal of not only upskilling youth but also injecting new energy into the sector's scalability and sustainability. With over 10,000 applicants and only 130 slots, the competitive selection process reflects the high demand for youth involvement in Nigeria's clean energy future.</p>
-            <p>Premplus remains committed to supporting initiatives that build local capacity and create pathways for young professionals to contribute meaningfully to the renewable energy transition. We congratulate all selected participants and look forward to seeing the impact of this transformative programme.</p>
+            <p><strong>Premplus Nig. Ltd was proud to attend the official launch of the NEXTGEN RESCO Programme on Friday, May 23, 2025, in Abuja. This forward-looking initiative, led by the Rural Electrification Agency (REA) in partnership with NAPTIN and Eco Innovation Empowerment Initiatives (EIEI) of Prado Power, aims to address a critical gap in Nigeria’s renewable energy sector: the need for a highly skilled, future-ready workforce.</strong></p>
+            
+            <p>With the theme focused on “Building a Structured Talent Pipeline for the Renewable Energy Industry,” the programme was introduced as a structured 12-month journey that will nurture 130 young Nigerian graduates into full-fledged renewable energy professionals. Participants will undergo classroom-based technical training, mentorship, and hands-on experience on real-world energy projects across the country.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${micImg}" alt="NEXTGEN RESCO Programme Launch" class="w-full h-auto object-cover" />
+            </div>
+            
+            <p>At the launch, the REA emphasized its goal of not only upskilling youth but also injecting new energy into the sector’s scalability and sustainability. With over 10,000 applicants and only 130 slots, the competitive selection process reflects the high demand for youth involvement in Nigeria’s clean energy future.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${standImg}" alt="NEXTGEN RESCO Programme Group Photo" class="w-full h-auto object-cover" />
+            </div>
+            
+            <p>We recognize that the future of renewable energy depends not only on innovation and investment, but on the caliber of talent driving it forward. We commend REA, NAPTIN, EIEI, and Prado Power for this impactful initiative and look forward to future collaborations that will strengthen Nigeria’s energy ecosystem and create lasting impact across communities.</p>
         `,
         img: nextGenImg
     },
