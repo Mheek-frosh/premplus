@@ -29,7 +29,7 @@ const Projects = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer"
+                            className="group relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden cursor-pointer"
                         >
                             <img src={project.img} alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-125" />
                             <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">

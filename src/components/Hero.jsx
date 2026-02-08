@@ -47,7 +47,7 @@ const Hero = () => {
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black py-24 md:py-32">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={current}
@@ -100,7 +100,7 @@ const Hero = () => {
                     </motion.div>
                 </AnimatePresence>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-12">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-20 md:pb-32">
                     <button className="btn-primary flex items-center gap-2 group">
                         Get Started
                         <motion.span
@@ -125,7 +125,7 @@ const Hero = () => {
             </button>
 
             {/* Dash Indicators */}
-            <div className="absolute bottom-[180px] left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            <div className="absolute bottom-[160px] md:bottom-[180px] left-1/2 -translate-x-1/2 z-20 flex gap-3">
                 {slides.map((_, i) => (
                     <button
                         key={i}

@@ -34,7 +34,7 @@ const Benefits = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 h-full">
                     {benefitItems.map((item, index) => (
                         <motion.div
                             key={index}
@@ -45,7 +45,7 @@ const Benefits = () => {
                             className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
                                 }`}
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-56 lg:h-[350px]' : 'h-32 md:h-36'
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-52 md:h-64 lg:h-[350px]' : 'h-32 md:h-36'
                                 }`}>
                                 <img
                                     src={item.img}
@@ -54,12 +54,12 @@ const Benefits = () => {
                                 />
                                 <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
                             </div>
-                            <div className="p-5 flex-1 flex flex-col justify-center">
-                                <h3 className={`font-bold mb-3 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'
+                            <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">
+                                <h3 className={`font-bold mb-3 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'
                                     }`}>
                                     {item.title}
                                 </h3>
-                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-base md:text-lg' : 'text-sm'
+                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-base md:text-lg' : 'text-xs md:text-sm'
                                     }`}>
                                     {item.desc}
                                 </p>
