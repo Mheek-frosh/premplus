@@ -9,6 +9,8 @@ import mou2Img from '../assets/mou2.png';
 import nextGenImg from '../assets/nextgen.png';
 import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
+import b41Img from '../assets/b41.png';
+import b42Img from '../assets/b42.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
 import b7Img from '../assets/b7.png';
@@ -82,14 +84,20 @@ const blogPosts = [
             <p><strong>The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework for the state. The event, held at Alheri Hotel, Yola, brought together key stakeholders from the energy and academic sectors to discuss strategies for achieving a more stable and efficient power supply in Adamawa.</strong></p>
             
             <p>The workshop featured technical representatives from Modibbo Adama University, Yola Electric Distribution Company (YEDC), Transmission Company of Nigeria (TCN), Adamawa State Polytechnic, and other institutions. These experts contributed insights into policy development, energy generation, and regulatory measures to ensure energy sufficiency within the state.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${b41Img}" alt="Adamawa Workshop Stakeholders" class="w-full h-auto object-cover" />
+            </div>
             
             <p>Speaking at the event, the Honourable Commissioner for Works and Energy Development, Hon. Adamu Atiku Abubakar, emphasized that this initiative is a critical step toward crafting a regulatory framework that will not only enhance energy security but also foster economic growth by attracting investments in the power sector. He urged the people of Adamawa to continue supporting policies aimed at improving infrastructure and services in the state.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${b42Img}" alt="Adamawa Workshop Discussions" class="w-full h-auto object-cover" />
+            </div>
             
             <p>The Permanent Secretary of Energy Development, Mr. Dogara Paul Musa, commended participants for their engagement, expressing confidence that their contributions would lead to actionable policies promoting energy efficiency and sustainability. Premplus Nig. Ltd played a pivotal role in the discussions, with Managing Director, Engr. Zaharadeen Usman Ibrahim, highlighting Adamawa’s untapped energy potential. He stressed the need to strategically harness these resources for effective energy generation, transmission, and distribution, ultimately benefiting communities across the state.</p>
             
-            <p>The workshop was widely regarded as a significant milestone in the pursuit of a structured and well-regulated energy sector in Adamawa. Participants lauded the initiative, emphasizing its interactive and solution-driven approach, which allowed for valuable contributions from industry professionals and academic experts.</p>
-            
-            <p>This collaboration between Premplus Nig. Ltd and the Adamawa State Ministry of Works and Energy Development marks a positive step toward ensuring a sustainable energy future for the state. As discussions continue, all stakeholders remain committed to translating the outcomes of this workshop into effective policies and real-world implementation.</p>
+            <p>Premplus Nig. Ltd played a pivotal role in the discussions, with Managing Director, Engr. Zaharadeen Usman Ibrahim, highlighting Adamawa’s untapped energy potential. He stressed the need to strategically harness these resources for effective energy generation, transmission, and distribution, ultimately benefiting communities across the state.</p>
         `,
         img: b4Img
     },
