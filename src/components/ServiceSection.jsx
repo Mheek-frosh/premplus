@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Building2, HardHat, ShieldCheck, GraduationCap } from 'lucide-react';
+import lookbackImg from '../assets/lookback.png';
+import roundtableImg from '../assets/roundtable.png';
+import innovationImg from '../assets/innovation.png';
 
 const services = [
     {
@@ -12,19 +15,19 @@ const services = [
     {
         title: 'Electricity Market and Energy Sector Advisory',
         icon: <ShieldCheck className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1454165205732-d01140e59b73?w=800&q=80',
+        img: roundtableImg,
         desc: 'Expert consulting on regulatory frameworks, market dynamics, and strategic energy planning.'
     },
     {
         title: 'Capacity Development and Energy Innovation',
         icon: <GraduationCap className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80',
+        img: innovationImg,
         desc: 'Empowering stakeholders through specialized training and fostering cutting-edge energy technologies.'
     },
     {
         title: 'Engineering, Procurement and Construction',
         icon: <HardHat className="w-8 h-8 text-brand-green" />,
-        img: 'https://images.unsplash.com/photo-1538474705339-e85de812795c?w=800&q=80',
+        img: lookbackImg,
         desc: 'Integrated EPC services ensuring seamless delivery of large-scale infrastructure and energy projects.'
     }
 ];

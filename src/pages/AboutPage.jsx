@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Target, Eye, ArrowUpRight, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
 import officeImg from '../assets/office.png';
+import aboutusImg from '../assets/aboutus.png';
+import handlampImg from '../assets/handlamp.png';
+import hwomanImg from '../assets/hwoman.png';
+import groupImg from '../assets/group.png';
+import missionImg from '../assets/mission.png';
+import visionImg from '../assets/vision.png';
 
 const teamMembers = [
     {
@@ -60,7 +66,7 @@ const AboutPage = () => {
                     transition={{ duration: 1.5 }}
                     className="absolute inset-0 z-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: `url("${officeImg}")`,
+                        backgroundImage: `url("${aboutusImg}")`,
                     }}
                 />
                 <div className="absolute inset-0 bg-black/50 z-10" />
@@ -88,16 +94,16 @@ const AboutPage = () => {
             <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-20">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} className="h-80 rounded-3xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="" className="w-full h-full object-cover" />
+                        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Solar Energy Engineer" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }} className="h-80 md:translate-y-12 rounded-3xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=800&q=80" alt="" className="w-full h-full object-cover" />
+                        <img src={handlampImg} alt="Green Energy Summit" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }} className="h-80 rounded-3xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="" className="w-full h-full object-cover" />
+                        <img src={hwomanImg} alt="Tech Professional" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }} className="h-80 md:translate-y-12 rounded-3xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="" className="w-full h-full object-cover" />
+                        <img src={groupImg} alt="Renewable Energy Collaboration" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 
@@ -162,14 +168,14 @@ const AboutPage = () => {
                             </button>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="h-[450px] rounded-[60px] overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80" className="w-full h-full object-cover" />
+                            <img src={missionImg} className="w-full h-full object-cover" />
                         </motion.div>
                     </div>
 
                     {/* Vision */}
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} className="order-2 md:order-1 h-[450px] rounded-[60px] overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80" className="w-full h-full object-cover" />
+                            <img src={visionImg} className="w-full h-full object-cover" />
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
                             <div className="w-16 h-16 bg-brand-green/10 rounded-2xl flex items-center justify-center text-brand-green mb-8">

@@ -19,6 +19,10 @@ import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 
 import officeImg from './assets/office.png';
+import gc2Img from './assets/gc (2).jpg';
+import manladderImg from './assets/manladder.png';
+import happyImg from './assets/happy.png';
+import gc1Img from './assets/gc (1).jpg';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -41,12 +45,12 @@ const HomePage = () => (
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-green/10 rounded-full blur-3xl -z-10 animate-pulse" />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4 pt-8">
-              <img src={officeImg} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
-              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80" className="rounded-3xl h-48 w-full object-cover shadow-lg" />
+              <img src={gc2Img} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
+              <img src={manladderImg} className="rounded-3xl h-48 w-full object-cover shadow-lg" />
             </div>
             <div className="space-y-4">
-              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500&q=80" className="rounded-3xl h-48 w-full object-cover shadow-lg" />
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
+              <img src={happyImg} className="rounded-3xl h-48 w-full object-cover shadow-lg" />
+              <img src={gc1Img} className="rounded-3xl h-64 w-full object-cover shadow-2xl border-4 border-app-card" />
             </div>
           </div>
         </div>

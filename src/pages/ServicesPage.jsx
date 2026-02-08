@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, ShieldCheck, Building2, FileText } from 'lucide-react';
+import lookbackImg from '../assets/lookback.png';
+import roundtableImg from '../assets/roundtable.png';
+import innovationImg from '../assets/innovation.png';
 
 const ServicesPage = () => {
     const services = [
@@ -14,19 +17,19 @@ const ServicesPage = () => {
             title: "Electricity Market and Energy sector advisory",
             desc: "Expert advisory for power transmission, electricity market regulations, and distribution network optimization.",
             icon: <ShieldCheck size={24} />,
-            image: "https://images.unsplash.com/photo-1454165205732-d01140e59b73?w=800&q=80"
+            image: roundtableImg
         },
         {
             title: "Capacity development and energy innovation",
             desc: "Training programs, research, and innovative energy solutions to drive industry growth and sustainability.",
             icon: <ArrowRight size={24} />,
-            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+            image: innovationImg
         },
         {
             title: "Engineering, procurement and construction",
             desc: "Comprehensive EPC services for energy infrastructure, from design to final implementation.",
             icon: <Building2 size={24} />,
-            image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
+            image: lookbackImg
         }
     ];
 

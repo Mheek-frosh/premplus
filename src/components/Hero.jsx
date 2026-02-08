@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../assets/hero1.png';
+import img1 from '../assets/sunset.jpg';
 import img2 from '../assets/2.png.jpg';
-import img3 from '../assets/3.png.jpg';
+import img3 from '../assets/light.png';
 import ChatWidget from './ChatWidget';
 
 const slides = [
