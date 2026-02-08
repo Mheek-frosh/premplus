@@ -58,7 +58,7 @@ const ChatWidget = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="mb-6 w-[350px] bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-gray-100"
+                        className="mb-6 w-[350px] bg-app-card rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-app"
                         style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.2)" }}
                     >
                         {/* Header */}
@@ -84,7 +84,7 @@ const ChatWidget = () => {
                         </div>
 
                         {/* Messages Body */}
-                        <div className="flex-1 bg-gray-50 p-4 h-[350px] overflow-y-auto space-y-4">
+                        <div className="flex-1 bg-app-secondary p-4 h-[350px] overflow-y-auto space-y-4">
                             {messages.map((msg) => (
                                 <div key={msg.id} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}>
                                     {msg.isBot && (
@@ -93,11 +93,11 @@ const ChatWidget = () => {
                                         </div>
                                     )}
                                     <div className={`max-w-[80%] rounded-2xl p-3 text-sm relative group ${msg.isBot
-                                            ? 'bg-brand-yellow text-white rounded-tl-none'
-                                            : 'bg-gray-200 text-gray-800 rounded-tr-none'
+                                        ? 'bg-brand-yellow text-white rounded-tl-none'
+                                        : 'bg-app-main text-app-main rounded-tr-none border border-app'
                                         }`}>
                                         <p>{msg.text}</p>
-                                        <span className={`text-[10px] block mt-1 ${msg.isBot ? 'text-white/70' : 'text-gray-500'}`}>
+                                        <span className={`text-[10px] block mt-1 ${msg.isBot ? 'text-white/70' : 'text-app-muted'}`}>
                                             {msg.timestamp}
                                         </span>
                                     </div>
@@ -107,21 +107,21 @@ const ChatWidget = () => {
                         </div>
 
                         {/* Footer Input */}
-                        <div className="p-4 bg-white border-t border-gray-100">
+                        <div className="p-4 bg-app-card border-t border-app">
                             <div className="flex gap-2 mb-3 overflow-x-auto pb-2 scrollbar-hide">
-                                <button className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-xs text-gray-600 hover:bg-gray-200">👋 What is Solar?</button>
-                                <button className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-xs text-gray-600 hover:bg-gray-200">💰 Pricing</button>
-                                <button className="whitespace-nowrap px-3 py-1 bg-gray-100 rounded-full text-xs text-gray-600 hover:bg-gray-200">🙋 FAQs</button>
+                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">👋 What is Solar?</button>
+                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">💰 Pricing</button>
+                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">🙋 FAQs</button>
                             </div>
 
-                            <div className="relative bg-gray-100 rounded-2xl">
+                            <div className="relative bg-app-main rounded-2xl border border-app">
                                 <input
                                     type="text"
                                     value={inputText}
                                     onChange={(e) => setInputText(e.target.value)}
                                     onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                                     placeholder="Type your message here..."
-                                    className="w-full bg-transparent border-none focus:ring-0 py-3 pl-4 pr-10 text-sm"
+                                    className="w-full bg-transparent border-none focus:ring-0 py-3 pl-4 pr-10 text-sm text-app-main placeholder:text-app-muted"
                                 />
                                 <button
                                     onClick={handleSend}
