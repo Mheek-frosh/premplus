@@ -39,7 +39,6 @@ const Partners = () => {
                 <p className="text-app-muted text-xs font-bold uppercase tracking-[0.4em] mb-2">
                     Our Clients & Partners
                 </p>
-                <h2 className="text-2xl font-bold text-app-main">Our Clients & Partners</h2>
             </div>
 
             <div className="flex overflow-hidden">
@@ -50,21 +49,21 @@ const Partners = () => {
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="flex flex-nowrap gap-16 items-center"
+                    className="flex flex-nowrap gap-20 items-center"
                     style={{ width: "fit-content" }}
                 >
                     {[...logoAssets, ...logoAssets].map((logo, i) => (
-                        <div key={i} className="flex-shrink-0 flex items-center justify-center w-40">
+                        <div key={i} className="flex-shrink-0 flex items-center justify-center w-56">
                             {logo === p1Logo ? (
-                                <div className="relative h-12 w-auto">
-                                    <img src={p1Logo} alt="Premplus Logo" className="h-12 w-auto object-contain dark:hidden transition-all duration-300" />
-                                    <img src={p2Logo} alt="Premplus Logo" className="h-12 w-auto object-contain hidden dark:block transition-all duration-300" />
+                                <div className="relative h-16 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                                    <img src={p1Logo} alt="Premplus Logo" className="h-16 w-auto object-contain dark:hidden" />
+                                    <img src={p2Logo} alt="Premplus Logo" className="h-16 w-auto object-contain hidden dark:block" />
                                 </div>
                             ) : (
                                 <img
                                     src={logo}
                                     alt="Partner Logo"
-                                    className="h-12 w-auto object-contain hover:scale-110 transition-transform duration-300"
+                                    className="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500"
                                 />
                             )}
                         </div>
