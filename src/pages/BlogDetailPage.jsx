@@ -12,6 +12,11 @@ import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
 import b7Img from '../assets/b7.png';
+import b8Img from '../assets/b8.png';
+import b9Img from '../assets/b9.png';
+import b91Img from '../assets/b91.png';
+import b92Img from '../assets/b92.png';
+import b10Img from '../assets/b10.png';
 
 const blogPosts = [
     {
@@ -145,75 +150,76 @@ const blogPosts = [
     },
     {
         id: 8,
-        title: 'Sustainable Consulting: Guiding Businesses to Net Zero',
+        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
         category: 'Consultation',
-        author: 'Emily Chen',
-        date: 'January 10, 2024',
-        content: '<p>How our consultation services help major industries reduce their carbon footprint while maintaining profitability and competitiveness in the global market.</p>',
-        img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200'
+        author: 'REA Communications',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), held on December 18th and 19th, 2024, at the UBEC Digital Centre in Jahi, Abuja.</strong></p>
+            
+            <p>Organized by the Rural Electrification Agency (REA), SEW2024 convened key stakeholders in the renewable energy sector, including policymakers, developers, manufacturers, financiers, and productive-use energy users. Themed "Powering Partnerships for Sustainable Energy Access and Innovation," the workshop aimed to foster collaborations for advancing renewable energy initiatives in Nigeria.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Key Highlights</h3>
+            <ul class="list-disc pl-6 space-y-4">
+                <li><strong>Launch of the DARES Project:</strong> The workshop marked the initiation of the Distributed Access through Renewable Energy Scale-Up (DARES) project under the Nigeria Electrification Project (NEP). This $750 million initiative seeks to utilize renewable solar energy to electrify rural areas.</li>
+                <li><strong>Introduction of the e-H.E.A.R.T Project:</strong> The e-H.E.A.R.T Project was announced, aiming to promote access to reliable and sustainable electricity in rural communities by powering Primary Health Centers (PHCs) across all geopolitical zones.</li>
+                <li><strong>Productive Use of Energy (PUE):</strong> Discussions centered on PUE initiatives, highlighting opportunities for economic growth through renewable energy-powered equipment and innovations.</li>
+            </ul>
+            
+            <p class="mt-8">Our participation in SEW2024 underscores Premplus' dedication to contributing to Nigeria's renewable energy landscape. We are committed to leveraging the insights gained to drive sustainable energy solutions and foster partnerships that align with the nation's electrification goals.</p>
+        `,
+        img: b8Img
     },
     {
         id: 9,
-        title: 'Startup Spotlight: The Next Big Thing in Green Tech',
-        category: 'Startup Advice',
-        author: 'Chris Evans',
-        date: 'December 05, 2023',
-        content: '<p>Featuring promising startups that are innovating in the battery storage and electric vehicle sectors, and what makes them stand out in the competitive green tech landscape.</p>',
-        img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200'
+        title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
+        category: 'Innovation',
+        author: 'Policy & Strategy Team',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Premplus recently had the privilege of attending a landmark event organized by the Nigerian Electricity Regulatory Commission (NERC), focused on accelerating the adoption of renewable and distributed energy solutions in Nigeria. This two-day summit, held in Abuja on July 22-23, 2024, brought together a diverse group of stakeholders, including government officials, private sector developers, financial institutions, non-governmental organizations, and international partners to contribute to a greener future.</strong></p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Driving Renewable Energy Adoption</h3>
+            <p>The summit served as a crucial platform for discussing strategies to boost renewable energy usage across Nigeria. Prominent figures such as the Minister of Power, Chief Adebayo Adelabu, and NERC Chairman, Sanusi Garba, delivered keynote addresses that highlighted the significance of this initiative in reshaping Nigeria's energy landscape.</p>
+            
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${b91Img}" alt="NERC Summit Presentation" class="w-full h-auto object-cover" />
+            </div>
+
+            <p>A notable moment was the presentation by Abba Abubakar Aliyu, Managing Director of the Rural Electrification Agency (REA). He shared impressive achievements, such as electrifying over 7.8 million Nigerians and deploying over 1 million solar home systems through the World Bank-funded Nigeria Electrification Programme (NEP). Looking forward, Mr. Abba introduced the ambitious Nigeria Distributed Access through Renewable Energy Scale-Up (DARES) initiative, aiming to extend electricity access to 17 million more Nigerians with a USD 750 million project.</p>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">Expanding Horizons and Collaboration</h3>
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${b92Img}" alt="NERC Summit Discussions" class="w-full h-auto object-cover" />
+            </div>
+            
+            <p>Olufemi Akinyelure, Head of the Nigeria Electrification Project (NEP), emphasized the successes of NEP and the importance of collaboration among regulators, developers, and financiers to maximize the potential of off-grid solutions. He stressed the need for efficient governance to leverage additional financing and drive sector growth.</p>
+            
+            <p>NERC Deputy General Manager, Abba Terab, underscored the summit’s role in fostering collaboration among renewable energy companies and distribution companies. He reiterated NERC's commitment to refining regulations and ensuring a supportive environment for renewable energy projects.</p>
+            
+            <p class="mt-8">Premplus Ltd is honored to be part of this transformative journey and remains dedicated to driving innovation and sustainability in Nigeria's energy sector.</p>
+        `,
+        img: b9Img
     },
     {
         id: 10,
-        title: 'Community Engagement: The Heart of Successful Energy Projects',
-        category: 'Consultation',
-        author: 'Fatima Ahmed',
-        date: 'November 22, 2023',
-        content: '<p>Building trust with local communities is crucial for the long-term success of any major infrastructure development. Discover proven strategies for effective community engagement.</p>',
-        img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200'
-    },
-    {
-        id: 11,
-        title: 'Optimizing Hydroelectric Power Generation',
-        category: 'Renewable Energy',
-        author: 'James Wilson',
-        date: 'October 15, 2023',
-        content: '<p>New technologies are breathing new life into older dams, increasing efficiency and output without new construction, making hydroelectric power more viable than ever.</p>',
-        img: 'https://images.unsplash.com/photo-1461301214746-1e790926d323?w=1200'
-    },
-    {
-        id: 12,
-        title: 'Policy Frameworks for a Green Future',
-        category: 'Consultation',
-        author: 'Linda Kim',
-        date: 'September 30, 2023',
-        content: '<p>Analyzing the latest government policies and what they mean for investors in the renewable energy sector, including incentives and regulatory considerations.</p>',
-        img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200'
-    },
-    {
-        id: 13,
-        title: 'The Economics of Solar Panels for Small Businesses',
-        category: 'Startup Advice',
-        author: 'Robert Taylor',
-        date: 'August 12, 2023',
-        content: '<p>Why switching to solar is a smart financial move for SMEs looking to cut operational costs and improve their environmental credentials.</p>',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200'
-    },
-    {
-        id: 14,
-        title: 'Biofuel Innovations: Turning Waste into Energy',
+        title: 'Growing Green Job Career Fair',
         category: 'Innovation',
-        author: 'Maria Garcia',
-        date: 'July 25, 2023',
-        content: '<p>Groundbreaking research into converting agricultural waste into viable biofuel sources for transportation and power generation.</p>',
-        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1200'
-    },
-    {
-        id: 15,
-        title: 'Electric Vehicles: Infrastructure Challenges',
-        category: 'Innovation',
-        author: 'Tom Harris',
-        date: 'June 18, 2023',
-        content: '<p>Addressing the critical need for charging stations and grid upgrades to support the EV revolution and enable widespread adoption.</p>',
-        img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1200'
+        author: 'Human Resources',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Premplus was proud to participate in the "Growing Green Job" Career Fair and Mini Clinics, a pivotal event dedicated to fostering talent and innovation within the renewable energy sector.</strong></p>
+            
+            <p>The program served as a dynamic platform for both aspiring professionals and established green energy organizations. Central to the event were the career fair sessions, which facilitated direct engagement between top-tier industry players and the next generation of sustainability leaders. These interactions provided invaluable insights into the diverse career pathways available in the rapidly evolving green economy.</p>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4">Empowering Talent through Mini Clinics</h3>
+            <p>A highlight of the event was the series of "Mini Clinics" designed for green energy organizations. These focused sessions addressed critical areas such as technical skill development, professional mentorship, and the latest trends in renewable energy technologies. The clinics allowed participants to receive practical, expert-led guidance on navigating the unique challenges and opportunities of the green job market.</p>
+            
+            <p>Premplus's involvement underscores our commitment to not only deploying world-class energy infrastructure but also investing in the human capital that will drive the global transition to clean energy. We believe that by supporting platforms like the Growing Green Job Career Fair, we are helping to build a more resilient, knowledgeable, and passionate workforce dedicated to societal progress and environmental stewardship.</p>
+            
+            <p class="mt-8">We look forward to continuing our support for such initiatives and welcoming the innovative minds we met during the fair as they embark on their journeys to create a greener future.</p>
+        `,
+        img: b10Img
     },
 ];
 

@@ -9,6 +9,9 @@ import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
 import b7Img from '../assets/b7.png';
+import b8Img from '../assets/b8.png';
+import b9Img from '../assets/b9.png';
+import b10Img from '../assets/b10.png';
 
 const blogPosts = [
     {
@@ -60,6 +63,27 @@ const blogPosts = [
         date: 'February 08, 2026',
         category: 'Consultation',
         img: b7Img
+    },
+    {
+        id: 8,
+        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
+        date: 'February 08, 2026',
+        category: 'Consultation',
+        img: b8Img
+    },
+    {
+        id: 9,
+        title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
+        date: 'February 08, 2026',
+        category: 'Innovation',
+        img: b9Img
+    },
+    {
+        id: 10,
+        title: 'Growing Green Job Career Fair',
+        date: 'February 08, 2026',
+        category: 'Innovation',
+        img: b10Img
     }
 ];
 

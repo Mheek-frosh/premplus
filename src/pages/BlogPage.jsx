@@ -9,6 +9,9 @@ import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
 import b7Img from '../assets/b7.png';
+import b8Img from '../assets/b8.png';
+import b9Img from '../assets/b9.png';
+import b10Img from '../assets/b10.png';
 
 const categories = ['All', 'Innovation', 'Renewable Energy', 'Startup Advice', 'Consultation'];
 
@@ -78,75 +81,30 @@ const blogPosts = [
     },
     {
         id: 8,
-        title: 'Sustainable Consulting: Guiding Businesses to Net Zero',
+        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
         category: 'Consultation',
-        author: 'Emily Chen',
-        date: 'January 10, 2024',
-        excerpt: 'How our consultation services help major industries reduce their carbon footprint while maintaining profitability.',
-        img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80'
+        author: 'REA Communications',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), focusing on sustainable energy access and innovation.',
+        img: b8Img
     },
     {
         id: 9,
-        title: 'Startup Spotlight: The Next Big Thing in Green Tech',
-        category: 'Startup Advice',
-        author: 'Chris Evans',
-        date: 'December 05, 2023',
-        excerpt: 'Featuring promising startups that are innovating in the battery storage and electric vehicle sectors.',
-        img: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80'
+        title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
+        category: 'Innovation',
+        author: 'Policy & Strategy Team',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus recently had the privilege of attending a landmark event organized by NERC, focused on accelerating the adoption of renewable energy in Nigeria.',
+        img: b9Img
     },
     {
         id: 10,
-        title: 'Community Engagement: The Heart of Successful Energy Projects',
-        category: 'Consultation',
-        author: 'Fatima Ahmed',
-        date: 'November 22, 2023',
-        excerpt: 'Building trust with local communities is crucial for the long-term success of any major infrastructure development.',
-        img: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80'
-    },
-    {
-        id: 11,
-        title: 'Optimizing Hydroelectric Power Generation',
-        category: 'Renewable Energy',
-        author: 'James Wilson',
-        date: 'October 15, 2023',
-        excerpt: 'New technologies are breathing new life into older dams, increasing efficiency and output without new construction.',
-        img: 'https://images.unsplash.com/photo-1461301214746-1e790926d323?w=800&q=80'
-    },
-    {
-        id: 12,
-        title: 'Policy Frameworks for a Green Future',
-        category: 'Consultation',
-        author: 'Linda Kim',
-        date: 'September 30, 2023',
-        excerpt: 'Analyzing the latest government policies and what they mean for investors in the renewable energy sector.',
-        img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80'
-    },
-    {
-        id: 13,
-        title: 'The Economics of Solar Panels for Small Businesses',
-        category: 'Startup Advice',
-        author: 'Robert Taylor',
-        date: 'August 12, 2023',
-        excerpt: 'Why switching to solar is a smart financial move for SMEs looking to cut operational costs.',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80'
-    },
-    {
-        id: 14,
-        title: 'Biofuel Innovations: Turning Waste into Energy',
+        title: 'Growing Green Job Career Fair',
         category: 'Innovation',
-        author: 'Maria Garcia',
-        date: 'July 25, 2023',
-        excerpt: 'Groundbreaking research into converting agricultural waste into viable biofuel sources for transportation.',
-        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80'
-    },
-    {
-        id: 15,
-        title: 'Electric Vehicles: Infrastructure Challenges',
-        category: 'Innovation',
-        author: 'Tom Harris',
-        date: 'June 18, 2023',
-        excerpt: 'Addressing the critical need for charging stations and grid upgrades to support the EV revolution.',
-        img: 'https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80'
+        author: 'Human Resources',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus participated in the Growing Green Job Career Fair, featuring career clinics and networking opportunities for the next generation of energy professionals.',
+        img: b10Img
     }
 ];
 
