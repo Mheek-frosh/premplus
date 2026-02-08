@@ -7,6 +7,9 @@ import mouImg from '../assets/mou.png';
 import mou1Img from '../assets/mou1.png';
 import mou2Img from '../assets/mou2.png';
 import nextGenImg from '../assets/nextgen.png';
+import b3Img from '../assets/b3.png';
+import b4Img from '../assets/b4.png';
+import b5Img from '../assets/b5.png';
 
 const blogPosts = [
     {
@@ -41,38 +44,64 @@ const blogPosts = [
     },
     {
         id: 3,
-        title: 'Adamawa State Roundtable to Advance Renewable Energy Initiatives',
+        title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
         category: 'Innovation',
-        author: 'Jane Smith',
-        date: 'June 05, 2024',
+        author: 'Engr. Zaharadeen Usman',
+        date: 'February 08, 2026',
         content: `
-            <p>Premplus participated in a high-level roundtable discussion in Adamawa State focused on advancing renewable energy initiatives across the region. The event brought together key stakeholders from government, private sector, and civil society to discuss strategies for expanding electricity access in rural areas.</p>
-            <p>During the event, discussions centered on expanding electricity access in rural areas, leveraging distributed energy solutions, and creating sustainable business models for mini-grid deployment. Participants explored innovative financing mechanisms and policy frameworks that could accelerate the adoption of clean energy technologies.</p>
-            <p>The roundtable highlighted the critical role of public-private partnerships in achieving universal energy access. Premplus shared insights from our ongoing projects and emphasized the importance of community engagement in ensuring the long-term success of renewable energy initiatives.</p>
+            <p><strong>Premplus Nig. Ltd proudly participated in the REA State-by-State Roundtable with Adamawa State, held in Abuja. This strategic event, organized by the Rural Electrification Agency (REA), focused on enhancing renewable energy access and fostering economic growth through collaborative public-private partnerships.</strong></p>
+            
+            <p>Themed “Unlocking Private Sector Opportunities in Distributed Renewable Energy,” the roundtable brought together key stakeholders, including government officials, renewable energy service companies (RESCOs), private investors, and technical experts. During the event, discussions centered on expanding electricity access in rural areas, leveraging distributed energy solutions, and strengthening private sector involvement.</p>
+            
+            <p>One of the major highlights of the roundtable was the signing of a Memorandum of Understanding (MoU) between the Adamawa State Government and the REA. This partnership aims to accelerate renewable energy projects across the state, with projections indicating a potential $1.9 billion investment influx and the creation of approximately 40,000 jobs. The agreement represents a significant step toward sustainable energy development, with a focus on deploying solar PV systems and off-grid solutions in underserved communities.</p>
+            
+            <p>The Governor of Adamawa State, His Excellency Ahmadu Umaru Fintiri, expressed the state’s commitment to renewable energy initiatives, highlighting plans to train 1,000 citizens annually in solar photovoltaic (PV) installation and the development of a 300-megawatt solar PV farm. He noted that these initiatives are designed to not only boost energy access but also create job opportunities for local communities.</p>
+            
+            <p>As part of the event, Premplus Managing Director, Engr. Zaharadeen Usman, made a presentation on the progress of the Adamawa State Electricity Policy, which Premplus is developing as the policy consultant. His presentation highlighted key milestones, the vision for energy sustainability, and the strategic steps being taken to ensure reliable power supply across the state.</p>
+            
+            <p>Engr. Usman reaffirmed Premplus' dedication to working alongside government and private partners to drive impactful energy solutions in Adamawa. “This policy framework is a pathway to energy independence and sustainable development for the people of Adamawa State. We are committed to its successful implementation,” he stated during his address.</p>
+            
+            <p>Premplus remains committed to supporting initiatives that enhance energy access, economic empowerment, and sustainable development through innovative renewable energy solutions. Our involvement in the REA-Adamawa State Roundtable reflects our ongoing mission to lead in sustainable energy projects across Nigeria.</p>
         `,
-        img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200'
+        img: b3Img
     },
     {
         id: 4,
-        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
+        title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
         category: 'Innovation',
-        author: 'Alice Brown',
-        date: 'May 12, 2024',
+        author: 'Engr. Zaharadeen Usman Ibrahim',
+        date: 'February 08, 2026',
         content: `
-            <p>Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), held on December 18th at the REA headquarters in Abuja. The workshop provided a platform for industry players, government agencies, and development partners to discuss the progress and future direction of Nigeria's rural electrification efforts.</p>
-            <p>Key topics included the implementation of the Distributed Access through Renewable Energy Scale-up (DARES) programme, innovations in mini-grid technology, and strategies for improving project sustainability. Premplus contributed to discussions on technical capacity building and the role of private sector partnerships in achieving the nation's electrification goals.</p>
-            <p>The workshop reaffirmed our commitment to supporting REA's vision of providing clean, reliable, and affordable energy to underserved communities across Nigeria. We look forward to continued collaboration with all stakeholders in this important mission.</p>
+            <p><strong>The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework for the state. The event, held at Alheri Hotel, Yola, brought together key stakeholders from the energy and academic sectors to discuss strategies for achieving a more stable and efficient power supply in Adamawa.</strong></p>
+            
+            <p>The workshop featured technical representatives from Modibbo Adama University, Yola Electric Distribution Company (YEDC), Transmission Company of Nigeria (TCN), Adamawa State Polytechnic, and other institutions. These experts contributed insights into policy development, energy generation, and regulatory measures to ensure energy sufficiency within the state.</p>
+            
+            <p>Speaking at the event, the Honourable Commissioner for Works and Energy Development, Hon. Adamu Atiku Abubakar, emphasized that this initiative is a critical step toward crafting a regulatory framework that will not only enhance energy security but also foster economic growth by attracting investments in the power sector. He urged the people of Adamawa to continue supporting policies aimed at improving infrastructure and services in the state.</p>
+            
+            <p>The Permanent Secretary of Energy Development, Mr. Dogara Paul Musa, commended participants for their engagement, expressing confidence that their contributions would lead to actionable policies promoting energy efficiency and sustainability. Premplus Nig. Ltd played a pivotal role in the discussions, with Managing Director, Engr. Zaharadeen Usman Ibrahim, highlighting Adamawa’s untapped energy potential. He stressed the need to strategically harness these resources for effective energy generation, transmission, and distribution, ultimately benefiting communities across the state.</p>
+            
+            <p>The workshop was widely regarded as a significant milestone in the pursuit of a structured and well-regulated energy sector in Adamawa. Participants lauded the initiative, emphasizing its interactive and solution-driven approach, which allowed for valuable contributions from industry professionals and academic experts.</p>
+            
+            <p>This collaboration between Premplus Nig. Ltd and the Adamawa State Ministry of Works and Energy Development marks a positive step toward ensuring a sustainable energy future for the state. As discussions continue, all stakeholders remain committed to translating the outcomes of this workshop into effective policies and real-world implementation.</p>
         `,
-        img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200'
+        img: b4Img
     },
     {
         id: 5,
-        title: 'Harnessing Solar Power for Rural Development in Nigeria',
-        category: 'Renewable Energy',
-        author: 'Michael Obi',
-        date: 'April 20, 2024',
-        content: '<p>Exploring how off-grid solar solutions are transforming lives in remote communities by providing reliable and clean energy. This article examines successful case studies and best practices for rural solar deployment.</p>',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200'
+        title: 'Premplus CEO receives Award of Excellence',
+        category: 'Consultation',
+        author: 'NYAN Press',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Engr. Zaharadeen Usman, the esteemed CEO of Premplus, has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria, in recognition of his dedicated contributions to the advancement of youth, nation-building initiatives, and societal progress.</strong></p>
+            
+            <p>The Award of Excellence is an accolade presented by NYAN to individuals who have demonstrated outstanding dedication to the progress and empowerment of Nigerian youth. Engr. Usman's recognition underscores his unwavering commitment to fostering positive change and development within the nation.</p>
+            
+            <p>In response to receiving the award, Engr. Usman expressed his gratitude to NYAN and reaffirmed his commitment to advancing youth development initiatives. He emphasized that this recognition serves as a motivation to continue working towards a brighter future for Nigerian youth and the nation at large.</p>
+            
+            <p>Premplus congratulates Engr. Zaharadeen Usman on this well-deserved honor and remains steadfast in its mission to support endeavors that align with our core values of excellence, innovation, and community.</p>
+        `,
+        img: b5Img
     },
     {
         id: 6,

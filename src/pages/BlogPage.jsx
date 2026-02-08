@@ -4,6 +4,9 @@ import { Search, Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from 'l
 import { Link } from 'react-router-dom';
 import mouImg from '../assets/mou.png';
 import nextGenImg from '../assets/nextgen.png';
+import b3Img from '../assets/b3.png';
+import b4Img from '../assets/b4.png';
+import b5Img from '../assets/b5.png';
 
 const categories = ['All', 'Innovation', 'Renewable Energy', 'Startup Advice', 'Consultation'];
 
@@ -28,30 +31,30 @@ const blogPosts = [
     },
     {
         id: 3,
-        title: 'Adamawa State Roundtable to Advance Renewable Energy Initiatives',
+        title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
         category: 'Innovation',
-        author: 'Jane Smith',
-        date: 'June 05, 2024',
-        excerpt: 'During the event, discussions centered on expanding electricity access in rural areas, leveraging distributed energy solutions',
-        img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80'
+        author: 'Engr. Zaharadeen Usman',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus Nig. Ltd proudly participated in the REA State-by-State Roundtable with Adamawa State, held in Abuja, focusing on enhancing renewable energy access and fostering economic growth.',
+        img: b3Img
     },
     {
         id: 4,
-        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
+        title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
         category: 'Innovation',
-        author: 'Alice Brown',
-        date: 'May 12, 2024',
-        excerpt: 'Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), held on December 18th',
-        img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
+        author: 'Engr. Zaharadeen Usman Ibrahim',
+        date: 'February 08, 2026',
+        excerpt: 'The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework.',
+        img: b4Img
     },
     {
         id: 5,
-        title: 'Harnessing Solar Power for Rural Development in Nigeria',
-        category: 'Renewable Energy',
-        author: 'Michael Obi',
-        date: 'April 20, 2024',
-        excerpt: 'Exploring how off-grid solar solutions are transforming lives in remote communities by providing reliable and clean energy.',
-        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80'
+        title: 'Premplus CEO receives Award of Excellence',
+        category: 'Consultation',
+        author: 'NYAN Press',
+        date: 'February 08, 2026',
+        excerpt: 'Engr. Zaharadeen Usman, the esteemed CEO of Premplus, has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria.',
+        img: b5Img
     },
     {
         id: 6,

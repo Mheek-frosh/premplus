@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Calendar, ArrowUpRight } from 'lucide-react';
 import mouImg from '../assets/mou.png';
 import nextGenImg from '../assets/nextgen.png';
+import b3Img from '../assets/b3.png';
+import b4Img from '../assets/b4.png';
+import b5Img from '../assets/b5.png';
 
 const blogPosts = [
     {
@@ -23,17 +26,24 @@ const blogPosts = [
     },
     {
         id: 3,
-        title: 'Adamawa State Roundtable to Advance Renewable Energy Initiatives',
-        date: 'June 05, 2024',
+        title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
+        date: 'February 08, 2026',
         category: 'Innovation',
-        img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80'
+        img: b3Img
     },
     {
         id: 4,
-        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
-        date: 'May 12, 2024',
+        title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
+        date: 'February 08, 2026',
         category: 'Innovation',
-        img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80'
+        img: b4Img
+    },
+    {
+        id: 5,
+        title: 'Premplus CEO receives Award of Excellence',
+        date: 'February 08, 2026',
+        category: 'Consultation',
+        img: b5Img
     }
 ];
 
