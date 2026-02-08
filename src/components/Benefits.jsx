@@ -23,7 +23,7 @@ const benefitItems = [
 const Benefits = () => {
     return (
         <section className="bg-app-secondary py-10 overflow-hidden transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-6 gap-6">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
@@ -45,7 +45,7 @@ const Benefits = () => {
                             className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
                                 }`}
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-48 md:h-56 lg:h-[280px]' : 'h-24 md:h-28'
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-40 md:h-56 lg:h-64' : 'h-20 md:h-24'
                                 }`}>
                                 <img
                                     src={item.img}
