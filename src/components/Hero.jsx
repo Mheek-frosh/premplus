@@ -86,7 +86,7 @@ const Hero = () => {
                         <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-brand-yellow uppercase bg-brand-yellow/10 rounded-full border border-brand-yellow/20">
                             {slides[current].tag}
                         </span>
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-[1.1]">
+                        <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1]">
                             {slides[current].title.split(slides[current].highlight).map((part, i, arr) => (
                                 <React.Fragment key={i}>
                                     {part}
@@ -94,7 +94,7 @@ const Hero = () => {
                                 </React.Fragment>
                             ))}
                         </h1>
-                        <p className="text-lg md:text-xl text-white/70 mb-10 max-w-2xl mx-auto leading-loose">
+                        <p className="text-base md:text-xl text-white/70 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed md:leading-loose px-4">
                             {slides[current].desc}
                         </p>
                     </motion.div>
@@ -117,11 +117,11 @@ const Hero = () => {
             </div>
 
             {/* Navigation Arrows */}
-            <button onClick={prevSlide} className="absolute left-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
-                <ChevronLeft size={48} strokeWidth={1} />
+            <button onClick={prevSlide} className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
+                <ChevronLeft size={32} mdSize={48} strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12" />
             </button>
-            <button onClick={nextSlide} className="absolute right-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
-                <ChevronRight size={48} strokeWidth={1} />
+            <button onClick={nextSlide} className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
+                <ChevronRight size={32} mdSize={48} strokeWidth={1} className="w-8 h-8 md:w-12 md:h-12" />
             </button>
 
             {/* Dash Indicators */}
@@ -140,9 +140,9 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 hidden lg:block"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-20"
             >
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-6 flex justify-around items-center">
+                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 md:p-6 grid grid-cols-2 md:flex md:justify-around items-center gap-4 md:gap-0">
                     {[
                         { label: 'Founded', value: '2024' },
                         { label: 'Locations', value: '5' },
@@ -150,8 +150,8 @@ const Hero = () => {
                         { label: 'Projects', value: '5' }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
-                            <p className="text-white/50 text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
-                            <p className="text-white text-2xl font-bold group-hover:text-brand-yellow transition-colors">{stat.value}</p>
+                            <p className="text-white/50 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
+                            <p className="text-white text-lg md:text-2xl font-bold group-hover:text-brand-yellow transition-colors">{stat.value}</p>
                         </div>
                     ))}
                 </div>

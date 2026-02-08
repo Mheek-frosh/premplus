@@ -283,7 +283,7 @@ const BlogDetailPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-4xl md:text-5xl font-bold text-app-main mb-6 leading-tight"
+                    className="text-2xl md:text-5xl font-bold text-app-main mb-6 leading-tight"
                 >
                     {post.title}
                 </motion.h1>
@@ -293,14 +293,14 @@ const BlogDetailPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="flex flex-wrap items-center gap-6 text-app-muted mb-12 pb-8 border-b border-app"
+                    className="flex flex-wrap items-center gap-4 text-app-muted mb-8 md:mb-12 pb-6 md:pb-8 border-b border-app"
                 >
-                    <div className="flex items-center gap-2">
-                        <User size={18} />
+                    <div className="flex items-center gap-2 text-sm">
+                        <User size={16} />
                         <span className="font-semibold">{post.author}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <Calendar size={18} />
+                    <div className="flex items-center gap-2 text-sm">
+                        <Calendar size={16} />
                         <span>{post.date}</span>
                     </div>
                 </motion.div>
@@ -429,7 +429,7 @@ const BlogDetailPage = () => {
                             <div className="flex-1">
                                 <textarea
                                     placeholder="Share your thoughts..."
-                                    className="w-full bg-app-card border border-app rounded-xl p-4 text-app-main placeholder:text-app-muted focus:outline-none focus:ring-2 focus:ring-brand-green/20 resize-none h-32 transition-colors"
+                                    className="w-full bg-app-card border border-app rounded-xl p-4 text-sm text-app-main placeholder:text-app-muted focus:outline-none focus:ring-2 focus:ring-brand-green/20 resize-none h-32 transition-colors"
                                 ></textarea>
                                 <div className="flex justify-end mt-4">
                                     <button className="bg-brand-yellow text-brand-dark px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-brand-yellow/20 hover:scale-105 transition-all">

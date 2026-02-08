@@ -146,8 +146,8 @@ const BlogPage = () => {
     return (
         <div className="pt-32 pb-24 bg-app-main min-h-screen transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold text-app-main mb-4">Blog News</h1>
+                <div className="text-center mb-8 md:mb-16">
+                    <h1 className="text-3xl md:text-5xl font-bold text-app-main mb-4">Blog News</h1>
                 </div>
 
                 {/* Search Bar */}
@@ -168,7 +168,7 @@ const BlogPage = () => {
                 </div>
 
                 {/* Category Filters */}
-                <div className="flex flex-wrap justify-center gap-4 mb-16">
+                <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 md:mb-16">
                     {categories.map(cat => (
                         <button
                             key={cat}
@@ -176,7 +176,7 @@ const BlogPage = () => {
                                 setActiveCategory(cat);
                                 setCurrentPage(1); // Reset to page 1 on category change
                             }}
-                            className={`px-6 py-2 rounded-lg text-sm font-semibold transition-all ${activeCategory === cat
+                            className={`px-4 md:px-6 py-2 rounded-lg text-xs md:text-sm font-semibold transition-all ${activeCategory === cat
                                 ? 'bg-brand-yellow text-brand-dark shadow-md'
                                 : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'
                                 }`}
@@ -203,7 +203,7 @@ const BlogPage = () => {
                                         {post.category}
                                     </div>
                                 </div>
-                                <h3 className="text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
+                                <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
                                     {post.title}
                                 </h3>
                                 <p className="text-app-muted text-base mb-6 line-clamp-2">

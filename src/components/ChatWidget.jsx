@@ -58,7 +58,7 @@ const ChatWidget = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="mb-6 w-[350px] bg-app-card rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-app"
+                        className="mb-4 md:mb-6 w-[calc(100vw-32px)] md:w-[380px] fixed bottom-24 md:bottom-28 right-4 md:right-8 bg-app-card rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-app"
                         style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.2)" }}
                     >
                         {/* Header */}

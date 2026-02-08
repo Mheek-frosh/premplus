@@ -135,9 +135,9 @@ const Navbar = () => {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`${(isSolidNav && !darkMode) ? 'text-app-main' : 'text-white'}`}
+                            className={`p-2 transition-colors ${(isSolidNav && !darkMode) ? 'text-app-main hover:bg-app-secondary rounded-lg' : 'text-white hover:bg-white/10 rounded-lg'}`}
                         >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                            {isOpen ? <X size={32} /> : <Menu size={32} />}
                         </button>
                     </div>
                 </div>
@@ -155,23 +155,37 @@ const Navbar = () => {
                         <div className="px-4 pt-4 pb-6 space-y-2">
                             {navLinks.map((link) => (
                                 <React.Fragment key={link.name}>
-                                    <Link
-                                        to={link.href}
-                                        className="block px-3 py-3 text-base font-bold text-brand-dark dark:text-white hover:bg-gray-50 dark:hover:bg-white/5 rounded-lg transition-colors"
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                    {link.dropdown && link.dropdown.map(sub => (
+                                    {link.dropdown ? (
+                                        <div className="py-2 pl-4">
+                                            <Link
+                                                to={link.href}
+                                                className="block px-3 py-2 text-base font-bold text-app-main hover:text-brand-yellow transition-colors"
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                {link.name}
+                                            </Link>
+                                            <div className="mt-1 space-y-1 border-l-2 border-brand-yellow/30 ml-3">
+                                                {link.dropdown.map(sub => (
+                                                    <Link
+                                                        key={sub.name}
+                                                        to={sub.href}
+                                                        className="block px-4 py-2 text-sm font-semibold text-app-muted hover:text-brand-yellow transition-colors"
+                                                        onClick={() => setIsOpen(false)}
+                                                    >
+                                                        {sub.name}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    ) : (
                                         <Link
-                                            key={sub.name}
-                                            to={sub.href}
-                                            className="block px-8 py-2 text-sm font-medium text-brand-gray hover:text-brand-yellow transition-colors"
+                                            to={link.href}
+                                            className="block px-3 py-3 text-base font-bold text-app-main hover:bg-app-secondary rounded-xl transition-colors"
                                             onClick={() => setIsOpen(false)}
                                         >
-                                            {sub.name}
+                                            {link.name}
                                         </Link>
-                                    ))}
+                                    )}
                                 </React.Fragment>
                             ))}
                             <div className="pt-4 space-y-3">
