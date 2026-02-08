@@ -22,9 +22,9 @@ const benefitItems = [
 
 const Benefits = () => {
     return (
-        <section className="bg-app-secondary py-16 overflow-hidden transition-colors duration-300">
+        <section className="bg-app-secondary py-10 overflow-hidden transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row justify-between items-end mb-10 gap-8">
+                <div className="flex flex-col lg:flex-row justify-between items-end mb-6 gap-6">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">The Advantages of <br /> Partnering with <span className="text-brand-green">US</span></h2>
@@ -45,7 +45,7 @@ const Benefits = () => {
                             className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
                                 }`}
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-52 md:h-64 lg:h-[350px]' : 'h-32 md:h-36'
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-48 md:h-56 lg:h-[280px]' : 'h-24 md:h-28'
                                 }`}>
                                 <img
                                     src={item.img}
@@ -55,11 +55,11 @@ const Benefits = () => {
                                 <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
                             </div>
                             <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">
-                                <h3 className={`font-bold mb-3 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'
+                                <h3 className={`font-bold mb-2 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-xl md:text-2xl' : 'text-base md:text-lg'
                                     }`}>
                                     {item.title}
                                 </h3>
-                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-base md:text-lg' : 'text-xs md:text-sm'
+                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-sm md:text-base' : 'text-[10px] md:text-xs'
                                     }`}>
                                     {item.desc}
                                 </p>
