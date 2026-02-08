@@ -5,28 +5,28 @@ import { ArrowRight, Zap, ShieldCheck, Building2, FileText } from 'lucide-react'
 const ServicesPage = () => {
     const services = [
         {
-            title: "Renewable Energy Design",
-            desc: "End-to-end solar and wind energy systems customized for your business needs.",
+            title: "Renewable energy solutions",
+            desc: "End-to-end solar, wind, and hybrid energy systems customized for your business needs.",
             icon: <Zap size={24} />,
             image: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?w=800&q=80"
         },
         {
-            title: "Transmission Consultancy",
-            desc: "Expert advisory for high voltage power transmission and distribution networks.",
+            title: "Electricity Market and Energy sector advisory",
+            desc: "Expert advisory for power transmission, electricity market regulations, and distribution network optimization.",
             icon: <ShieldCheck size={24} />,
-            image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80"
-        },
-        {
-            title: "Sustainable Building Design",
-            desc: "Eco-friendly architectural solutions that maximize energy efficiency.",
-            icon: <Building2 size={24} />,
-            image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80"
-        },
-        {
-            title: "Technical Advisory",
-            desc: "Strategic guidance on energy regulations and policy compliance.",
-            icon: <FileText size={24} />,
             image: "https://images.unsplash.com/photo-1454165205732-d01140e59b73?w=800&q=80"
+        },
+        {
+            title: "Capacity development and energy innovation",
+            desc: "Training programs, research, and innovative energy solutions to drive industry growth and sustainability.",
+            icon: <ArrowRight size={24} />,
+            image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
+        },
+        {
+            title: "Engineering, procurement and construction",
+            desc: "Comprehensive EPC services for energy infrastructure, from design to final implementation.",
+            icon: <Building2 size={24} />,
+            image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
         }
     ];
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Target, Eye, ArrowUpRight, Play, X, ChevronRight } from 'lucide-react';
+import { Target, Eye, ArrowUpRight, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
 import officeImg from '../assets/office.png';
 
 const teamMembers = [
@@ -111,6 +111,40 @@ const AboutPage = () => {
                     </p>
                 </motion.div>
 
+                {/* About Premplus Intro */}
+                <div className="mb-32">
+                    <div className="max-w-4xl">
+                        <motion.span
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4"
+                        >
+                            Our Identity
+                        </motion.span>
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.1 }}
+                            className="text-4xl md:text-6xl font-bold mb-8 text-app-main leading-tight"
+                        >
+                            About <span className="text-brand-green">Premplus</span>
+                        </motion.h2>
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.2 }}
+                            className="space-y-6"
+                        >
+                            <p className="text-app-muted text-xl leading-relaxed">
+                                At Premplus, we are more than just an energy provider; we are architects of a sustainable future. Founded with a vision to redefine how the world interacts with energy, we specialize in delivering high-impact engineering solutions that bridge the gap between traditional infrastructure and next-generation renewable technology.
+                            </p>
+                            <p className="text-app-muted text-xl leading-relaxed">
+                                Our team of seasoned experts brings decades of collective experience in electricity markets, energy sector advisory, and large-scale EPC projects. We are driven by a commitment to excellence and a passion for innovation, ensuring that every project we undertake contributes to a cleaner, more reliable global energy landscape.
+                            </p>
+                        </motion.div>
+                    </div>
+                </div>
+
                 {/* Mission and Vision */}
                 <div className="space-y-32 mb-32">
                     {/* Mission */}
@@ -152,7 +186,46 @@ const AboutPage = () => {
                     </div>
                 </div>
 
-                {/* Meet Our Team Members */}
+                {/* Our Core Values */}
+                <section className="py-32 mb-32 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl -z-10" />
+
+                    <div className="text-center mb-20">
+                        <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Our Culture</span>
+                        <h2 className="text-5xl font-bold mt-4 text-app-main">Our Core Values</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { title: 'Sustainability', icon: <Leaf />, color: 'bg-emerald-500/10 text-emerald-600' },
+                            { title: 'Innovation', icon: <Lightbulb />, color: 'bg-amber-500/10 text-amber-600' },
+                            { title: 'Integrity', icon: <Shield />, color: 'bg-blue-500/10 text-blue-600' },
+                            { title: 'Collaboration', icon: <Users />, color: 'bg-indigo-500/10 text-indigo-600' },
+                            { title: 'Excellence', icon: <Award />, color: 'bg-purple-500/10 text-purple-600' },
+                            { title: 'Inclusion', icon: <UserPlus />, color: 'bg-pink-500/10 text-pink-600' },
+                            { title: 'Community', icon: <Heart />, color: 'bg-red-500/10 text-red-600' }
+                        ].map((value, idx) => (
+                            <motion.div
+                                key={idx}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: idx * 0.1 }}
+                                className="group p-8 rounded-[40px] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+                            >
+                                <div className={`w-14 h-14 ${value.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
+                                    {React.cloneElement(value.icon, { size: 28 })}
+                                </div>
+                                <h3 className="text-2xl font-bold text-app-main group-hover:text-brand-green transition-colors">{value.title}</h3>
+                                <p className="text-app-muted mt-4 text-sm leading-relaxed">
+                                    Living our commitment to {value.title.toLowerCase()} in every decision we make.
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Meet Our Team Members - Hidden */}
+                {/* 
                 <section className="py-24 border-t border-gray-100">
                     <div className="text-center mb-20">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Team</span>
@@ -172,7 +245,6 @@ const AboutPage = () => {
                                     <p className="text-brand-yellow font-bold text-sm uppercase mb-4">{member.position}</p>
                                     <p className="text-white/60 text-sm italic line-clamp-2">“ {member.quote} ”</p>
 
-                                    {/* Expansion Button */}
                                     <button
                                         onClick={() => setSelectedMember(member)}
                                         className="absolute -bottom-4 right-8 w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center text-brand-dark shadow-xl hover:scale-110 transition-transform"
@@ -191,9 +263,11 @@ const AboutPage = () => {
                             </button>
                         </Link>
                     </div>
-                </section>
+                </section> 
+                */}
 
-                {/* Completed Projects */}
+                {/* Completed Projects - Hidden */}
+                {/* 
                 <section className="py-24">
                     <div className="text-center mb-16">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Project</span>
@@ -239,9 +313,11 @@ const AboutPage = () => {
                             </motion.div>
                         </div>
                     </div>
-                </section>
+                </section> 
+                */}
 
-                {/* Watch our Story in Action */}
+                {/* Watch our Story in Action - Hidden */}
+                {/* 
                 <section className="py-24">
                     <div className="grid md:grid-cols-2 gap-16 items-center">
                         <div>
@@ -264,7 +340,8 @@ const AboutPage = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> 
+                */}
             </section>
 
             {/* Work with Premplus CTA */}
@@ -290,7 +367,8 @@ const AboutPage = () => {
                 </motion.div>
             </section>
 
-            {/* Team Biography Overlay */}
+            {/* Team Biography Overlay - Hidden */}
+            {/* 
             <AnimatePresence>
                 {selectedMember && (
                     <motion.div
@@ -299,10 +377,8 @@ const AboutPage = () => {
                         exit={{ opacity: 0 }}
                         className="fixed inset-0 z-[100] flex items-center justify-center p-4"
                     >
-                        {/* Overlay Backdrop */}
                         <div onClick={() => setSelectedMember(null)} className="absolute inset-0 bg-brand-dark/95 backdrop-blur-xl" />
 
-                        {/* Modal Content */}
                         <motion.div
                             initial={{ scale: 0.9, y: 50, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
@@ -338,8 +414,9 @@ const AboutPage = () => {
                         </motion.div>
                     </motion.div>
                 )}
-            </AnimatePresence>
-        </div>
+            </AnimatePresence> 
+            */}
+        </div >
     );
 };
 
