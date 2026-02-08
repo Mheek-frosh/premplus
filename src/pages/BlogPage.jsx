@@ -7,6 +7,7 @@ import nextGenImg from '../assets/nextgen.png';
 import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
+import b6Img from '../assets/b6.png';
 
 const categories = ['All', 'Innovation', 'Renewable Energy', 'Startup Advice', 'Consultation'];
 
@@ -58,12 +59,12 @@ const blogPosts = [
     },
     {
         id: 6,
-        title: 'The Role of Smart Grids in Modernizing African Infrastructure',
+        title: 'Premplus CEO receives Distinguished Merit Award',
         category: 'Innovation',
-        author: 'Sarah Johnson',
-        date: 'March 15, 2024',
-        excerpt: 'Smart grid technology is essential for efficient energy distribution and minimizing losses in the national power network.',
-        img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80'
+        author: 'NANNS Press',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus is proud to announce that our CEO, Engr. Zaharadeen Usman, has been honored with the Distinguished Merit Award by the National Association of Northern Nigerian Students (NANNS).',
+        img: b6Img
     },
     {
         id: 7,

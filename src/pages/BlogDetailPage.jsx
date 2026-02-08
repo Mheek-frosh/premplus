@@ -10,6 +10,7 @@ import nextGenImg from '../assets/nextgen.png';
 import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
+import b6Img from '../assets/b6.png';
 
 const blogPosts = [
     {
@@ -105,12 +106,20 @@ const blogPosts = [
     },
     {
         id: 6,
-        title: 'The Role of Smart Grids in Modernizing African Infrastructure',
+        title: 'Premplus CEO receives Distinguished Merit Award',
         category: 'Innovation',
-        author: 'Sarah Johnson',
-        date: 'March 15, 2024',
-        content: '<p>Smart grid technology is essential for efficient energy distribution and minimizing losses in the national power network. Learn about the latest innovations and implementation strategies.</p>',
-        img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200'
+        author: 'NANNS Press',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Premplus is proud to announce that our CEO, Engr. Zaharadeen Usman, has been honored with the Distinguished Merit Award by the National Association of Northern Nigerian Students (NANNS). This prestigious accolade recognizes Engr. Usman as an "Epitome of Societal Development" for his significant contributions to national development, educational advancement, youth engagement, and service to humanity.</strong></p>
+            
+            <p>The Distinguished Merit Award is one of the honors bestowed by NANNS, aimed at acknowledging individuals who have made remarkable impacts in various sectors of society. Engr. Usman's recognition underscores his unwavering commitment to fostering positive change and development within Nigeria.</p>
+            
+            <p>This award reflects Engr. Usman's dedication to service and his belief in the power of education and youth engagement as catalysts for societal transformation. His efforts resonate with Premplus's mission to contribute meaningfully to the communities we serve.</p>
+            
+            <p>Engr. Usman expressed his gratitude to NANS for this recognition and reaffirmed his commitment to continuing efforts that promote national development and support for Nigerian students. He emphasized that this award serves as a motivation to further engage in initiatives that drive positive societal change.</p>
+        `,
+        img: b6Img
     },
     {
         id: 7,

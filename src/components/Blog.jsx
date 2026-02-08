@@ -7,6 +7,7 @@ import nextGenImg from '../assets/nextgen.png';
 import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
+import b6Img from '../assets/b6.png';
 
 const blogPosts = [
     {
@@ -44,6 +45,13 @@ const blogPosts = [
         date: 'February 08, 2026',
         category: 'Consultation',
         img: b5Img
+    },
+    {
+        id: 6,
+        title: 'Premplus CEO receives Distinguished Merit Award',
+        date: 'February 08, 2026',
+        category: 'Innovation',
+        img: b6Img
     }
 ];
 
