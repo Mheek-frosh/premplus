@@ -1,16 +1,39 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import p1 from '../assets/p1.png';
+import p2 from '../assets/p2.png';
 
 const Footer = () => {
+    const [isDark, setIsDark] = React.useState(false);
+
+    React.useEffect(() => {
+        // Initial check
+        setIsDark(document.documentElement.classList.contains('dark'));
+
+        // Observer for changes
+        const observer = new MutationObserver(() => {
+            setIsDark(document.documentElement.classList.contains('dark'));
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <footer className="bg-app-card pt-20 pb-10 border-t border-app transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Logo & Info */}
                     <div className="space-y-6">
-                        <Link to="/" className="text-2xl font-bold tracking-tighter text-app-main">
-                            PREMPLUS
+                        <Link to="/" className="flex-shrink-0 flex items-center gap-2">
+                            <img
+                                src={isDark ? p2 : p1}
+                                alt="PREMPLUS"
+                                className="h-10 w-auto"
+                            />
+                            <span className={`text-2xl font-bold tracking-tighter ${isDark ? 'text-white' : 'text-app-main'}`}>
+                                Premplus
+                            </span>
                         </Link>
                         <p className="text-app-muted leading-relaxed text-sm">
                             Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.
