@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import mouLogo from '../assets/mou.png';
 
 const benefitItems = [
     {
         title: 'Excellence and professionalism',
-        img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+        img: mouLogo,
         desc: 'We uphold the highest standards of quality and professional ethics in every project we undertake.'
     },
     {
