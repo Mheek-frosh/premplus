@@ -15,11 +15,12 @@ import reanNewLogo from '../assets/rean-new-removebg.png';
 import p1Logo from '../assets/p1.png';
 import p2Logo from '../assets/p2.png';
 import accessBank from '../assets/accessbank.png';
+import signatureBank from '../assets/signbank.png';
 
 
 const logoAssets = [
     zenithBank,
-    p1Logo,
+    signatureBank,
     accessBank,
     abiaLogo,
     arktikLogo,
@@ -52,22 +53,30 @@ const Partners = () => {
                     className="flex flex-nowrap gap-20 items-center"
                     style={{ width: "fit-content" }}
                 >
-                    {[...logoAssets, ...logoAssets].map((logo, i) => (
-                        <div key={i} className="flex-shrink-0 flex items-center justify-center w-56">
-                            {logo === p1Logo ? (
-                                <div className="relative h-16 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                                    <img src={p1Logo} alt="Premplus Logo" className="h-16 w-auto object-contain dark:hidden" />
-                                    <img src={p2Logo} alt="Premplus Logo" className="h-16 w-auto object-contain hidden dark:block" />
-                                </div>
-                            ) : (
+                    {[...logoAssets, ...logoAssets].map((logo, i) => {
+                        // Selective resizing for smaller-looking logos
+                        let heightClass = "h-16";
+                        let additionalScale = "";
+                        let containerWidth = "w-56";
+
+                        if (logo === signatureBank) {
+                            heightClass = "h-20";
+                            additionalScale = "scale-105";
+                            containerWidth = "w-64";
+                        } else if (logo === abiaLogo || logo === midgardLogo || logo === auroraLogo) {
+                            heightClass = "h-20";
+                        }
+
+                        return (
+                            <div key={i} className={`flex-shrink-0 flex items-center justify-center ${containerWidth}`}>
                                 <img
                                     src={logo}
                                     alt="Partner Logo"
-                                    className="h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500"
+                                    className={`${heightClass} ${additionalScale} w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500`}
                                 />
-                            )}
-                        </div>
-                    ))}
+                            </div>
+                        );
+                    })}
                 </motion.div>
             </div>
         </section>
