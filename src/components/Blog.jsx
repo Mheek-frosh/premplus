@@ -8,6 +8,7 @@ import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
+import b7Img from '../assets/b7.png';
 
 const blogPosts = [
     {
@@ -52,6 +53,13 @@ const blogPosts = [
         date: 'February 08, 2026',
         category: 'Innovation',
         img: b6Img
+    },
+    {
+        id: 7,
+        title: 'Premplus signs partnership deal with Aurora',
+        date: 'February 08, 2026',
+        category: 'Consultation',
+        img: b7Img
     }
 ];
 

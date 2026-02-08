@@ -11,6 +11,7 @@ import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
+import b7Img from '../assets/b7.png';
 
 const blogPosts = [
     {
@@ -123,12 +124,24 @@ const blogPosts = [
     },
     {
         id: 7,
-        title: 'Investing in Wind Energy: Opportunities and Challenges',
-        category: 'Renewable Energy',
-        author: 'David Lee',
-        date: 'February 28, 2024',
-        content: '<p>A comprehensive look at the potential for wind energy projects across the continent and the hurdles developers face in bringing these projects to fruition.</p>',
-        img: 'https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=1200'
+        title: 'Premplus signs partnership deal with Aurora',
+        category: 'Consultation',
+        author: 'Corporate Communications',
+        date: 'February 08, 2026',
+        content: `
+            <p><strong>Premplus is excited to announce the signing of a Memorandum of Understanding (MoU) with Aurora, a leading solar energy company. This strategic partnership aims to leverage Aurora's high-quality solar products to enhance our renewable energy solutions.</strong></p>
+            
+            <p>Aurora has been at the forefront of solar innovation for over a decade, specializing in the development of advanced solar street lighting solutions. Their products are designed for easy installation, safety, and efficiency, reflecting their commitment to making solar energy accessible and affordable. A notable example is their Eiffel series, which utilizes LiFePO4 batteries known for their safety, cost-effectiveness, and long service life of 8-10 years.</p>
+            
+            <p>In addition to street lighting, Aurora offers a range of solar-powered products, including off-grid systems, LED solar landscape lights, and integrated lithium battery systems with inverters. Their comprehensive approach to solar energy solutions aligns seamlessly with Premplus's mission to provide reliable and efficient renewable energy options.</p>
+            
+            <p>Through this MoU, Premplus and Aurora will collaborate to integrate advanced solar technologies into our projects. This partnership is set to expand our service offerings, providing clients with cutting-edge solar solutions that are both sustainable and cost-effective. We are confident that this collaboration will significantly contribute to the advancement of renewable energy adoption.</p>
+            
+            <p>By combining Premplus's expertise in project implementation with Aurora's superior solar products, we aim to deliver exceptional value to our clients and promote a greener future. For more information about Aurora and their offerings, please visit their website: <a href="https://yufai-aurora.com" target="_blank" rel="noopener noreferrer" class="text-brand-green hover:underline">yufai-aurora.com</a>.</p>
+            
+            <p>Stay tuned for updates on our joint initiatives and projects stemming from this exciting partnership.</p>
+        `,
+        img: b7Img
     },
     {
         id: 8,

@@ -8,6 +8,7 @@ import b3Img from '../assets/b3.png';
 import b4Img from '../assets/b4.png';
 import b5Img from '../assets/b5.png';
 import b6Img from '../assets/b6.png';
+import b7Img from '../assets/b7.png';
 
 const categories = ['All', 'Innovation', 'Renewable Energy', 'Startup Advice', 'Consultation'];
 
@@ -68,12 +69,12 @@ const blogPosts = [
     },
     {
         id: 7,
-        title: 'Investing in Wind Energy: Opportunities and Challenges',
-        category: 'Renewable Energy',
-        author: 'David Lee',
-        date: 'February 28, 2024',
-        excerpt: 'A comprehensive look at the potential for wind energy projects across the continent and the hurdles developers face.',
-        img: 'https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=800&q=80'
+        title: 'Premplus signs partnership deal with Aurora',
+        category: 'Consultation',
+        author: 'Corporate Communications',
+        date: 'February 08, 2026',
+        excerpt: 'Premplus is excited to announce the signing of a Memorandum of Understanding (MoU) with Aurora, a leading solar energy company, to enhance our renewable energy solutions.',
+        img: b7Img
     },
     {
         id: 8,
