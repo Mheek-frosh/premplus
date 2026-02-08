@@ -65,7 +65,7 @@ const AboutPage = () => {
                 />
                 <div className="absolute inset-0 bg-black/50 z-10" />
 
-                <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
+                <div className="relative z-20 text-center px-4 max-w-7xl mx-auto">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}

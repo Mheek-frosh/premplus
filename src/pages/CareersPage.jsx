@@ -88,7 +88,7 @@ const CareersPage = () => {
             </section>
 
             {/* Jobs Section */}
-            <section className="py-24 max-w-4xl mx-auto px-4">
+            <section className="py-24 max-w-7xl mx-auto px-4">
                 <div className="flex justify-between items-end mb-16">
                     <div>
                         <h2 className="text-4xl font-bold mb-4 text-app-main">Open Roles</h2>

@@ -175,7 +175,7 @@ const ProjectsPage = () => {
 
                             <motion.div
                                 layoutId={`project-card-${selectedProject.id}`}
-                                className="relative w-full max-w-6xl max-h-[90vh] bg-app-card rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row"
+                                className="relative w-full max-w-7xl max-h-[90vh] bg-app-card rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row"
                                 onClick={(e) => e.stopPropagation()}
                             >
                                 <button

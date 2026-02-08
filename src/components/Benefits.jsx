@@ -23,7 +23,7 @@ const benefitItems = [
 const Benefits = () => {
     return (
         <section className="bg-app-secondary py-16 overflow-hidden transition-colors duration-300">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-10 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>

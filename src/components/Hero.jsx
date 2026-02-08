@@ -74,7 +74,7 @@ const Hero = () => {
                 className="absolute w-[800px] h-[800px] rounded-full border border-white/10 z-0"
             />
 
-            <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={current}
@@ -140,7 +140,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-20"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 z-20"
             >
                 <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 md:p-6 grid grid-cols-2 md:flex md:justify-around items-center gap-4 md:gap-0">
                     {[
