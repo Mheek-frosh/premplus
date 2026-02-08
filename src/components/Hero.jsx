@@ -125,7 +125,7 @@ const Hero = () => {
             </button>
 
             {/* Dash Indicators */}
-            <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+            <div className="absolute bottom-40 md:bottom-44 left-1/2 -translate-x-1/2 z-20 flex gap-3">
                 {slides.map((_, i) => (
                     <button
                         key={i}

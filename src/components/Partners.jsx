@@ -50,19 +50,18 @@ const Partners = () => {
                         repeat: Infinity,
                         ease: "linear"
                     }}
-                    className="flex flex-nowrap gap-20 items-center"
+                    className="flex flex-nowrap gap-24 items-center"
                     style={{ width: "fit-content" }}
                 >
                     {[...logoAssets, ...logoAssets].map((logo, i) => {
                         // Selective resizing for smaller-looking logos
                         let heightClass = "h-16";
                         let additionalScale = "";
-                        let containerWidth = "w-56";
+                        let containerWidth = "w-64";
 
                         if (logo === signatureBank) {
                             heightClass = "h-20";
                             additionalScale = "scale-105";
-                            containerWidth = "w-64";
                         } else if (logo === abiaLogo || logo === midgardLogo || logo === auroraLogo) {
                             heightClass = "h-20";
                         }
