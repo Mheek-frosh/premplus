@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Maximize2, Minimize2 } from 'lucide-react';
-import videoFile from '../assets/v1.MOV';
+import videoFile from '../assets/v1.mp4';
 import videoThumbnail from '../assets/video-thumbnail.png';
 
 const VideoSection = () => {
@@ -115,7 +115,6 @@ const VideoSection = () => {
                     onEnded={() => setIsPlaying(false)}
                 >
                     <source src={videoFile} type="video/mp4" />
-                    <source src={videoFile} type="video/quicktime" />
                     Your browser does not support the video tag.
                 </video>
 
