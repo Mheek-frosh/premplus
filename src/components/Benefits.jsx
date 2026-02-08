@@ -23,7 +23,7 @@ const benefitItems = [
 const Benefits = () => {
     return (
         <section className="bg-app-secondary py-24 overflow-hidden transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
@@ -45,7 +45,7 @@ const Benefits = () => {
                             className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
                                 }`}
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-64 lg:h-[500px]' : 'h-48 md:h-52'
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-64 lg:h-[420px]' : 'h-40 md:h-44'
                                 }`}>
                                 <img
                                     src={item.img}
@@ -54,7 +54,7 @@ const Benefits = () => {
                                 />
                                 <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
                             </div>
-                            <div className="p-8 flex-1 flex flex-col justify-center">
+                            <div className="p-6 flex-1 flex flex-col justify-center">
                                 <h3 className={`font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl'
                                     }`}>
                                     {item.title}
