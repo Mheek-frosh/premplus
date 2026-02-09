@@ -39,11 +39,15 @@ const Footer = () => {
                             Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.
                         </p>
                         <div className="flex space-x-4">
-                            {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
-                                    <Icon size={18} />
-                                </a>
-                            ))}
+                            <a href="https://www.facebook.com/profile.php?id=61581626194270" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
+                                <Facebook size={18} />
+                            </a>
+                            <a href="https://www.instagram.com/premplusltd?igsh=Zzg2Y2xpcHRnYWEx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
+                                <Instagram size={18} />
+                            </a>
+                            <a href="https://www.linkedin.com/company/premplusltd/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">
+                                <Linkedin size={18} />
+                            </a>
                         </div>
                     </div>
 

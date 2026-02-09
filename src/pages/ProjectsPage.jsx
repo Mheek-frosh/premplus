@@ -32,8 +32,8 @@ const ProjectsPage = () => {
             id: 2,
             title: "Adamawa State Electricity Policy",
             category: "Policy & Regulation",
-            desc: "Adamawa state electricity policy document was passed into bill, enabling solar and green energy implementation.",
-            details: "The Adamawa State Electricity Policy document has been successfully passed into a bill. This landmark legislation paves the way for the implementation of solar and green energy projects across the state. It marks a significant step towards sustainable development, providing a framework for investment in renewable energy infrastructure and ensuring a cleaner, more reliable power supply for the region.",
+            desc: "Premplus successfully developed the Adamawa State Electricity Policy framework, which has now been passed into a bill by the Adamawa State House of Assembly.",
+            details: "This landmark initiative establishes a modern legal and institutional structure for improving electricity access across Adamawa State. The Adamawa State Electricity Bill provides a comprehensive framework for electricity generation, transmission, distribution, supply, and trading within the state. It also strengthens consumer protection through the establishment of regulatory and grievance redress mechanisms. The bill repeals the Gongola Basin Energy Development Company Law of 2009 and introduces a more modern electricity market structure designed to improve power availability, reduce reliance on external energy supply, and encourage investments in solar, hydro, and gas-based electricity generation.",
             image: adamImg,
             gallery: [
                 adamImg
@@ -41,10 +41,10 @@ const ProjectsPage = () => {
         },
         {
             id: 3,
-            title: "Capacity Development in Abia State",
+            title: "Solar PV Technical Training Program",
             category: "Human Capital Development",
-            desc: "Delivering impactful orientation and training programs to empower the workforce in Abia State.",
-            details: "Premplus successfully conducted a comprehensive capacity development program in Abia State. This initiative featured intensive orientation sessions and specialized training workshops designed to equip participants with essential skills and industry knowledge. Our goal is to foster a skilled workforce capable of driving sustainable growth and innovation within the region.",
+            desc: "Premplus successfully delivered a Basic Solar PV System Operation and Maintenance training program for staff of the Ministry of Power and Public Utilities and the Broadcasting Corporation of Abia State.",
+            details: "The training was designed to strengthen technical capacity and improve the sustainability of solar power infrastructure across public institutions in the state. The Basic Solar PV System Operation and Maintenance training focused on equipping participants with practical knowledge and hands-on skills required to operate, troubleshoot, and maintain solar photovoltaic systems effectively. Through interactive sessions and practical demonstrations, Premplus ensured participants gained the technical competence to support reliable solar installations, reduce system downtime, and enhance long-term energy efficiency.",
             image: cap1Img,
             gallery: [
                 cap1Img,

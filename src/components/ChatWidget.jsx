@@ -27,26 +27,15 @@ const ChatWidget = () => {
     const handleSend = () => {
         if (!inputText.trim()) return;
 
-        const userMsg = {
-            id: Date.now(),
-            text: inputText,
-            isBot: false,
-            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        };
+        // Redirect to WhatsApp with the user's message
+        const whatsappNumber = "2348144648025"; // +234 814 464 8025
+        const message = encodeURIComponent(inputText);
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
 
-        setMessages(prev => [...prev, userMsg]);
+        window.open(whatsappUrl, '_blank');
+
+        // Clear input after sending
         setInputText("");
-
-        // Simulate Bot Reply
-        setTimeout(() => {
-            const botMsg = {
-                id: Date.now() + 1,
-                text: "Thanks for reaching out! Our team is currently reviewing your request and will get back to you shortly regarding our energy solutions.",
-                isBot: true,
-                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-            };
-            setMessages(prev => [...prev, botMsg]);
-        }, 1500);
     };
 
     return (
