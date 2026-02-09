@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Lightbulb, ShieldCheck } from 'lucide-react';
 import mouLogo from '../assets/mou.png';
 
 const benefitItems = [
@@ -10,12 +11,12 @@ const benefitItems = [
     },
     {
         title: 'Innovation with purpose',
-        img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80',
+        icon: Lightbulb,
         desc: 'Driving meaningful change through creative solutions that address real-world energy challenges.'
     },
     {
         title: 'Integrity and result orientation',
-        img: 'https://images.unsplash.com/photo-1541888941257-e8bcad95d137?w=800&q=80',
+        icon: ShieldCheck,
         desc: 'Commitment to transparency and delivering measurable value for our partners and clients.'
     }
 ];
@@ -45,14 +46,20 @@ const Benefits = () => {
                             className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
                                 }`}
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-40 md:h-56 lg:h-64' : 'h-20 md:h-24'
+                            <div className={`relative overflow-hidden ${index === 0 ? 'h-40 md:h-56 lg:h-64' : 'h-20 md:h-24 flex items-center justify-center bg-brand-dark/5'
                                 }`}>
-                                <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
+                                {item.img ? (
+                                    <>
+                                        <img
+                                            src={item.img}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
+                                    </>
+                                ) : (
+                                    <item.icon className="w-10 h-10 md:w-12 md:h-12 text-brand-green group-hover:scale-110 transition-transform duration-500" />
+                                )}
                             </div>
                             <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">
                                 <h3 className={`font-bold mb-2 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-xl md:text-2xl' : 'text-base md:text-lg'
