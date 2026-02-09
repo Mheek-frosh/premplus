@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, CheckCircle, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import cap1Img from '../assets/cap1.jpeg';
@@ -93,6 +94,20 @@ const ProjectsPage = () => {
                 }
                 */
     ];
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.selectedProjectId) {
+            const project = projects.find(p => p.id === location.state.selectedProjectId);
+            if (project) {
+                setSelectedProject(project);
+            }
+            // Optional: Clear state so it doesn't reopen on refresh, 
+            // but strictly speaking not required by prompt. 
+            // Leaving it persistent is often fine for "back" navigation.
+        }
+    }, [location]);
 
     const openProject = (project) => {
         setSelectedProject(project);
