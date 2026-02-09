@@ -1,8 +1,8 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import p1 from '../assets/p1.png';
-import p2 from '../assets/p2.png';
+import lightModeLogo from '../assets/lightmode.png';
+import darkModeLogo from '../assets/dark.png';
 
 const Footer = () => {
     const [isDark, setIsDark] = React.useState(false);
@@ -27,13 +27,10 @@ const Footer = () => {
                     <div className="space-y-6">
                         <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                             <img
-                                src={isDark ? p2 : p1}
+                                src={isDark ? darkModeLogo : lightModeLogo}
                                 alt="PREMPLUS"
                                 className="h-10 w-auto"
                             />
-                            <span className={`text-2xl font-bold tracking-tighter ${isDark ? 'text-white' : 'text-app-main'}`}>
-                                Premplus
-                            </span>
                         </Link>
                         <p className="text-app-muted leading-relaxed text-sm">
                             Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.

@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
-import p1 from '../assets/p1.png';
-import p2 from '../assets/p2.png';
+import lightModeLogo from '../assets/lightmode.png';
+import darkModeLogo from '../assets/dark.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -62,13 +62,10 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <Link to="/" className="flex-shrink-0 flex items-center gap-2">
                         <img
-                            src={(isSolidNav && !darkMode) ? p1 : p2}
+                            src={(isSolidNav && !darkMode) ? lightModeLogo : darkModeLogo}
                             alt="PREMPLUS"
                             className="h-10 w-auto"
                         />
-                        <span className={`text-2xl font-bold tracking-tighter ${(isSolidNav && !darkMode) ? 'text-app-main' : 'text-white'}`}>
-                            Premplus
-                        </span>
                     </Link>
 
                     {/* Desktop Links */}
