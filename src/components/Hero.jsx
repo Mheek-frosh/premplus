@@ -17,7 +17,7 @@ const slides = [
     },
     {
         id: 2,
-        tag: 'Electrical Engineering',
+        tag: 'Engineering Services',
         title: 'Premium engineering and consultancy services',
         desc: 'Expert design and deployment of high-voltage power transmission and distribution networks.',
         img: img2,
@@ -145,8 +145,7 @@ const Hero = () => {
                 <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 md:p-6 grid grid-cols-2 md:flex md:justify-center items-center gap-4 md:gap-12 lg:gap-20">
                     {[
                         { label: 'Founded', value: '2024' },
-                        { label: 'Locations', value: '5' },
-                        { label: 'Megawatts Installed', value: '5' },
+                        { label: 'Locations', value: '15' },
                         { label: 'Projects', value: '5' }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
