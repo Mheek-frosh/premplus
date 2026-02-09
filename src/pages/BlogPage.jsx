@@ -147,7 +147,7 @@ const BlogPage = () => {
         <div className="pt-32 pb-24 bg-app-main min-h-screen transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 md:mb-16">
-                    <h1 className="text-3xl md:text-5xl font-bold text-app-main mb-4">Blog News</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold text-app-main mb-4">Latest News and Insights</h1>
                 </div>
 
                 {/* Search Bar */}

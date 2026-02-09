@@ -94,7 +94,7 @@ const Blog = () => {
                 <div className="flex justify-between items-end mb-16">
                     <div>
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Blog</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">Latest News Article</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">Latest News and Insights</h2>
                     </div>
                     <Link to="/blog">
                         <button className="hidden sm:flex items-center gap-2 text-app-main font-bold hover:text-brand-green transition-colors">
