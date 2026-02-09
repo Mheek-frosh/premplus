@@ -21,6 +21,8 @@ import b92Img from '../assets/b92.png';
 import micImg from '../assets/mic.png';
 import standImg from '../assets/stand.png';
 import b10Img from '../assets/b10.png';
+import usBlogImg from '../assets/usblog.jpeg';
+import usBlog2Img from '../assets/usblog2.jpeg';
 
 const blogPosts = [
     {
@@ -232,11 +234,19 @@ const blogPosts = [
             <p><strong>Premplus was proud to participate in the "Growing Green Job" Career Fair and Mini Clinics, a pivotal event dedicated to fostering talent and innovation within the renewable energy sector.</strong></p>
             
             <p>The program served as a dynamic platform for both aspiring professionals and established green energy organizations. Central to the event were the career fair sessions, which facilitated direct engagement between top-tier industry players and the next generation of sustainability leaders. These interactions provided invaluable insights into the diverse career pathways available in the rapidly evolving green economy.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${usBlogImg}" alt="Career Fair Session" class="w-full h-auto object-cover" />
+            </div>
             
             <h3 class="text-2xl font-bold mt-8 mb-4">Empowering Talent through Mini Clinics</h3>
             <p>A highlight of the event was the series of "Mini Clinics" designed for green energy organizations. These focused sessions addressed critical areas such as technical skill development, professional mentorship, and the latest trends in renewable energy technologies. The clinics allowed participants to receive practical, expert-led guidance on navigating the unique challenges and opportunities of the green job market.</p>
             
             <p>Premplus's involvement underscores our commitment to not only deploying world-class energy infrastructure but also investing in the human capital that will drive the global transition to clean energy. We believe that by supporting platforms like the Growing Green Job Career Fair, we are helping to build a more resilient, knowledgeable, and passionate workforce dedicated to societal progress and environmental stewardship.</p>
+
+            <div class="my-8 rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
+                <img src="${usBlog2Img}" alt="Mini Clinics" class="w-full h-auto object-cover" />
+            </div>
             
             <p class="mt-8">We look forward to continuing our support for such initiatives and welcoming the innovative minds we met during the fair as they embark on their journeys to create a greener future.</p>
         `,
