@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import manladderImg from '../assets/manladder.png';
 import oneTwentyImg from '../assets/120.png';
 import solarImg from '../assets/solar.png';
+import cap1Img from '../assets/cap1.jpeg';
 
 const projects = [
-    { title: 'Commercial Solar Power Solution', category: 'Renewables', img: solarImg },
+    { title: 'Solar Power Solution in Abia State', category: 'Renewables', img: solarImg },
     { title: '120 kWp Hybrid Solar Mini Grid Installation', category: 'Energy', img: oneTwentyImg },
     { title: 'High Power Cable Installation by our Electrical Engineers', category: 'Infrastructure', img: manladderImg },
-    { title: 'Smart Grid Gamma', category: 'Technology', img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80' },
+    { title: 'Capacity Development', category: 'Human Capital', img: cap1Img },
 ];
 
 const Projects = () => {
