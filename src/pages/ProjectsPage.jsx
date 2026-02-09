@@ -4,6 +4,10 @@ import { ArrowRight, CheckCircle, X, ChevronLeft, ChevronRight } from 'lucide-re
 import cap1Img from '../assets/cap1.jpeg';
 import cap2Img from '../assets/cap2.jpeg';
 import cap3Img from '../assets/cap3.jpeg';
+import solarImg from '../assets/solar.png';
+import img120 from '../assets/120.png';
+import gworkImg from '../assets/gwork.jpeg';
+import adamImg from '../assets/adam.jpeg';
 
 const ProjectsPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -12,28 +16,26 @@ const ProjectsPage = () => {
     const projects = [
         {
             id: 1,
-            title: "Solar Grid Integration",
-            category: "Renewable Energy",
-            desc: "Integrated a 50MW solar farm into the national grid infrastructure, providing clean energy to over 20,000 households.",
-            details: "This flagship project involved the complete design, engineering, and deployment of a 50MW photovoltaic solar plant. Our team managed the intricate grid synchronization process, ensuring stability and efficiency. The project reduces carbon emissions by approximately 75,000 tons annually.",
-            image: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?w=800&q=80",
+            title: "120KWp Hybrid Solar Mini Grid Installation in Abia State",
+            category: "Rural Electrification",
+            desc: "Installation of a 120KWp Hybrid Solar Mini Grid to provide reliable power.",
+            details: "This project showcases our expertise in renewable energy solutions with the successful installation of a 120KWp Hybrid Solar Mini Grid in Abia State. The system is designed to provide clean, reliable, and sustainable energy to the community, significantly reducing reliance on fossil fuel generators and promoting environmental sustainability.",
+            image: solarImg,
             gallery: [
-                "https://images.unsplash.com/photo-1509391366360-fe09a921881b?w=1200&q=80",
-                "https://images.unsplash.com/photo-1559302504-64aae6ca6b6f?w=1200&q=80",
-                "https://images.unsplash.com/photo-1548613053-22002dd9c756?w=1200&q=80"
+                solarImg,
+                img120,
+                gworkImg
             ]
         },
         {
             id: 2,
-            title: "Urban Power Upgrade",
-            category: "Distribution",
-            desc: "Modernized the power distribution network for a major metropolitan area to reduce outages and improve load balancing.",
-            details: "We overhauled the aging electrical infrastructure of the downtown district. This included upgrading substations, installing smart sensors for real-time monitoring, and replacing over 50km of cabling. The result is a 99.9% reliability rate.",
-            image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+            title: "Adamawa State Electricity Policy",
+            category: "Policy & Regulation",
+            desc: "Adamawa state electricity policy document was passed into bill, enabling solar and green energy implementation.",
+            details: "The Adamawa State Electricity Policy document has been successfully passed into a bill. This landmark legislation paves the way for the implementation of solar and green energy projects across the state. It marks a significant step towards sustainable development, providing a framework for investment in renewable energy infrastructure and ensuring a cleaner, more reliable power supply for the region.",
+            image: adamImg,
             gallery: [
-                "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80",
-                "https://images.unsplash.com/photo-1487875961445-47a00398c267?w=1200&q=80",
-                "https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?w=1200&q=80"
+                adamImg
             ]
         },
         {
@@ -49,45 +51,47 @@ const ProjectsPage = () => {
                 cap3Img
             ]
         },
-        {
-            id: 4,
-            title: "Offshore Wind Study",
-            category: "Feasibility",
-            desc: "Comprehensive environmental and technical feasibility study for a proposed 200MW offshore wind farm.",
-            details: "Our technical advisory team conducted a year-long analysis of wind patterns, seabed conditions, and environmental impact. The study paved the way for a successful government tender process.",
-            image: "https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=800&q=80",
-            gallery: [
-                "https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=1200&q=80",
-                "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1200&q=80",
-                "https://images.unsplash.com/photo-1508514177221-188b1cf2f24f?w=1200&q=80"
-            ]
-        },
-        {
-            id: 5,
-            title: "Smart Meter Rollout",
-            category: "Technology",
-            desc: "Deployment of 100,000+ smart meters enabling accurate billing and energy usage analytics for consumers.",
-            details: "This massive logistical project involved the installation of IoT-enabled electricity meters across three states. We developed the backend data management system to process millions of data points daily.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-            gallery: [
-                "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
-                "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1200&q=80",
-                "https://images.unsplash.com/photo-1563770095-25f6f3be450d?w=1200&q=80"
-            ]
-        },
-        {
-            id: 6,
-            title: "Rural Electrification",
-            category: "Infrastructure",
-            desc: "Providing reliable solar-hybrid power minigrids to 15 remote communities previously off the grid.",
-            details: "Focused on social impact, this project brought electricity to rural healthcare centers and schools. The hybrid systems use solar with battery storage and backup diesel generators for 24/7 reliability.",
-            image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80",
-            gallery: [
-                "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80",
-                "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80",
-                "https://images.unsplash.com/photo-1594818379496-da1e345b0ded?w=1200&q=80"
-            ]
-        }
+        /*
+                {
+                    id: 4,
+                    title: "Offshore Wind Study",
+                    category: "Feasibility",
+                    desc: "Comprehensive environmental and technical feasibility study for a proposed 200MW offshore wind farm.",
+                    details: "Our technical advisory team conducted a year-long analysis of wind patterns, seabed conditions, and environmental impact. The study paved the way for a successful government tender process.",
+                    image: "https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=800&q=80",
+                    gallery: [
+                        "https://images.unsplash.com/photo-1466611653911-954ff21caaf0?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1508514177221-188b1cf2f24f?w=1200&q=80"
+                    ]
+                },
+                {
+                    id: 5,
+                    title: "Smart Meter Rollout",
+                    category: "Technology",
+                    desc: "Deployment of 100,000+ smart meters enabling accurate billing and energy usage analytics for consumers.",
+                    details: "This massive logistical project involved the installation of IoT-enabled electricity meters across three states. We developed the backend data management system to process millions of data points daily.",
+                    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+                    gallery: [
+                        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1563770095-25f6f3be450d?w=1200&q=80"
+                    ]
+                },
+                {
+                    id: 6,
+                    title: "Rural Electrification",
+                    category: "Infrastructure",
+                    desc: "Providing reliable solar-hybrid power minigrids to 15 remote communities previously off the grid.",
+                    details: "Focused on social impact, this project brought electricity to rural healthcare centers and schools. The hybrid systems use solar with battery storage and backup diesel generators for 24/7 reliability.",
+                    image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80",
+                    gallery: [
+                        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80",
+                        "https://images.unsplash.com/photo-1594818379496-da1e345b0ded?w=1200&q=80"
+                    ]
+                }
+                */
     ];
 
     const openProject = (project) => {
