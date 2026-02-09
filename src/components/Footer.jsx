@@ -29,7 +29,7 @@ const Footer = () => {
                             <img
                                 src={isDark ? darkModeLogo : lightModeLogo}
                                 alt="PREMPLUS"
-                                className="h-10 w-auto"
+                                className="h-20 w-auto"
                             />
                         </Link>
                         <p className="text-app-muted leading-relaxed text-sm">
