@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, CheckCircle, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import cap1Img from '../assets/cap1.jpeg';
+import cap2Img from '../assets/cap2.jpeg';
+import cap3Img from '../assets/cap3.jpeg';
 
 const ProjectsPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -35,15 +38,15 @@ const ProjectsPage = () => {
         },
         {
             id: 3,
-            title: "Green Office Complex",
-            category: "Sustainable Building",
-            desc: "LEED Platinum certified commercial building design utilizing passive cooling and smart lighting systems.",
-            details: "A landmark sustainable architecture project. We integrated geothermal cooling, rainwater harvesting, and a rooftop solar array. The building consumes 40% less energy than standard compliance requirements.",
-            image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=800&q=80",
+            title: "Capacity Development in Abia State",
+            category: "Human Capital Development",
+            desc: "Delivering impactful orientation and training programs to empower the workforce in Abia State.",
+            details: "Premplus successfully conducted a comprehensive capacity development program in Abia State. This initiative featured intensive orientation sessions and specialized training workshops designed to equip participants with essential skills and industry knowledge. Our goal is to foster a skilled workforce capable of driving sustainable growth and innovation within the region.",
+            image: cap1Img,
             gallery: [
-                "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=1200&q=80",
-                "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
-                "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80"
+                cap1Img,
+                cap2Img,
+                cap3Img
             ]
         },
         {
