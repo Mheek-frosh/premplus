@@ -64,7 +64,7 @@ const Navbar = () => {
                         <img
                             src={(isSolidNav && !darkMode) ? lightModeLogo : darkModeLogo}
                             alt="PREMPLUS"
-                            className="h-20 w-auto"
+                            className="h-11 w-auto"
                         />
                     </Link>
 
