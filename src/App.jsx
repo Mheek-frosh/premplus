@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Link, Navigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
 import ServiceSection from './components/ServiceSection';
 import Benefits from './components/Benefits';
-import Projects from './components/Projects';
 import VideoSection from './components/VideoSection';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
@@ -23,6 +23,9 @@ import img1 from './assets/1.jpeg';
 import manladderImg from './assets/manladder.png';
 import img2 from './assets/2.jpeg';
 import img3 from './assets/3.jpeg';
+import solarImg from './assets/solar.png';
+import adamImg from './assets/adam.jpeg';
+import cap1Img from './assets/cap1.jpeg';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -86,7 +89,57 @@ const HomePage = () => (
 
     <Benefits />
     <ServiceSection />
-    <Projects />
+
+    {/* Completed Projects */}
+    <section className="py-24 bg-app-main transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Project</span>
+          <h2 className="text-5xl font-bold mt-4 text-app-main">Completed Project</h2>
+          <p className="text-app-muted max-w-2xl mx-auto mt-6">
+            Watch our story in action - various projects that we have successfully delivered with excellence and precision.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group"
+          >
+            <img src={solarImg} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+              <p className="text-white font-bold text-xl">120KWp Hybrid Solar Mini Grid Installation in Abia State</p>
+            </div>
+          </motion.div>
+          <div className="lg:col-span-2 grid grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group"
+            >
+              <img src={adamImg} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white font-bold lg:text-lg">Adamawa State Electricity Policy</p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group"
+            >
+              <img src={cap1Img} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <p className="text-white font-bold lg:text-lg">Capacity Development in Abia State</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <VideoSection />
     <Blog />
   </>
