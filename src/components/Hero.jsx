@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import img1 from '../assets/sunset.jpg';
 import img2 from '../assets/2.png.jpg';
@@ -35,6 +36,7 @@ const slides = [
 
 const Hero = () => {
     const [current, setCurrent] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -45,6 +47,17 @@ const Hero = () => {
 
     const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+
+    const scrollToNextSection = () => {
+        const nextSection = document.getElementById('about-intro');
+        if (nextSection) {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const handleLearnMore = () => {
+        navigate('/services');
+    };
 
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black py-24 md:py-32">
@@ -101,7 +114,10 @@ const Hero = () => {
                 </AnimatePresence>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pb-20 md:pb-32">
-                    <button className="btn-primary flex items-center gap-2 group">
+                    <button
+                        onClick={scrollToNextSection}
+                        className="btn-primary flex items-center gap-2 group"
+                    >
                         Get Started
                         <motion.span
                             animate={{ x: [0, 5, 0] }}
@@ -110,7 +126,10 @@ const Hero = () => {
                             <Play size={16} className="fill-current" />
                         </motion.span>
                     </button>
-                    <button className="btn-secondary">
+                    <button
+                        onClick={handleLearnMore}
+                        className="btn-secondary"
+                    >
                         Learn More
                     </button>
                 </div>

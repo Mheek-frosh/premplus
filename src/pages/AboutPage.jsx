@@ -356,6 +356,15 @@ const AboutPage = () => {
                             </motion.div>
                         </div>
 
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            className="mb-12 relative group h-[500px] rounded-[60px] overflow-hidden shadow-2xl"
+                        >
+                            <img src={cheerImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                        </motion.div>
+
                         {/* Restructured Milestones in Rows */}
                         <div className="space-y-12">
                             {[
@@ -400,15 +409,6 @@ const AboutPage = () => {
                                 </motion.div>
                             ))}
                         </div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            className="mt-24 relative group h-[500px] rounded-[60px] overflow-hidden shadow-2xl"
-                        >
-                            <img src={cheerImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                        </motion.div>
                     </div>
                 </section>
             </section>
