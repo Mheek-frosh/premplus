@@ -10,7 +10,7 @@ const services = [
         title: 'Renewable Energy Solutions',
         icon: <Zap className="w-8 h-8 text-brand-green" />,
         img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
-        desc: 'Advanced solar, wind, and hybrid energy systems designed for long-term sustainability and efficiency.'
+        desc: 'Development and deployment of solar mini-grids, hybrid systems, and innovative clean energy solutions.'
     },
     {
         title: 'Electricity Market and Energy Sector Advisory',
@@ -22,13 +22,13 @@ const services = [
         title: 'Capacity Development and Energy Innovation',
         icon: <GraduationCap className="w-8 h-8 text-brand-green" />,
         img: innovationImg,
-        desc: 'Empowering stakeholders through specialized training and fostering cutting-edge energy technologies.'
+        desc: 'Empowering stakeholders through specialized training and Energy Innovation Hubs.'
     },
     {
-        title: 'Engineering, Procurement and Construction',
-        icon: <HardHat className="w-8 h-8 text-brand-green" />,
+        title: 'Sustainable Building and Infrastructure Design',
+        icon: <Building2 className="w-8 h-8 text-brand-green" />,
         img: lookbackImg,
-        desc: 'Integrated EPC services ensuring seamless delivery of large-scale infrastructure and energy projects.'
+        desc: 'Integration of renewable energy and energy efficiency into climate-responsive infrastructure projects.'
     }
 ];
 

@@ -8,26 +8,26 @@ import innovationImg from '../assets/innovation.png';
 const ServicesPage = () => {
     const services = [
         {
-            title: "Renewable energy solutions",
-            desc: "End-to-end solar, wind, and hybrid energy systems customized for your business needs.",
+            title: "Renewable Energy Solutions",
+            desc: "Development and deployment of renewable and distributed energy systems, including solar mini-grids, hybrid power systems, and innovative clean energy solutions tailored for commercial, industrial, and community applications.",
             icon: <Zap size={24} />,
             image: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?w=800&q=80"
         },
         {
-            title: "Electricity Market and Energy sector advisory",
-            desc: "Expert advisory for power transmission, electricity market regulations, and distribution network optimization.",
+            title: "Electricity Market and Energy Sector Advisory",
+            desc: "Expert advisory on electricity market design, regulatory and commercial frameworks, energy policy development, and power sector reform to improve market efficiency and investor confidence.",
             icon: <ShieldCheck size={24} />,
             image: roundtableImg
         },
         {
-            title: "Capacity development and energy innovation",
-            desc: "Training programs, research, and innovative energy solutions to drive industry growth and sustainability.",
+            title: "Capacity Development and Energy Innovation",
+            desc: "Targeted capacity development through technical and professional training, executive-level courses, and the development of Energy Innovation and Skills Hubs.",
             icon: <ArrowRight size={24} />,
             image: innovationImg
         },
         {
-            title: "Engineering, procurement and construction",
-            desc: "Comprehensive EPC services for energy infrastructure, from design to final implementation.",
+            title: "Sustainable Building and Infrastructure Design",
+            desc: "Integration of renewable energy, energy efficiency, and climate-responsive design into buildings and infrastructure to reduce costs and support sustainability objectives.",
             icon: <Building2 size={24} />,
             image: lookbackImg
         }

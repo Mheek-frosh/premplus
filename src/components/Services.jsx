@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 
 const services = [
-    { id: '01', title: 'Petroleum Product Supply', desc: 'World-class supply of petroleum products.' },
-    { id: '02', title: 'Lubricant and Chemical Storage', desc: 'Secure and efficient storage solutions.' },
-    { id: '03', title: 'Renewable Power Solutions', desc: 'Leading the green energy transition.' },
-    { id: '04', title: 'Logistics and Distribution', desc: 'Seamless global energy logistics.' },
+    { id: '01', title: 'Renewable Energy Solutions', desc: 'Integrated renewable and distributed energy systems.' },
+    { id: '02', title: 'Electricity Market Advisory', desc: 'Market design and energy sector advisory services.' },
+    { id: '03', title: 'Capacity Development', desc: 'Targeted capacity building and energy innovation.' },
+    { id: '04', title: 'Sustainable Infrastructure', desc: 'Energy-efficient building and infrastructure design.' },
 ];
 
 const Services = () => {

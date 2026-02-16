@@ -142,10 +142,10 @@ const AboutPage = () => {
                             className="space-y-6"
                         >
                             <p className="text-app-muted text-xl leading-relaxed">
-                                At Premplus, we are more than just an energy provider; we are architects of a sustainable future. Founded with a vision to redefine how the world interacts with energy, we specialize in delivering high-impact engineering solutions that bridge the gap between traditional infrastructure and next-generation renewable technology.
+                                Premplus is an integrated energy and sustainability solutions company delivering advisory, development, and implementation services across Nigeria and selected African markets. We partner with governments, corporates, investors, and development institutions to design, finance, and deliver energy and infrastructure solutions that are commercially viable, technically sound, and sustainable.
                             </p>
                             <p className="text-app-muted text-xl leading-relaxed">
-                                Our team of seasoned experts brings decades of collective experience in electricity markets, energy sector advisory, and large-scale EPC projects. We are driven by a commitment to excellence and a passion for innovation, ensuring that every project we undertake contributes to a cleaner, more reliable global energy landscape.
+                                Our core strength lies in bridging the gap between strategy and execution—transforming energy policies, market opportunities, and investment plans into bankable projects and operational assets.
                             </p>
                         </motion.div>
                     </div>
@@ -161,7 +161,7 @@ const AboutPage = () => {
                             </div>
                             <h2 className="text-4xl font-bold mb-8 text-app-main">Our Mission</h2>
                             <p className="text-app-muted text-lg leading-relaxed mb-10">
-                                To lead the global transition toward cleaner and more efficient energy systems. We provide state-of-the-art petroleum and renewable energy infrastructure that empowers businesses while preserving the environment for future generations.
+                                To transform policy and strategy into effective action by providing integrated renewable energy solutions, advising on electricity markets, building capacity, and developing sustainable infrastructure.
                             </p>
                             <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-yellow pb-1 px-1 hover:border-brand-green transition-all">
                                 Read More <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -183,7 +183,7 @@ const AboutPage = () => {
                             </div>
                             <h2 className="text-4xl font-bold mb-8 text-app-main">Our Vision</h2>
                             <p className="text-app-muted text-lg leading-relaxed mb-10">
-                                To be the most innovative energy provider in the world, renowned for our commitment to sustainable development and operational excellence. We envision a planet powered entirely by safe, renewable, and infinitely reliable energy sources.
+                                To be a reputable and reliable provider of integrated energy and sustainability solutions, contributing to the development of efficient, resilient, and sustainable energy systems in Nigeria and across Africa.
                             </p>
                             <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-green pb-1 px-1 hover:border-brand-yellow transition-all">
                                 Read More <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -201,15 +201,14 @@ const AboutPage = () => {
                         <h2 className="text-5xl font-bold mt-4 text-app-main">Our Core Values</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { title: 'Sustainability', icon: <Leaf />, color: 'bg-emerald-500/10 text-emerald-600' },
-                            { title: 'Innovation', icon: <Lightbulb />, color: 'bg-amber-500/10 text-amber-600' },
-                            { title: 'Integrity', icon: <Shield />, color: 'bg-blue-500/10 text-blue-600' },
-                            { title: 'Collaboration', icon: <Users />, color: 'bg-indigo-500/10 text-indigo-600' },
-                            { title: 'Excellence', icon: <Award />, color: 'bg-purple-500/10 text-purple-600' },
-                            { title: 'Inclusion', icon: <UserPlus />, color: 'bg-pink-500/10 text-pink-600' },
-                            { title: 'Community', icon: <Heart />, color: 'bg-red-500/10 text-red-600' }
+                            { title: 'Excellence and professionalism', icon: <Award />, color: 'bg-emerald-500/10 text-emerald-600' },
+                            { title: 'Commercial discipline and accountability', icon: <Shield />, color: 'bg-amber-500/10 text-amber-600' },
+                            { title: 'Innovation with purpose', icon: <Lightbulb />, color: 'bg-blue-500/10 text-blue-600' },
+                            { title: 'Sustainability and long-term value creation', icon: <Leaf />, color: 'bg-indigo-500/10 text-indigo-600' },
+                            { title: 'Partnership and collaboration', icon: <Users />, color: 'bg-purple-500/10 text-purple-600' },
+                            { title: 'Integrity and results orientation', icon: <Heart />, color: 'bg-pink-500/10 text-pink-600' }
                         ].map((value, idx) => (
                             <motion.div
                                 key={idx}
@@ -222,9 +221,6 @@ const AboutPage = () => {
                                     {React.cloneElement(value.icon, { size: 28 })}
                                 </div>
                                 <h3 className="text-2xl font-bold text-app-main group-hover:text-brand-green transition-colors">{value.title}</h3>
-                                <p className="text-app-muted mt-4 text-sm leading-relaxed">
-                                    Living our commitment to {value.title.toLowerCase()} in every decision we make.
-                                </p>
                             </motion.div>
                         ))}
                     </div>
@@ -322,32 +318,73 @@ const AboutPage = () => {
                 </section> 
                 */}
 
-                {/* Watch our Story in Action - Hidden */}
-                {/* 
+                {/* Our History */}
                 <section className="py-24">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
+                    <div className="grid md:grid-cols-2 gap-16 items-start">
+                        <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}>
+                            <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Journey</span>
                             <h2 className="text-5xl font-bold leading-tight mb-10 text-app-main">
-                                Watch our <span className="text-brand-yellow underline decoration-brand-yellow/30">Story</span> in Action
+                                Our <span className="text-brand-green">History</span>
                             </h2>
-                            <p className="text-xl font-bold text-app-main mb-6">
-                                Premplus helps people discover simple ways to live better every day through
-                            </p>
-                            <p className="text-app-muted text-lg mb-8 leading-relaxed">
-                                Blending smart technology with personalized guidance, our platform helps people make small, meaningful changes that lead to lasting results. By combining data-driven insights and human support, we've created a...
-                            </p>
-                        </div>
-                        <div className="relative group cursor-pointer h-[400px] rounded-[50px] overflow-hidden shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" className="w-full h-full object-cover brightness-75 transition-scale duration-700 group-hover:scale-105" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white shadow-2xl group-hover:scale-110 transition-transform">
-                                    <Play size={32} className="fill-current ml-1" />
+                            <div className="space-y-6 text-app-muted text-lg leading-relaxed">
+                                <p>
+                                    Premplus was established in 2024 in Abuja, Nigeria, in response to the rapidly evolving needs of Nigeria’s energy sector and the wider African clean energy transition. The Company was founded to provide practical, implementation-driven solutions at a time when energy reforms, decentralisation of electricity markets, and renewable energy deployment were creating new opportunities, alongside significant institutional and technical gaps.
+                                </p>
+                                <p>
+                                    From inception, Premplus was conceived as more than a conventional engineering or consulting firm. Its founding vision was to operate at the intersection of policy, markets, infrastructure delivery, and capacity development, addressing the persistent disconnect between energy policies and on-the-ground execution. This positioning was informed by extensive professional experience across engineering, power system operations, ICT, renewable energy, project management, and public-sector engagement.
+                                </p>
+                                <p>
+                                    Premplus commenced operations with a strong focus on renewable energy development and deployment, particularly decentralized energy solutions such as solar mini-grids, hybrid systems, and solar power solutions for public institutions and productive economic uses. Early engagements emphasized technical robustness, regulatory compliance, and long-term sustainability, reflecting the Company’s commitment to delivering bankable and operationally reliable projects.
+                                </p>
+                                <p>
+                                    As Nigeria’s electricity sector underwent significant structural changes, including the decentralisation of electricity regulation and the emergence of State Electricity Markets, Premplus expanded its scope to include electricity market and power sector consultancy. The Company began supporting State Governments with advisory services related to market design, regulatory frameworks, institutional strengthening, and investment readiness, helping bridge national policy objectives with sub-national implementation realities.
+                                </p>
+                                <p>
+                                    A major milestone in the Company’s growth was its engagement by the Adamawa State Government, where Premplus developed the State Electricity Policy and the State Electricity Law, providing the foundational legal and policy framework for the State’s power sector reforms. Building on this role, Premplus continues to provide advisory support to Adamawa State on its transition to a State-regulated electricity market, including institutional, regulatory, and market readiness support.
+                                </p>
+                                <p>
+                                    Recognising that sustainable energy systems depend as much on people and institutions as on infrastructure, Premplus deliberately embedded capacity development into its core business model. The Company developed and delivered training programmes targeting technical professionals, public-sector officials, and energy market stakeholders, with a strong emphasis on practical skills, institutional performance, and applied knowledge.
+                                </p>
+                                <p>
+                                    Another important milestone in the Company’s evolution was the execution of a Memorandum of Understanding with the Rural Electrification Agency (REA) to support the upgrade of REA’s workshops and training centres into Energy Innovation Hubs. This initiative reinforced Premplus’ role in strengthening Nigeria’s renewable energy ecosystem through skills development, innovation support, and institutional capacity building.
+                                </p>
+                                <p>
+                                    In parallel, Premplus expanded its services in energy policy and strategic advisory, supporting the development of practical policies, strategies, and implementation frameworks for governments and development partners. These services were designed to ensure that energy policies are actionable, financially viable, and aligned with market realities.
+                                </p>
+                                <p>
+                                    To further enhance its sustainability offering, Premplus integrated sustainable building and energy-efficient infrastructure design into its service portfolio, enabling clients to reduce lifecycle costs, improve environmental performance, and align infrastructure development with climate objectives.
+                                </p>
+                                <p>
+                                    Since its establishment, Premplus has operated with a Nigeria-wide mandate while positioning itself for regional engagement across Africa, leveraging local market knowledge, strong institutional understanding, and international best practices. The Company continues to evolve as a trusted partner to governments, development institutions, and private sector clients seeking commercially viable, technically sound, and sustainable energy solutions.
+                                </p>
+                                <p>
+                                    Today, Premplus stands as an integrated energy and sustainability solutions company, committed to translating strategy into execution, strengthening institutions, building capacity, and delivering long-term value across the energy sector.
+                                </p>
+                            </div>
+                        </motion.div>
+                        <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="space-y-8">
+                            <div className="bg-app-card p-12 rounded-[50px] border border-app shadow-sm">
+                                <h3 className="text-3xl font-bold mb-6 text-app-main">Brief History</h3>
+                                <div className="space-y-4 text-app-muted leading-relaxed">
+                                    <p>
+                                        Premplus was founded to bridge the gap between energy policies and practical implementation, leveraging expertise in engineering, power systems, ICT, renewable energy, and project management. The company initially focused on decentralized renewable solutions, such as solar mini-grids and public institution projects, emphasizing technical quality and sustainability. As Nigeria’s electricity sector decentralized, Premplus expanded into consultancy, advising state governments on market design, regulatory frameworks, and institutional strengthening. A key achievement was developing Adamawa State’s electricity policy and law, followed by continued advisory support for its market transition.
+                                    </p>
+                                    <p>
+                                        Recognizing the importance of capacity development, Premplus launched training programs for professionals and stakeholders, and partnered with the Rural Electrification Agency to transform its workshops into Energy Innovation Hubs. The company also provides strategic policy advisory to ensure actionable, market-aligned energy strategies. By integrating sustainable building design into its offerings, Premplus helps clients improve efficiency and environmental impact. Operating nationwide and preparing for regional expansion, Premplus remains a trusted partner for governments and private clients seeking sustainable energy solutions across Africa.
+                                    </p>
                                 </div>
                             </div>
-                        </div>
+                            <div className="relative group cursor-pointer h-[400px] rounded-[50px] overflow-hidden shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" className="w-full h-full object-cover brightness-75 transition-scale duration-700 group-hover:scale-105" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white shadow-2xl group-hover:scale-110 transition-transform">
+                                        <Play size={32} className="fill-current ml-1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
                     </div>
-                </section> 
-                */}
+                </section>
             </section>
 
             {/* Work with Premplus CTA */}
