@@ -216,7 +216,7 @@ const AboutPage = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="group p-8 rounded-[40px] bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
+                                className="group p-8 rounded-[40px] bg-app-card border border-app shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
                             >
                                 <div className={`w-14 h-14 ${value.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
                                     {React.cloneElement(value.icon, { size: 28 })}
@@ -402,7 +402,7 @@ const AboutPage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                                    className="bg-app-card p-10 rounded-[40px] border border-app shadow-sm hover:shadow-md transition-shadow"
                                 >
                                     <h3 className="text-2xl font-bold text-brand-green mb-4">{milestone.title}</h3>
                                     <p className="text-app-muted text-lg leading-relaxed">{milestone.text}</p>
