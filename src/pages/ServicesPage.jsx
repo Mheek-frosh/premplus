@@ -39,13 +39,13 @@ const ServicesPage = () => {
 
                 {/* Header */}
                 <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-                    <div className="max-w-2xl">
+                    <div className="max-w-2xl text-left">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Services</span>
                         <h1 className="text-4xl md:text-5xl font-bold text-app-main">
                             Professional Energy <br /> Solutions We Provide
                         </h1>
                     </div>
-                    <p className="text-app-muted max-w-md leading-relaxed">
+                    <p className="text-app-muted max-w-md leading-relaxed text-left">
                         Competently repurpose go forward benefits without goal-oriented conveniently target opportunities whereas parallel services.
                     </p>
                 </div>
