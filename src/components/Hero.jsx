@@ -73,7 +73,7 @@ const Hero = () => {
                         backgroundImage: `url("${slides[current].img}")`,
                     }}
                 >
-                    <div className="absolute inset-0 bg-brand-dark/70" /> {/* Increased from 60 to 70 for better text visibility */}
+                    <div className="absolute inset-0 bg-black/70 backdrop-blur-[1px]" />
                 </motion.div>
             </AnimatePresence>
 
