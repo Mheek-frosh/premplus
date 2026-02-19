@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../assets/sunset.jpg';
+import img1 from '../assets/s.jpeg';
 import img2 from '../assets/2.png.jpg';
 import img3 from '../assets/light.png';
 import ChatWidget from './ChatWidget';
@@ -73,7 +73,7 @@ const Hero = () => {
                         backgroundImage: `url("${slides[current].img}")`,
                     }}
                 >
-                    <div className="absolute inset-0 bg-brand-dark/60" /> {/* Dark overlay for readability, not white fade */}
+                    <div className="absolute inset-0 bg-brand-dark/70" /> {/* Increased from 60 to 70 for better text visibility */}
                 </motion.div>
             </AnimatePresence>
 
