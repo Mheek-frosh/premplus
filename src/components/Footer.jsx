@@ -63,9 +63,10 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-app-main">Services</h4>
                         <ul className="space-y-4 text-sm text-app-muted">
-                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Renewable Energy</Link></li>
-                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Consultation</Link></li>
-                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Green Energy</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Renewable Energy Solutions</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Electricity Market Advisory</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Capacity Development</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Sustainable Building Design</Link></li>
                         </ul>
                     </div>
 
