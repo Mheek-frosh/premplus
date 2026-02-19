@@ -165,7 +165,7 @@ const Hero = () => {
                     {[
                         { label: 'Founded', value: '2024' },
                         { label: 'Locations', value: '15' },
-                        { label: 'Projects', value: '15' }
+                        { label: 'Projects', value: '18' }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group">
                             <p className="text-white/50 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
