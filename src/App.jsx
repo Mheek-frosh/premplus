@@ -92,7 +92,7 @@ const HomePage = () => (
 
 
     {/* Completed Projects */}
-    <section className="py-24 bg-app-main transition-colors duration-300 relative overflow-hidden">
+    <section id="completed-projects" className="py-24 bg-app-main transition-colors duration-300 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <motion.div
         animate={{

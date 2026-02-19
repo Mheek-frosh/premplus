@@ -49,7 +49,7 @@ const Hero = () => {
     const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
     const scrollToNextSection = () => {
-        const nextSection = document.getElementById('about-intro');
+        const nextSection = document.getElementById('completed-projects');
         if (nextSection) {
             nextSection.scrollIntoView({ behavior: 'smooth' });
         }
