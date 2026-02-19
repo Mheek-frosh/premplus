@@ -9,7 +9,7 @@ import hwomanImg from '../assets/hwoman.png';
 import groupImg from '../assets/group.png';
 import missionImg from '../assets/mission.png';
 import visionImg from '../assets/vision.png';
-import cheerImg from '../assets/cheer.jpg';
+
 
 const teamMembers = [
     {
@@ -319,98 +319,7 @@ const AboutPage = () => {
                 </section> 
                 */}
 
-                {/* Our History */}
-                <section className="py-24">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-20">
-                            <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Journey</span>
-                            <h2 className="text-5xl font-bold leading-tight text-app-main">
-                                Our <span className="text-brand-green">History</span>
-                            </h2>
-                        </div>
 
-                        <div className="grid md:grid-cols-2 gap-16 items-start mb-24">
-                            <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} className="space-y-6 text-app-muted text-lg leading-relaxed">
-                                <p>
-                                    Premplus was established in 2024 in Abuja, Nigeria, in response to the rapidly evolving needs of Nigeria’s energy sector and the wider African clean energy transition. The Company was founded to provide practical, implementation-driven solutions at a time when energy reforms, decentralisation of electricity markets, and renewable energy deployment were creating new opportunities, alongside significant institutional and technical gaps.
-                                </p>
-                                <p>
-                                    From inception, Premplus was conceived as more than a conventional engineering or consulting firm. Its founding vision was to operate at the intersection of policy, markets, infrastructure delivery, and capacity development, addressing the persistent disconnect between energy policies and on-the-ground execution. This positioning was informed by extensive professional experience across engineering, power system operations, ICT, renewable energy, project management, and public-sector engagement.
-                                </p>
-                                <p>
-                                    Premplus commenced operations with a strong focus on renewable energy development and deployment, particularly decentralized energy solutions such as solar mini-grids, hybrid systems, and solar power solutions for public institutions and productive economic uses.
-                                </p>
-                            </motion.div>
-                            <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="space-y-8">
-                                <div className="bg-app-card p-12 rounded-[50px] border border-app shadow-sm">
-                                    <h3 className="text-3xl font-bold mb-6 text-app-main">Brief History</h3>
-                                    <div className="space-y-4 text-app-muted leading-relaxed">
-                                        <p>
-                                            Premplus was founded to bridge the gap between energy policies and practical implementation, leveraging expertise in engineering, power systems, ICT, renewable energy, and project management. The company initially focused on decentralized renewable solutions, such as solar mini-grids and public institution projects, emphasizing technical quality and sustainability.
-                                        </p>
-                                        <p>
-                                            As Nigeria’s electricity sector decentralized, Premplus expanded into consultancy, advising state governments on market design, regulatory frameworks, and institutional strengthening.
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        </div>
-
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            className="mb-12 relative group h-[500px] rounded-[60px] overflow-hidden shadow-2xl"
-                        >
-                            <img src={cheerImg} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                        </motion.div>
-
-                        {/* Restructured Milestones in Rows */}
-                        <div className="space-y-12">
-                            {[
-                                {
-                                    title: "State Electricity Reforms",
-                                    text: "A major milestone in the Company’s growth was its engagement by the Adamawa State Government, where Premplus developed the State Electricity Policy and the State Electricity Law, providing the foundational legal and policy framework for the State’s power sector reforms. Building on this role, Premplus continues to provide advisory support to Adamawa State on its transition to a State-regulated electricity market, including institutional, regulatory, and market readiness support."
-                                },
-                                {
-                                    title: "Capacity Development",
-                                    text: "Recognising that sustainable energy systems depend as much on people and institutions as on infrastructure, Premplus deliberately embedded capacity development into its core business model. The Company developed and delivered training programmes targeting technical professionals, public-sector officials, and energy market stakeholders, with a strong emphasis on practical skills, institutional performance, and applied knowledge."
-                                },
-                                {
-                                    title: "Energy Innovation Hubs",
-                                    text: "Another important milestone in the Company’s evolution was the execution of a Memorandum of Understanding with the Rural Electrification Agency (REA) to support the upgrade of REA’s workshops and training centres into Energy Innovation Hubs. This initiative reinforced Premplus’ role in strengthening Nigeria’s renewable energy ecosystem through skills development, innovation support, and institutional capacity building."
-                                },
-                                {
-                                    title: "Strategic Advisory",
-                                    text: "In parallel, Premplus expanded its services in energy policy and strategic advisory, supporting the development of practical policies, strategies, and implementation frameworks for governments and development partners. These services were designed to ensure that energy policies are actionable, financially viable, and aligned with market realities."
-                                },
-                                {
-                                    title: "Sustainability Integration",
-                                    text: "To further enhance its sustainability offering, Premplus integrated sustainable building and energy-efficient infrastructure design into its service portfolio, enabling clients to reduce lifecycle costs, improve environmental performance, and align infrastructure development with climate objectives."
-                                },
-                                {
-                                    title: "Regional Reach",
-                                    text: "Since its establishment, Premplus has operated with a Nigeria-wide mandate while positioning itself for regional engagement across Africa, leveraging local market knowledge, strong institutional understanding, and international best practices. The Company continues to evolve as a trusted partner to governments, development institutions, and private sector clients seeking commercially viable, technically sound, and sustainable energy solutions."
-                                },
-                                {
-                                    title: "Our Commitment Today",
-                                    text: "Today, Premplus stands as an integrated energy and sustainability solutions company, committed to translating strategy into execution, strengthening institutions, building capacity, and delivering long-term value across the energy sector."
-                                }
-                            ].map((milestone, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.1 }}
-                                    className="bg-app-card p-10 rounded-[40px] border border-app shadow-sm hover:shadow-md transition-shadow"
-                                >
-                                    <h3 className="text-2xl font-bold text-brand-green mb-4">{milestone.title}</h3>
-                                    <p className="text-app-muted text-lg leading-relaxed">{milestone.text}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
             </section>
 
             {/* Work with Premplus CTA */}
