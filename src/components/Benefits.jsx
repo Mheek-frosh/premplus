@@ -62,12 +62,10 @@ const Benefits = () => {
                                 )}
                             </div>
                             <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">
-                                <h3 className={`font-bold mb-2 group-hover:text-brand-green transition-colors leading-tight text-app-main ${index === 0 ? 'text-xl md:text-2xl' : 'text-base md:text-lg'
-                                    }`}>
+                                <h3 className="font-bold mb-2 group-hover:text-brand-green transition-colors leading-tight text-app-main text-xl md:text-2xl">
                                     {item.title}
                                 </h3>
-                                <p className={`text-app-muted leading-relaxed ${index === 0 ? 'text-sm md:text-base' : 'text-[10px] md:text-xs'
-                                    }`}>
+                                <p className="text-app-muted leading-relaxed text-sm md:text-base">
                                     {item.desc}
                                 </p>
                             </div>
