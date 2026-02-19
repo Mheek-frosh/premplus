@@ -25,7 +25,7 @@ const Benefits = () => {
     return (
         <section className="bg-app-secondary py-10 overflow-hidden transition-colors duration-300">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row justify-between items-end mb-6 gap-6">
+                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-6 gap-6">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">The Advantages of <br /> Partnering with <span className="text-brand-green">US</span></h2>

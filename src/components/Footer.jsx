@@ -53,7 +53,7 @@ const Footer = () => {
                         <h4 className="text-lg font-bold mb-6 text-app-main">Company</h4>
                         <ul className="space-y-4 text-sm text-app-muted">
                             <li><Link to="/about" className="hover:text-brand-yellow transition-colors">About Us</Link></li>
-                            <li><Link to="/about#history" className="hover:text-brand-yellow transition-colors">Our History</Link></li>
+                            <li><Link to="/projects" className="hover:text-brand-yellow transition-colors">Projects</Link></li>
                             <li><Link to="/team" className="hover:text-brand-yellow transition-colors">Our Team</Link></li>
                             <li><Link to="/careers" className="hover:text-brand-yellow transition-colors">Careers</Link></li>
                         </ul>
@@ -63,10 +63,9 @@ const Footer = () => {
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-app-main">Services</h4>
                         <ul className="space-y-4 text-sm text-app-muted">
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Oil Supply</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Renewable Energy</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Gas Distribution</a></li>
-                            <li><a href="#" className="hover:text-brand-yellow transition-colors">Consultation</a></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Renewable Energy</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Consultation</Link></li>
+                            <li><Link to="/services" className="hover:text-brand-yellow transition-colors">Green Energy</Link></li>
                         </ul>
                     </div>
 

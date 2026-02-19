@@ -38,7 +38,7 @@ const ServicesPage = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}
-                <div className="mb-16 flex flex-col md:flex-row justify-between items-end gap-8">
+                <div className="mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
                     <div className="max-w-2xl">
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-4">Our Services</span>
                         <h1 className="text-4xl md:text-5xl font-bold text-app-main">
