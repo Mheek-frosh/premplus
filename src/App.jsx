@@ -59,16 +59,15 @@ const HomePage = () => (
         </div>
 
         <div className="lg:pl-8">
-          <span className="text-brand-green font-bold text-sm uppercase tracking-[0.2em]">What We Do</span>
-          <h2 className="text-4xl lg:text-5xl font-bold mt-4 mb-8 leading-tight text-app-main">Empowering Energy Solutions</h2>
-          <p className="text-app-muted text-lg mb-10 leading-relaxed italic">
-            Leading the global transition to clean, efficient, and reliable energy through innovative technology and strategic expertise.
+          <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight text-app-main">Empowering Energy Solutions</h2>
+          <p className="text-app-muted text-lg mb-10 leading-relaxed">
+            At Premplus, we work with governments, institutions, and private sector partners to accelerate sustainable development through clean energy innovation, technical excellence, and strategic execution.
           </p>
           <div className="space-y-6 mb-12">
             {[
-              'Innovative energy distribution technologies',
-              'Sustainable petroleum product harvesting',
-              'Renewable energy integration strategies'
+              'Policy-driven, project-focused energy solutions',
+              'Strong technical expertise and stakeholder engagement',
+              'Sustainable infrastructure built for long-term value'
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4">
                 <div className="w-6 h-6 rounded-full bg-brand-green/10 flex items-center justify-center text-brand-green">
@@ -159,16 +158,16 @@ const HomePage = () => (
           >
             <motion.img
               src={solarImg}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover transition-all duration-700"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.7 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-white font-bold text-xl leading-tight"
+                className="text-white font-bold text-xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
               >
                 120KWp Hybrid Solar Mini Grid Installation in Abia State
               </motion.p>
@@ -189,16 +188,16 @@ const HomePage = () => (
           >
             <motion.img
               src={adamImg}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover transition-all duration-700"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.7 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-white font-bold lg:text-lg leading-tight"
+                className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
               >
                 Adamawa State Electricity Policy
               </motion.p>
@@ -219,16 +218,16 @@ const HomePage = () => (
           >
             <motion.img
               src={cap1Img}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-full object-cover transition-all duration-700"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.7 }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-6">
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="text-white font-bold lg:text-lg leading-tight"
+                className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
               >
                 Solar PV Technical Training Program
               </motion.p>
