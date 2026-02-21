@@ -74,10 +74,10 @@ const ServiceSection = ({ service, index }) => {
             id={service.id}
             className={`py-12 lg:py-16 flex items-center ${index % 2 === 0 ? 'bg-app-secondary' : 'bg-app-main'} transition-colors duration-300`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                <div className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
+            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full">
+                <div className={`grid lg:grid-cols-2 gap-6 lg:gap-10 xl:gap-12 items-stretch ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
                     {/* Text Content */}
-                    <div className={isTextLeft ? 'lg:order-1' : 'lg:col-start-2'}>
+                    <div className={`${isTextLeft ? 'lg:order-1' : 'lg:col-start-2'} text-left min-w-0 flex flex-col justify-center`}>
                         <motion.div
                             initial={{ opacity: 0, x: isTextLeft ? -40 : 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -85,10 +85,10 @@ const ServiceSection = ({ service, index }) => {
                             transition={{ duration: 0.6 }}
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="w-14 h-14 rounded-2xl bg-brand-green/15 flex items-center justify-center text-brand-green">
+                                <div className="w-14 h-14 flex-shrink-0 rounded-2xl bg-brand-green/15 flex items-center justify-center text-brand-green">
                                     <service.icon size={28} />
                                 </div>
-                                <h2 className="text-3xl lg:text-4xl font-bold text-app-main">
+                                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-app-main">
                                     {service.title}
                                 </h2>
                             </div>
@@ -119,13 +119,13 @@ const ServiceSection = ({ service, index }) => {
                     </div>
 
                     {/* Image */}
-                    <div className={isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'}>
+                    <div className={`${isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'} min-w-0`}>
                         <motion.div
                             initial={{ opacity: 0, x: isTextLeft ? 40 : -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]"
+                            className="relative rounded-3xl overflow-hidden shadow-2xl w-full aspect-[4/3]"
                         >
                             <img
                                 src={service.image}
@@ -146,7 +146,7 @@ const ServicesPage = () => {
         <div className="bg-app-secondary min-h-screen transition-colors duration-300">
             {/* Page Header */}
             <div className="pt-28 pb-4 bg-app-secondary">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 text-center">
                     <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-2">
                         Our Services
                     </span>
