@@ -204,12 +204,12 @@ const AboutPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
-                            { title: 'Excellence and professionalism', icon: <Award />, color: 'bg-emerald-500/10 text-emerald-600' },
-                            { title: 'Commercial discipline and accountability', icon: <Shield />, color: 'bg-amber-500/10 text-amber-600' },
-                            { title: 'Innovation with purpose', icon: <Lightbulb />, color: 'bg-blue-500/10 text-blue-600' },
-                            { title: 'Sustainability and long-term value creation', icon: <Leaf />, color: 'bg-indigo-500/10 text-indigo-600' },
-                            { title: 'Partnership and collaboration', icon: <Users />, color: 'bg-purple-500/10 text-purple-600' },
-                            { title: 'Integrity and results orientation', icon: <Heart />, color: 'bg-pink-500/10 text-pink-600' }
+                            { title: 'Professionalism', icon: <Award />, color: 'bg-emerald-500/10 text-emerald-600' },
+                            { title: 'Accountability', icon: <Shield />, color: 'bg-amber-500/10 text-amber-600' },
+                            { title: 'Innovation', icon: <Lightbulb />, color: 'bg-blue-500/10 text-blue-600' },
+                            { title: 'Sustainability', icon: <Leaf />, color: 'bg-indigo-500/10 text-indigo-600' },
+                            { title: 'Collaboration', icon: <Users />, color: 'bg-purple-500/10 text-purple-600' },
+                            { title: 'Integrity', icon: <Heart />, color: 'bg-pink-500/10 text-pink-600' }
                         ].map((value, idx) => (
                             <motion.div
                                 key={idx}
