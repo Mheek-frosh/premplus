@@ -67,15 +67,16 @@ const servicesData = [
 ];
 
 const ServiceSection = ({ service, index }) => {
-    const isTextLeft = index % 2 === 0 || index === 3; // 0, 2, 3: text left, image right | 1: image left, text right
+    const isTextLeft = index % 2 === 0; // 0, 2: text left, image right | 1, 3: image left, text right
+    const isSustainable = service.id === 'sustainable';
 
     return (
         <section
             id={service.id}
-            className={`py-12 lg:py-16 flex items-center ${index % 2 === 0 ? 'bg-app-secondary' : 'bg-app-main'} transition-colors duration-300`}
+            className={`flex items-center ${index % 2 === 0 ? 'bg-app-secondary' : 'bg-app-main'} transition-colors duration-300 ${isSustainable ? 'py-8 lg:py-10' : 'py-12 lg:py-16'}`}
         >
             <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full">
-                <div className={`grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8 xl:gap-10 items-stretch lg:min-h-[320px] ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
+                <div className={`grid lg:grid-cols-[1.4fr_1fr] items-stretch ${!isTextLeft ? 'lg:grid-flow-dense' : ''} ${isSustainable ? 'gap-4 lg:gap-6 lg:min-h-0' : 'gap-6 lg:gap-8 xl:gap-10 lg:min-h-[320px]'}`}>
                     {/* Text Content */}
                     <div className={`${isTextLeft ? 'lg:order-1' : 'lg:col-start-2'} text-left min-w-0 flex flex-col h-full relative z-10`}>
                         <motion.div
@@ -86,18 +87,18 @@ const ServiceSection = ({ service, index }) => {
                             className="flex flex-col justify-between h-full min-h-0"
                         >
                             <div>
-                                <div className="flex items-center gap-4 mb-4">
+                                <div className={`flex items-center gap-4 ${isSustainable ? 'mb-2' : 'mb-4'}`}>
                                     <div className="w-14 h-14 flex-shrink-0 rounded-2xl bg-brand-green/15 flex items-center justify-center text-brand-green">
                                         <service.icon size={28} />
                                     </div>
-                                <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold text-app-main">
+                                <h2 className={`text-xl lg:text-2xl xl:text-3xl font-bold text-app-main ${service.id === 'sustainable' || service.id === 'advisory' ? 'whitespace-nowrap' : ''}`}>
                                     {service.title}
                                 </h2>
                                 </div>
-                                <p className="text-app-muted text-base lg:text-lg leading-relaxed mb-4">
+                                <p className={`text-app-muted text-base lg:text-lg leading-relaxed ${isSustainable ? 'mb-2' : 'mb-4'}`}>
                                     {service.intro}
                                 </p>
-                                <ul className="space-y-2 mb-4">
+                                <ul className={`${isSustainable ? 'space-y-1.5 mb-2' : 'space-y-2 mb-4'}`}>
                                 {service.bullets.map((bullet, i) => (
                                     <motion.li
                                         key={i}
@@ -115,20 +116,20 @@ const ServiceSection = ({ service, index }) => {
                                 ))}
                                 </ul>
                             </div>
-                            <p className="text-app-muted text-base lg:text-lg leading-relaxed border-l-4 border-brand-green pl-6 py-2 bg-brand-green/5 rounded-r-lg flex-shrink-0">
+                            <p className={`text-app-muted text-base lg:text-lg leading-relaxed border-l-4 border-brand-green pl-6 py-2 bg-brand-green/5 rounded-r-lg flex-shrink-0 ${isSustainable ? 'py-1.5' : ''}`}>
                                 {service.closing}
                             </p>
                         </motion.div>
                     </div>
 
                     {/* Image */}
-                    <div className={`${isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'} min-w-0`}>
+                    <div className={`${isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'} min-w-0 ${isSustainable ? 'h-full flex' : ''}`}>
                         <motion.div
                             initial={{ opacity: 0, x: isTextLeft ? 40 : -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className="relative rounded-3xl overflow-hidden shadow-2xl w-full aspect-[4/3]"
+                            className={`relative overflow-hidden ${isSustainable ? 'rounded-2xl shadow-xl w-full h-full min-h-[280px]' : 'rounded-3xl shadow-2xl w-full aspect-[4/3]'}`}
                         >
                             <img
                                 src={service.image}
