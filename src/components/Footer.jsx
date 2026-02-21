@@ -33,7 +33,7 @@ const Footer = () => {
                             />
                         </Link>
                         <p className="text-app-muted leading-relaxed text-sm">
-                            Fueling industries, empowering sustainable solutions for powering our world. We lead the way in innovative energy services.
+                            Driving energy transformation that accelerates clean energy adoption and delivers sustainable growth with lasting impact.
                         </p>
                         <div className="flex space-x-4">
                             <a href="https://www.facebook.com/profile.php?id=61581626194270" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-app flex items-center justify-center text-app-main hover:bg-brand-yellow hover:border-brand-yellow hover:text-white transition-all duration-300">

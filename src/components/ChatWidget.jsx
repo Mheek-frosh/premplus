@@ -8,7 +8,7 @@ const ChatWidget = () => {
     const [messages, setMessages] = useState([
         {
             id: 1,
-            text: "We are happy to help please check the following to see what service you want:",
+            text: "Have a question? Send us a message and our team will get back to you shortly.",
             isBot: true,
             timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
@@ -63,7 +63,7 @@ const ChatWidget = () => {
                                     <div className="w-6 h-6 bg-brand-dark rounded-full" /> {/* Robot Icon Placeholder */}
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-lg leading-none">Support</h3>
+                                    <h3 className="font-bold text-lg leading-none">Premplus Support</h3>
                                     <div className="flex items-center gap-1">
                                         <div className="w-2 h-2 bg-green-500 rounded-full" />
                                         <span className="text-xs opacity-90">Online</span>
@@ -77,8 +77,8 @@ const ChatWidget = () => {
                             {messages.map((msg) => (
                                 <div key={msg.id} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}>
                                     {msg.isBot && (
-                                        <div className="w-8 h-8 bg-brand-yellow rounded-full flex-shrink-0 mr-2 flex items-center justify-center text-white text-xs">
-                                            Bot
+                                        <div className="w-8 h-8 bg-brand-yellow rounded-full flex-shrink-0 mr-2 flex items-center justify-center text-white text-xs font-bold" title="Premplus Support">
+                                            PS
                                         </div>
                                     )}
                                     <div className={`max-w-[80%] rounded-2xl p-3 text-sm relative group ${msg.isBot
@@ -97,12 +97,6 @@ const ChatWidget = () => {
 
                         {/* Footer Input */}
                         <div className="p-4 bg-app-card border-t border-app">
-                            <div className="flex gap-2 mb-3 overflow-x-auto pb-2 scrollbar-hide">
-                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">👋 What is Solar?</button>
-                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">💰 Pricing</button>
-                                <button className="whitespace-nowrap px-3 py-1 bg-app-secondary rounded-full text-xs text-app-muted border border-app hover:bg-app-main transition-colors">🙋 FAQs</button>
-                            </div>
-
                             <div className="relative bg-app-main rounded-2xl border border-app">
                                 <input
                                     type="text"
