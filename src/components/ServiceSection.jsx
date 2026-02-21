@@ -1,30 +1,35 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Building2, HardHat, ShieldCheck, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Zap, Building2, ShieldCheck, GraduationCap, ArrowRight } from 'lucide-react';
 import lookbackImg from '../assets/lookback.png';
 import roundtableImg from '../assets/roundtable.png';
 import innovationImg from '../assets/innovation.png';
 
 const services = [
     {
+        id: 'renewable',
         title: 'Renewable Energy Solutions',
         icon: <Zap className="w-8 h-8 text-brand-green" />,
         img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80',
         desc: 'Development and deployment of solar mini-grids, hybrid systems, and innovative clean energy solutions.'
     },
     {
+        id: 'advisory',
         title: 'Electricity Market and Energy Sector Advisory',
         icon: <ShieldCheck className="w-8 h-8 text-brand-green" />,
         img: roundtableImg,
         desc: 'Expert consulting on regulatory frameworks, market dynamics, and strategic energy planning.'
     },
     {
+        id: 'capacity',
         title: 'Capacity Development and Energy Innovation',
         icon: <GraduationCap className="w-8 h-8 text-brand-green" />,
         img: innovationImg,
         desc: 'Empowering stakeholders through specialized training and Energy Innovation Hubs.'
     },
     {
+        id: 'sustainable',
         title: 'Sustainable Building and Infrastructure Design',
         icon: <Building2 className="w-8 h-8 text-brand-green" />,
         img: lookbackImg,
@@ -81,9 +86,15 @@ const ServiceSection = () => {
                                 <h3 className="text-xl font-bold mb-4 group-hover:text-brand-green transition-colors leading-tight text-app-main">
                                     {service.title}
                                 </h3>
-                                <p className="text-app-muted text-sm leading-relaxed">
+                                <p className="text-app-muted text-sm leading-relaxed mb-6">
                                     {service.desc}
                                 </p>
+                                <Link
+                                    to={`/services#${service.id}`}
+                                    className="inline-flex items-center gap-2 font-bold text-brand-green hover:text-brand-yellow transition-colors group/btn"
+                                >
+                                    View Details <ArrowRight size={20} className="transition-transform group-hover/btn:translate-x-1" />
+                                </Link>
                             </div>
                         </motion.div>
                     ))}

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, ShieldCheck, GraduationCap, Building2, Check } from 'lucide-react';
 import lookbackImg from '../assets/lookback.png';
@@ -146,6 +147,21 @@ const ServiceSection = ({ service, index }) => {
 };
 
 const ServicesPage = () => {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const id = hash.replace('#', '');
+            const timer = setTimeout(() => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 50);
+            return () => clearTimeout(timer);
+        }
+    }, [hash]);
+
     return (
         <div className="bg-app-secondary min-h-screen transition-colors duration-300">
             {/* Page Header */}
