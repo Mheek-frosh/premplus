@@ -34,7 +34,7 @@ const blogPosts = [
         id: 3,
         title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
         excerpt: 'Premplus proudly participated in the REA State-by-State Roundtable with Adamawa State, focusing on enhancing renewable energy access.',
-        date: 'February 08, 2026',
+        date: 'March 4, 2025',
         category: 'Innovation',
         img: b3Img
     },

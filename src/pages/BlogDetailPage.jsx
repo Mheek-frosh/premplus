@@ -29,7 +29,7 @@ const blogPosts = [
         id: 1,
         title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
         category: 'Innovation',
-        author: 'Dr. Anya Sharma',
+        author: 'Muhammad Fadil Yakubu',
         date: 'November 14, 2025',
         content: `
             <p>Premplus Nig. Ltd and the Rural Electrification Agency (REA) have signed a groundbreaking Memorandum of Understanding to upgrade existing REA Workshop and Training Centres into a National Energy Innovation Hub. The signing ceremony took place at the REA headquarters in Abuja.</p>
@@ -45,7 +45,7 @@ const blogPosts = [
         id: 2,
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme to Strengthen Renewable Energy Workforce',
         category: 'Renewable Energy',
-        author: 'Corporate Communications',
+        author: 'Muhammad Fadil Yakubu',
         date: 'May 23, 2025',
         content: `
             <p><strong>Premplus Nig. Ltd was proud to attend the official launch of the NEXTGEN RESCO Programme on Friday, May 23, 2025, in Abuja. This forward-looking initiative, led by the Rural Electrification Agency (REA) in partnership with NAPTIN and Eco Innovation Empowerment Initiatives (EIEI) of Prado Power, aims to address a critical gap in Nigeria’s renewable energy sector: the need for a highly skilled, future-ready workforce.</strong></p>
@@ -70,8 +70,8 @@ const blogPosts = [
         id: 3,
         title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
         category: 'Innovation',
-        author: 'Engr. Zaharadeen Usman',
-        date: 'February 08, 2026',
+        author: 'Muhammad Fadil Yakubu',
+        date: 'March 4, 2025',
         content: `
             <p><strong>Premplus Nig. Ltd proudly participated in the REA State-by-State Roundtable with Adamawa State, held in Abuja. This strategic event, organized by the Rural Electrification Agency (REA), focused on enhancing renewable energy access and fostering economic growth through collaborative public-private partnerships.</strong></p>
             
@@ -93,7 +93,7 @@ const blogPosts = [
         id: 4,
         title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
         category: 'Innovation',
-        author: 'Engr. Zaharadeen Usman Ibrahim',
+        author: 'Muhammad Fadil Yakubu',
         date: 'February 19, 2025',
         content: `
             <p><strong>The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework for the state. The event, held at Alheri Hotel, Yola, brought together key stakeholders from the energy and academic sectors to discuss strategies for achieving a more stable and efficient power supply in Adamawa.</strong></p>
@@ -120,7 +120,7 @@ const blogPosts = [
         id: 5,
         title: 'Premplus CEO receives Award of Excellence',
         category: 'Consultation',
-        author: 'NYAN Press',
+        author: 'Muhammad Fadil Yakubu',
         date: 'January 14, 2025',
         content: `
             <p><strong>Engr. Zaharadeen Usman, the esteemed CEO of Premplus, has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria, in recognition of his dedicated contributions to the advancement of youth, nation-building initiatives, and societal progress.</strong></p>
@@ -137,7 +137,7 @@ const blogPosts = [
         id: 6,
         title: 'Premplus CEO receives Distinguished Merit Award',
         category: 'Innovation',
-        author: 'NANNS Press',
+        author: 'Muhammad Fadil Yakubu',
         date: 'January 9, 2025',
         content: `
             <p><strong>Premplus is proud to announce that our CEO, Engr. Zaharadeen Usman, has been honored with the Distinguished Merit Award by the National Association of Northern Nigerian Students (NANNS). This prestigious accolade recognizes Engr. Usman as an "Epitome of Societal Development" for his significant contributions to national development, educational advancement, youth engagement, and service to humanity.</strong></p>
@@ -154,7 +154,7 @@ const blogPosts = [
         id: 7,
         title: 'Premplus signs partnership deal with Aurora',
         category: 'Consultation',
-        author: 'Corporate Communications',
+        author: 'Muhammad Fadil Yakubu',
         date: 'December 26, 2024',
         content: `
             <p><strong>Premplus is excited to announce the signing of a Memorandum of Understanding (MoU) with Aurora, a leading solar energy company. This strategic partnership aims to leverage Aurora's high-quality solar products to enhance our renewable energy solutions.</strong></p>
@@ -175,7 +175,7 @@ const blogPosts = [
         id: 8,
         title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
         category: 'Consultation',
-        author: 'REA Communications',
+        author: 'Muhammad Fadil Yakubu',
         date: 'December 18, 2024',
         content: `
             <p><strong>Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), held on December 18th and 19th, 2024, at the UBEC Digital Centre in Jahi, Abuja.</strong></p>
@@ -197,7 +197,7 @@ const blogPosts = [
         id: 9,
         title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
         category: 'Innovation',
-        author: 'Policy & Strategy Team',
+        author: 'Muhammad Fadil Yakubu',
         date: 'July 24, 2024',
         content: `
             <p><strong>Premplus recently had the privilege of attending a landmark event organized by the Nigerian Electricity Regulatory Commission (NERC), focused on accelerating the adoption of renewable and distributed energy solutions in Nigeria. This two-day summit, held in Abuja on July 22-23, 2024, brought together a diverse group of stakeholders, including government officials, private sector developers, financial institutions, non-governmental organizations, and international partners to contribute to a greener future.</strong></p>
@@ -228,7 +228,7 @@ const blogPosts = [
         id: 10,
         title: 'Growing Green Job Career Fair',
         category: 'Innovation',
-        author: 'Human Resources',
+        author: 'Muhammad Fadil Yakubu',
         date: 'July 8, 2024',
         content: `
             <p><strong>Premplus was proud to participate in the "Growing Green Job" Career Fair and Mini Clinics, a pivotal event dedicated to fostering talent and innovation within the renewable energy sector.</strong></p>
