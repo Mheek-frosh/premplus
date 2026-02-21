@@ -154,8 +154,8 @@ const ServicesPage = () => {
                     <span className="text-brand-green font-bold text-sm uppercase tracking-widest block mb-2">
                         Our Services
                     </span>
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-app-main mb-4">
-                        Professional Energy <br className="hidden md:block" /> Solutions We Provide
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-app-main mb-4 text-center whitespace-nowrap">
+                        Professional Energy Solutions We Provide
                     </h1>
                     <p className="text-app-muted max-w-2xl mx-auto text-lg leading-relaxed">
                         Competently repurpose go forward benefits without goal-oriented conveniently target opportunities whereas parallel services.
