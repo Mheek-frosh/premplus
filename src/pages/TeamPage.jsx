@@ -47,7 +47,7 @@ const teamMembers = [
         id: 5,
         name: 'Muhammad Fadil Yakubu',
         position: 'Business Development Manager',
-        category: 'Management',
+        category: 'Technical',
         bio: 'Muhammad Fadil Yakubu drives business growth and strategic partnerships, expanding Premplus\'s reach and impact in the sustainable energy sector.',
         img: fadil,
         quote: 'Technology is the bridge to our future.'
@@ -65,7 +65,7 @@ const teamMembers = [
         id: 7,
         name: 'Suleiman M. Jaji, Esq.',
         position: 'Legal Advisor',
-        category: 'Management',
+        category: 'Legal',
         bio: 'Suleiman M. Jaji serves as our trusted Legal Advisor, providing expert counsel on corporate governance, regulatory compliance, and strategic partnerships, safeguarding the integrity of our operations.',
         img: sule,
         quote: 'Justice and integrity form the bedrock of our success.'
@@ -94,15 +94,15 @@ const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
     const [filter, setFilter] = useState('All');
 
-    const categories = ['All', 'Executive', 'Management'];
-    const filteredMembers = filter === 'All' ? teamMembers : teamMembers.filter(m => m.category === filter);
+    const categories = ['All', 'Executive', 'Management', 'Legal', 'Technical'];
+    const filteredMembers = filter === 'All' || filter === 'Management' ? teamMembers : teamMembers.filter(m => m.category === filter);
 
     return (
         <div className="pt-24 bg-app-main min-h-screen transition-colors duration-300">
             {/* Team Hero */}
-            <section className="py-20 bg-brand-dark relative overflow-hidden">
+            <section className="py-12 sm:py-16 md:py-20 bg-brand-dark relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-yellow/5 skew-x-12 transform origin-right" />
-                <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 text-center">
                     <motion.span
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ const TeamPage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-5xl md:text-7xl font-bold text-white mt-4 mb-8"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-4 mb-6 md:mb-8"
                     >
                         Meet Our <span className="text-brand-yellow">Leadership</span>
                     </motion.h1>
@@ -122,7 +122,7 @@ const TeamPage = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-white/60 max-w-2xl mx-auto text-lg"
+                        className="text-white/60 max-w-2xl mx-auto text-base sm:text-lg"
                     >
                         A diverse group of visionaries, engineers, and strategists dedicated to redefining the global energy landscape.
                     </motion.p>
@@ -130,13 +130,13 @@ const TeamPage = () => {
             </section>
 
             {/* Filter */}
-            <section className="py-12 border-b border-app sticky top-20 bg-app-card/80 backdrop-blur-md z-40 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-4">
+            <section className="py-6 sm:py-8 md:py-12 border-b border-app sticky top-16 sm:top-20 bg-app-card/80 backdrop-blur-md z-40 transition-colors duration-300">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-center gap-3 sm:gap-4">
                     {categories.map((cat) => (
                         <button
                             key={cat}
                             onClick={() => setFilter(cat)}
-                            className={`px-8 py-3 rounded-full font-bold transition-all ${filter === cat ? 'bg-app-main text-app-main shadow-xl border-2 border-brand-yellow' : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'}`}
+                            className={`px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all ${filter === cat ? 'bg-app-main text-app-main shadow-xl border-2 border-brand-yellow' : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'}`}
                         >
                             {cat}
                         </button>
@@ -145,8 +145,8 @@ const TeamPage = () => {
             </section>
 
             {/* Team Grid */}
-            <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <section className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
                     <AnimatePresence mode="popLayout">
                         {filteredMembers.map((member) => (
                             <motion.div
@@ -158,7 +158,7 @@ const TeamPage = () => {
                                 whileHover={{ y: -10 }}
                                 className="relative bg-app-card rounded-[40px] overflow-hidden border border-app shadow-xl group transition-colors duration-300"
                             >
-                                <div className="h-80 overflow-hidden relative bg-gray-100 dark:bg-gray-800">
+                                <div className="h-64 sm:h-72 md:h-80 overflow-hidden relative bg-gray-100 dark:bg-gray-800">
                                     {member.img ? (
                                         <>
                                             <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
@@ -170,16 +170,16 @@ const TeamPage = () => {
                                         </div>
                                     )}
                                 </div>
-                                <div className="p-10 relative">
+                                <div className="p-6 sm:p-8 md:p-10 relative">
                                     <span className="text-brand-green font-bold text-xs uppercase tracking-widest mb-2 block">{member.category}</span>
-                                    <h3 className="text-2xl font-bold text-app-main mb-1 transition-colors duration-300">{member.name}</h3>
-                                    <p className="text-brand-yellow font-bold text-sm uppercase mb-6">{member.position}</p>
+                                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-app-main mb-1 transition-colors duration-300 line-clamp-2">{member.name}</h3>
+                                    <p className="text-brand-yellow font-bold text-xs sm:text-sm uppercase mb-4 md:mb-6 line-clamp-2">{member.position}</p>
 
                                     <button
                                         onClick={() => setSelectedMember(member)}
-                                        className="w-14 h-14 bg-brand-yellow rounded-2xl flex items-center justify-center text-brand-dark shadow-lg hover:scale-110 transition-transform"
+                                        className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-yellow rounded-2xl flex items-center justify-center text-brand-dark shadow-lg hover:scale-110 transition-transform"
                                     >
-                                        <ChevronRight size={28} />
+                                        <ChevronRight size={24} />
                                     </button>
                                 </div>
                             </motion.div>
@@ -195,45 +195,45 @@ const TeamPage = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-3xl bg-app-overlay"
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto backdrop-blur-3xl bg-app-overlay"
                     >
                         <motion.div
                             initial={{ scale: 0.9, y: 50, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.9, y: 50, opacity: 0 }}
-                            className="relative w-full max-w-7xl bg-app-card rounded-[60px] overflow-hidden flex flex-col md:flex-row shadow-2xl"
+                            className="relative w-full max-w-4xl lg:max-w-5xl xl:max-w-7xl max-h-[95vh] my-auto bg-app-card rounded-3xl sm:rounded-[40px] lg:rounded-[60px] overflow-hidden flex flex-col md:flex-row shadow-2xl"
                         >
                             <button
                                 onClick={() => setSelectedMember(null)}
-                                className="absolute top-8 left-8 z-30 w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-colors shadow-lg"
+                                className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-colors shadow-lg"
                             >
-                                <X size={24} />
+                                <X size={20} className="sm:w-6 sm:h-6" />
                             </button>
 
-                            <div className="w-full md:w-2/5 h-[400px] md:h-auto overflow-hidden bg-gray-100 dark:bg-gray-800">
+                            <div className="w-full md:w-2/5 h-[280px] sm:h-[320px] md:h-auto md:min-h-[350px] overflow-hidden bg-gray-100 dark:bg-gray-800 flex-shrink-0">
                                 {selectedMember.img ? (
                                     <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800">
-                                        <User className="w-32 h-32 text-gray-400 dark:text-gray-500" strokeWidth={1.5} />
+                                        <User className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 text-gray-400 dark:text-gray-500" strokeWidth={1.5} />
                                     </div>
                                 )}
                             </div>
 
-                            <div className="w-full md:w-3/5 p-12 md:p-20 flex flex-col justify-center items-center text-center">
-                                <span className="text-brand-green font-bold text-sm uppercase tracking-widest mb-4">Leadership Bio</span>
-                                <h2 className="text-5xl font-bold mb-2 text-app-main transition-colors duration-300">{selectedMember.name}</h2>
-                                <p className="text-brand-yellow font-bold text-2xl mb-8">{selectedMember.position}</p>
-                                <div className="w-24 h-1.5 bg-brand-yellow mb-10 rounded-full" />
-                                <p className="text-app-muted text-xl leading-relaxed font-medium mb-12 italic transition-colors duration-300">
+                            <div className="w-full md:w-3/5 p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col justify-center items-center text-center overflow-y-auto">
+                                <span className="text-brand-green font-bold text-xs sm:text-sm uppercase tracking-widest mb-3 sm:mb-4">Leadership Bio</span>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-app-main transition-colors duration-300">{selectedMember.name}</h2>
+                                <p className="text-brand-yellow font-bold text-base sm:text-lg md:text-xl lg:text-2xl mb-4 sm:mb-6 md:mb-8">{selectedMember.position}</p>
+                                <div className="w-16 sm:w-24 h-1 sm:h-1.5 bg-brand-yellow mb-6 sm:mb-8 md:mb-10 rounded-full" />
+                                <p className="text-app-muted text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed font-medium mb-6 sm:mb-8 md:mb-12 italic transition-colors duration-300">
                                     "{selectedMember.bio}"
                                 </p>
-                                <div className="flex gap-6">
-                                    <button className="flex items-center gap-3 bg-app-main text-app-main border border-app px-8 py-4 rounded-2xl font-bold hover:bg-brand-yellow hover:text-brand-dark transition-all">
-                                        <Linkedin size={20} /> LinkedIn Profile
+                                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                                    <button className="flex items-center justify-center gap-2 sm:gap-3 bg-app-main text-app-main border border-app px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base hover:bg-brand-yellow hover:text-brand-dark transition-all">
+                                        <Linkedin size={18} className="sm:w-5 sm:h-5" /> LinkedIn Profile
                                     </button>
-                                    <button className="flex items-center gap-3 border-2 border-app text-app-main px-8 py-4 rounded-2xl font-bold hover:bg-app-main hover:text-app-main transition-all">
-                                        <Mail size={20} /> Contact
+                                    <button className="flex items-center justify-center gap-2 sm:gap-3 border-2 border-app text-app-main px-6 py-3 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base hover:bg-app-main hover:text-app-main transition-all">
+                                        <Mail size={18} className="sm:w-5 sm:h-5" /> Contact
                                     </button>
                                 </div>
                             </div>
