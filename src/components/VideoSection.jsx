@@ -1,15 +1,26 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Maximize2, Minimize2 } from 'lucide-react';
 import videoFile from '../assets/v1.mp4';
 import videoThumbnail from '../assets/video-thumbnail.png';
 
+const formatTime = (seconds) => {
+    if (!isFinite(seconds) || isNaN(seconds)) return '0:00';
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+};
+
 const VideoSection = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [showControls, setShowControls] = useState(true);
+    const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [isDragging, setIsDragging] = useState(false);
     const videoRef = useRef(null);
     const containerRef = useRef(null);
+    const progressBarRef = useRef(null);
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -49,11 +60,82 @@ const VideoSection = () => {
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
             setIsPlaying(false);
+            setCurrentTime(0);
         }
         if (isFullscreen) {
             toggleFullscreen();
         }
     };
+
+    const seekTo = useCallback((clientX) => {
+        const bar = progressBarRef.current;
+        const video = videoRef.current;
+        if (!bar || !video || !video.duration) return;
+        const rect = bar.getBoundingClientRect();
+        const percent = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+        const newTime = percent * video.duration;
+        video.currentTime = newTime;
+        setCurrentTime(newTime);
+    }, []);
+
+    const handleProgressClick = (e) => {
+        seekTo(e.clientX);
+    };
+
+    const handleProgressMouseDown = (e) => {
+        e.preventDefault();
+        setIsDragging(true);
+        seekTo(e.clientX);
+    };
+
+    const handleProgressTouchStart = (e) => {
+        e.preventDefault();
+        setIsDragging(true);
+        seekTo(e.touches[0].clientX);
+    };
+
+    React.useEffect(() => {
+        const handleMouseMove = (e) => {
+            if (isDragging) seekTo(e.clientX);
+        };
+        const handleMouseUp = () => setIsDragging(false);
+        const handleTouchMove = (e) => {
+            if (isDragging && e.touches.length > 0) {
+                e.preventDefault();
+                seekTo(e.touches[0].clientX);
+            }
+        };
+        const handleTouchEnd = () => setIsDragging(false);
+        if (isDragging) {
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+            document.addEventListener('touchmove', handleTouchMove, { passive: false });
+            document.addEventListener('touchend', handleTouchEnd);
+        }
+        return () => {
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+            document.removeEventListener('touchmove', handleTouchMove);
+            document.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [isDragging, seekTo]);
+
+    // Pause video when user scrolls past it
+    React.useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting && videoRef.current && !videoRef.current.paused) {
+                    videoRef.current.pause();
+                    setIsPlaying(false);
+                }
+            },
+            { threshold: 0.25 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
     // Handle fullscreen change events
     React.useEffect(() => {
@@ -114,6 +196,10 @@ const VideoSection = () => {
                         poster={videoThumbnail}
                         preload="metadata"
                         onEnded={() => setIsPlaying(false)}
+                        onTimeUpdate={() => !isDragging && videoRef.current && setCurrentTime(videoRef.current.currentTime)}
+                        onLoadedMetadata={() => videoRef.current && setDuration(videoRef.current.duration)}
+                        onPlay={() => setIsPlaying(true)}
+                        onPause={() => setIsPlaying(false)}
                     >
                         <source src={videoFile} type="video/mp4" />
                         Your browser does not support the video tag.
@@ -134,7 +220,7 @@ const VideoSection = () => {
                                     whileTap={{ scale: 0.95 }}
                                     className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center text-white shadow-2xl"
                                 >
-                                    <Play size={40} className="fill-current ml-2" />
+                                    <Play size={40} className="fill-current ml-1" />
                                 </motion.div>
                             </motion.div>
                         )}
@@ -149,15 +235,29 @@ const VideoSection = () => {
                                 exit={{ opacity: 0, y: 20 }}
                                 className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6"
                             >
-                                <div className="flex items-center justify-between gap-4">
-                                    {/* Play/Pause Button */}
-                                    <button
-                                        onClick={togglePlay}
-                                        className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-all"
+                                {/* Progress Bar */}
+                                <div className="mb-4">
+                                    <div
+                                        ref={progressBarRef}
+                                        className="h-1.5 bg-brand-green/30 rounded-full cursor-pointer group hover:h-2 transition-all overflow-visible"
+                                        onClick={handleProgressClick}
+                                        onMouseDown={handleProgressMouseDown}
+                                        onTouchStart={handleProgressTouchStart}
                                     >
-                                        {isPlaying ? <Pause size={24} /> : <Play size={24} className="ml-1" />}
-                                    </button>
+                                        <div
+                                            className="h-full bg-brand-green rounded-full transition-all duration-75 pointer-events-none relative"
+                                            style={{ width: `${duration > 0 ? (currentTime / duration) * 100 : 0}%` }}
+                                        >
+                                            <div className={`absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg transition-opacity ${isDragging ? 'opacity-100' : 'opacity-0 group-hover:opacity-100 group-active:opacity-100'}`} />
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-between mt-1.5 text-xs text-white/80">
+                                        <span>{formatTime(currentTime)}</span>
+                                        <span>{formatTime(duration)}</span>
+                                    </div>
+                                </div>
 
+                                <div className="relative flex items-center justify-between gap-4">
                                     <div className="flex items-center gap-3">
                                         {/* Fullscreen Toggle */}
                                         <button
@@ -175,6 +275,16 @@ const VideoSection = () => {
                                             <X size={24} />
                                         </button>
                                     </div>
+
+                                    {/* Play/Pause Button - Centered */}
+                                    <button
+                                        onClick={togglePlay}
+                                        className="absolute left-1/2 -translate-x-1/2 w-14 h-14 bg-brand-green backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-brand-green/90 transition-all shadow-lg"
+                                    >
+                                        {isPlaying ? <Pause size={26} /> : <Play size={26} className="ml-1" />}
+                                    </button>
+
+                                    <div className="w-[120px]" />
                                 </div>
                             </motion.div>
                         )}

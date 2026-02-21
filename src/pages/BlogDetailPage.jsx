@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, User, Share2, Heart, MessageCircle, Send, ChevronRight, ArrowLeft } from 'lucide-react';
+import { Calendar, User, Share2, Heart, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import mouImg from '../assets/mou.png';
@@ -355,15 +355,12 @@ const BlogDetailPage = () => {
                     )}
                 </motion.article>
 
-                {/* Share Actions */}
+                {/* Share Actions - Like and Share */}
                 <div className="border-t border-b border-app py-8 mb-16 flex flex-wrap justify-between items-center gap-4">
                     <span className="text-sm font-bold text-app-main">Share this article:</span>
                     <div className="flex items-center gap-4">
                         <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-app-secondary text-app-muted hover:text-brand-green hover:bg-app-card transition-all">
                             <Heart size={20} /> <span className="text-sm font-semibold">23</span>
-                        </button>
-                        <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-app-secondary text-app-muted hover:text-brand-green hover:bg-app-card transition-all">
-                            <MessageCircle size={20} /> <span className="text-sm font-semibold">5</span>
                         </button>
                         <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-app-secondary text-app-muted hover:text-brand-green hover:bg-app-card transition-all">
                             <Share2 size={20} /> <span className="text-sm font-semibold">Share</span>
@@ -405,51 +402,6 @@ const BlogDetailPage = () => {
                     </div>
                 )}
 
-                {/* Comments Section */}
-                <div className="mt-20">
-                    <h2 className="text-3xl font-bold text-app-main mb-8">Comments (3)</h2>
-
-                    <div className="space-y-8 mb-12">
-                        {[
-                            { name: 'Ethan Carter', date: 'August 16, 2024', comment: 'Great insights! This article is very helpful for understanding the energy landscape in Nigeria.', avatar: 'https://i.pravatar.cc/150?u=ethan' },
-                            { name: 'Olivia Bennett', date: 'August 17, 2024', comment: 'I appreciate the clear explanations. The section on technical training was particularly informative.', avatar: 'https://i.pravatar.cc/150?u=olivia' },
-                            { name: post.author, date: 'August 17, 2024', comment: 'Thank you for your kind words! I am glad you found the information helpful.', avatar: 'https://i.pravatar.cc/150?u=author', isAuthor: true }
-                        ].map((comment, idx) => (
-                            <div key={idx} className={`flex gap-4 ${comment.isAuthor ? 'ml-8 md:ml-12' : ''}`}>
-                                <img src={comment.avatar} alt={comment.name} className="w-12 h-12 rounded-full border-2 border-brand-yellow/20 flex-shrink-0" />
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <h4 className="font-bold text-app-main">{comment.name}</h4>
-                                        {comment.isAuthor && (
-                                            <span className="px-2 py-0.5 bg-brand-yellow text-brand-dark text-xs font-bold rounded">Author</span>
-                                        )}
-                                        <span className="text-xs text-app-muted">{comment.date}</span>
-                                    </div>
-                                    <p className="text-app-muted leading-relaxed">{comment.comment}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Comment Form */}
-                    <div className="bg-app-secondary rounded-3xl p-6 md:p-8 border border-app">
-                        <h3 className="text-xl font-bold text-app-main mb-6">Leave a Comment</h3>
-                        <div className="flex gap-4 items-start">
-                            <img src="https://i.pravatar.cc/150?u=me" alt="user" className="w-12 h-12 rounded-full flex-shrink-0" />
-                            <div className="flex-1">
-                                <textarea
-                                    placeholder="Share your thoughts..."
-                                    className="w-full bg-app-card border border-app rounded-xl p-4 text-sm text-app-main placeholder:text-app-muted focus:outline-none focus:ring-2 focus:ring-brand-green/20 resize-none h-32 transition-colors"
-                                ></textarea>
-                                <div className="flex justify-end mt-4">
-                                    <button className="bg-brand-yellow text-brand-dark px-8 py-3 rounded-xl font-bold text-sm shadow-lg shadow-brand-yellow/20 hover:scale-105 transition-all">
-                                        Post Comment
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );
