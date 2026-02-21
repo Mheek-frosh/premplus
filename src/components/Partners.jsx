@@ -11,7 +11,7 @@ import adamawaLogo from '../assets/adamawalogo1.png';
 import auroraLogo from '../assets/auroralogo.avif';
 import beveLogo from '../assets/beve.jpg';
 import rea2Logo from '../assets/rea-2.png';
-import reanNewLogo from '../assets/rean-new-removebg.png';
+import reanNewLogo from '../assets/reannew.png';
 import p1Logo from '../assets/p1.png';
 import p2Logo from '../assets/p2.png';
 import accessBank from '../assets/accessbank.png';
@@ -35,7 +35,7 @@ const logoAssets = [
 
 const Partners = () => {
     return (
-        <section className="py-20 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
+        <section className="py-28 md:py-36 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
             <div className="max-w-7xl mx-auto px-4 text-center mb-12">
                 <p className="text-app-muted text-xs font-bold uppercase tracking-[0.4em] mb-2">
                     Our Clients & Partners
@@ -54,17 +54,11 @@ const Partners = () => {
                     style={{ width: "fit-content" }}
                 >
                     {[...logoAssets, ...logoAssets].map((logo, i) => {
-                        // Selective resizing for smaller-looking logos
-                        let heightClass = "h-12 md:h-16";
-                        let additionalScale = "";
-                        let containerWidth = "w-40 md:w-64";
-
-                        if (logo === signatureBank) {
-                            heightClass = "h-16 md:h-20";
-                            additionalScale = "scale-105";
-                        } else if (logo === abiaLogo || logo === midgardLogo || logo === auroraLogo) {
-                            heightClass = "h-16 md:h-20";
-                        }
+                        // Big logos (don't touch): signatureBank, abiaLogo, midgardLogo, auroraLogo
+                        const isBigLogo = logo === signatureBank || logo === abiaLogo || logo === midgardLogo || logo === auroraLogo;
+                        const heightClass = isBigLogo ? "h-16 md:h-20" : "h-20 md:h-28";
+                        const additionalScale = logo === signatureBank ? "scale-105" : "";
+                        const containerWidth = isBigLogo ? "w-40 md:w-64" : "w-48 md:w-72";
 
                         return (
                             <div key={i} className={`flex-shrink-0 flex items-center justify-center ${containerWidth}`}>
