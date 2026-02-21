@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, MapPin, Clock, ArrowRight, Briefcase, Zap, Globe, Heart } from 'lucide-react';
+import { Search, MapPin, Clock, Briefcase, Zap, Globe, Heart } from 'lucide-react';
 
 const jobs = [
     {
@@ -121,9 +121,9 @@ const CareersPage = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="flex items-center gap-2 font-bold text-brand-dark bg-gray-50 px-6 py-3 rounded-xl hover:bg-brand-dark hover:text-white transition-all">
-                                    Apply Now <ArrowRight size={18} />
-                                </button>
+                                <div className="flex items-center gap-2 font-medium text-app-muted bg-gray-100 px-6 py-3 rounded-xl cursor-not-allowed">
+                                    Not available
+                                </div>
                             </div>
                         </motion.div>
                     ))}
