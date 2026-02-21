@@ -1,42 +1,68 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronRight, Linkedin, Mail } from 'lucide-react';
+import { X, ChevronRight, Linkedin, Mail, User } from 'lucide-react';
 import ceo from '../assets/ceo.png';
 import ed from '../assets/ed.png';
 import fadil from '../assets/fadil.png';
 import sule from '../assets/sule.png';
-import jemi from '../assets/jemi.png';
 
 const teamMembers = [
     {
         id: 1,
         name: 'Engr. Zaharadeen Usman',
-        position: 'Chief Executive Officer',
+        position: 'MD/CEO',
         category: 'Executive',
-        bio: 'Engr. Zaharadeen Usman, a distinguished leader with a multifaceted background, brings a wealth of experience to the intersection of public service, engineering, renewable energy, sustainable designs, and information technology. With a robust history in public service, he has honed his skills in navigating complex regulatory landscapes and fostering collaboration between public and private sectors. Holding a degree in Metallurgical and Materials Engineering from the prestigious Ahmadu Bello University Zaria, Engr. Usman has amassed nearly 14 years of experience in the engineering domain and public service, earning recognition as a COREN certified Engineer. His journey in the field began with a strong foundation in Metallurgical and Materials Engineering, where he honed his skills in understanding the intricacies of materials science and engineering principles.',
+        bio: 'Engr. Zaharadeen Usman, a distinguished leader with a multifaceted background, brings a wealth of experience to the intersection of public service, engineering, renewable energy, sustainable designs, and information technology. With a robust history in public service, he has honed his skills in navigating complex regulatory landscapes and fostering collaboration between public and private sectors. Holding a degree in Metallurgical and Materials Engineering from the prestigious Ahmadu Bello University Zaria, Engr. Usman has amassed nearly 14 years of experience in the engineering domain and public service, earning recognition as a COREN certified Engineer.',
         img: ceo,
         quote: 'Leading with vision and integrity to power the future.'
     },
     {
         id: 2,
+        name: 'Engr. Suleiman Modu Maina',
+        position: 'Chief Operating Officer',
+        category: 'Executive',
+        bio: 'Engr. Suleiman Modu Maina leads the operational excellence of Premplus, ensuring seamless execution of our projects and strategic initiatives across the organization.',
+        img: null,
+        quote: 'Excellence in operations drives sustainable impact.'
+    },
+    {
+        id: 3,
+        name: 'Ahmed Ishaku Adamu',
+        position: 'Chief Finance Officer',
+        category: 'Executive',
+        bio: 'Ahmed Ishaku Adamu oversees the financial strategy and stewardship of Premplus, ensuring robust fiscal management and sustainable growth.',
+        img: null,
+        quote: 'Financial discipline enables lasting value creation.'
+    },
+    {
+        id: 4,
         name: 'Engr. Usman Dauda',
-        position: 'Executive Director',
+        position: 'Head of Operations and Maintenance',
         category: 'Executive',
         bio: 'Engr. Usman Dauda plays a pivotal role in steering the strategic direction of Premplus. With deep expertise in engineering management and operations, he ensures our projects meet the highest standards of quality and efficiency.',
         img: ed,
         quote: 'Excellence is not an act, but a habit.'
     },
     {
-        id: 3,
+        id: 5,
         name: 'Muhammad Fadil Yakubu',
-        position: 'Head of Tech & Media',
-        category: 'Technical',
-        bio: 'Leading our technology and media initiatives, Muhammad Fadil Yakubu coordinates our digital presence and technological integrations, ensuring Premplus stays at the forefront of the digital revolution.',
+        position: 'Business Development Manager',
+        category: 'Management',
+        bio: 'Muhammad Fadil Yakubu drives business growth and strategic partnerships, expanding Premplus\'s reach and impact in the sustainable energy sector.',
         img: fadil,
         quote: 'Technology is the bridge to our future.'
     },
     {
-        id: 4,
+        id: 6,
+        name: 'Zubaida Ibrahim',
+        position: 'Head of Admin',
+        category: 'Management',
+        bio: 'Zubaida Ibrahim leads administrative operations, ensuring smooth coordination and support across the organization.',
+        img: null,
+        quote: 'Efficiency in administration enables excellence in execution.'
+    },
+    {
+        id: 7,
         name: 'Suleiman M. Jaji, Esq.',
         position: 'Legal Advisor',
         category: 'Management',
@@ -45,13 +71,22 @@ const teamMembers = [
         quote: 'Justice and integrity form the bedrock of our success.'
     },
     {
-        id: 5,
-        name: 'Jemimah Jatau-Kyari',
-        position: 'Director of Strategy',
+        id: 8,
+        name: 'Fawziyyah Usman',
+        position: 'Head, Community and Stakeholder Engagement',
         category: 'Management',
-        bio: 'Jemimah Jatau-Kyari drives our strategic planning and business development. Her insights and leadership are instrumental in expanding our reach and impact in the sustainable energy sector.',
-        img: jemi,
-        quote: 'Strategic foundations build lasting legacies.'
+        bio: 'Fawziyyah Usman leads community and stakeholder engagement initiatives, building strong relationships and ensuring inclusive participation in our projects.',
+        img: null,
+        quote: 'Community engagement is the foundation of sustainable development.'
+    },
+    {
+        id: 9,
+        name: 'Ruwaida Kabir',
+        position: 'Head, Project Management',
+        category: 'Management',
+        bio: 'Ruwaida Kabir oversees project delivery, ensuring timely execution and high-quality outcomes across all Premplus initiatives.',
+        img: null,
+        quote: 'Effective project management turns vision into reality.'
     }
 ];
 
@@ -59,7 +94,7 @@ const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
     const [filter, setFilter] = useState('All');
 
-    const categories = ['All', 'Executive', 'Management', 'Technical', 'Consulting'];
+    const categories = ['All', 'Executive', 'Management'];
     const filteredMembers = filter === 'All' ? teamMembers : teamMembers.filter(m => m.category === filter);
 
     return (
@@ -123,9 +158,17 @@ const TeamPage = () => {
                                 whileHover={{ y: -10 }}
                                 className="relative bg-app-card rounded-[40px] overflow-hidden border border-app shadow-xl group transition-colors duration-300"
                             >
-                                <div className="h-80 overflow-hidden relative">
-                                    <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
-                                    <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors" />
+                                <div className="h-80 overflow-hidden relative bg-gray-100 dark:bg-gray-800">
+                                    {member.img ? (
+                                        <>
+                                            <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
+                                            <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors" />
+                                        </>
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 group-hover:from-gray-300 group-hover:to-gray-400 dark:group-hover:from-gray-600 dark:group-hover:to-gray-700 transition-colors duration-500">
+                                            <User className="w-24 h-24 text-gray-400 dark:text-gray-500 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-500" strokeWidth={1.5} />
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="p-10 relative">
                                     <span className="text-brand-green font-bold text-xs uppercase tracking-widest mb-2 block">{member.category}</span>
@@ -167,8 +210,14 @@ const TeamPage = () => {
                                 <X size={24} />
                             </button>
 
-                            <div className="w-full md:w-2/5 h-[400px] md:h-auto overflow-hidden">
-                                <img src={selectedMember.img} className="w-full h-full object-cover" />
+                            <div className="w-full md:w-2/5 h-[400px] md:h-auto overflow-hidden bg-gray-100 dark:bg-gray-800">
+                                {selectedMember.img ? (
+                                    <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
+                                ) : (
+                                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800">
+                                        <User className="w-32 h-32 text-gray-400 dark:text-gray-500" strokeWidth={1.5} />
+                                    </div>
+                                )}
                             </div>
 
                             <div className="w-full md:w-3/5 p-12 md:p-20 flex flex-col justify-center items-center text-center">
