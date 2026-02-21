@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Search, MapPin, Clock, Briefcase, Zap, Globe, Heart } from 'lucide-react';
 
-const jobs = [
+/* const jobs = [
     {
         id: 1,
         title: 'Senior Renewable Energy Engineer',
@@ -39,7 +40,8 @@ const jobs = [
         salary: 'Top tier',
         icon: <Briefcase className="text-brand-dark" />
     }
-];
+]; */
+const jobs = [];
 
 const CareersPage = () => {
     return (
@@ -53,7 +55,7 @@ const CareersPage = () => {
 
                         className="text-6xl md:text-8xl font-black text-app-main tracking-tighter mb-8"
                     >
-                        Join the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-brand-yellow">Future</span>.
+                        Join the <span className="text-brand-green">Future</span>.
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -101,32 +103,55 @@ const CareersPage = () => {
                 </div>
 
                 <div className="space-y-6">
-                    {jobs.map((job) => (
+                    {jobs.length === 0 ? (
                         <motion.div
-                            key={job.id}
-                            whileHover={{ scale: 1.01 }}
-                            className="bg-app-card p-8 rounded-[32px] shadow-sm border border-app hover:shadow-xl hover:border-brand-yellow/30 transition-all cursor-pointer group"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="bg-app-card p-16 md:p-20 rounded-[40px] shadow-sm border border-app text-center"
                         >
-                            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                                <div className="flex items-center gap-6">
-                                    <div className="w-16 h-16 bg-app-secondary rounded-2xl flex items-center justify-center text-2xl">
-                                        {job.icon}
-                                    </div>
-                                    <div>
-                                        <h3 className="text-2xl font-bold text-app-main mb-1 group-hover:text-brand-yellow transition-colors">{job.title}</h3>
-                                        <div className="flex flex-wrap gap-4 text-app-muted font-medium text-sm">
-                                            <span className="flex items-center gap-1"><MapPin size={14} /> {job.location}</span>
-                                            <span className="flex items-center gap-1"><Clock size={14} /> {job.type}</span>
-                                            <span className="text-brand-green">{job.department}</span>
+                            <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-brand-green/10 flex items-center justify-center">
+                                <Briefcase className="w-10 h-10 text-brand-green" />
+                            </div>
+                            <h3 className="text-2xl md:text-3xl font-bold text-app-main mb-4">No roles available at the moment</h3>
+                            <p className="text-app-muted text-lg max-w-xl mx-auto mb-8">
+                                We're not actively hiring right now, but we're always interested in connecting with talented people. Check back soon or reach out to stay in touch.
+                            </p>
+                            <Link
+                                to="/contact"
+                                className="inline-flex items-center gap-2 font-bold text-brand-green hover:text-brand-yellow transition-colors"
+                            >
+                                Get in touch <span aria-hidden>→</span>
+                            </Link>
+                        </motion.div>
+                    ) : (
+                        jobs.map((job) => (
+                            <motion.div
+                                key={job.id}
+                                whileHover={{ scale: 1.01 }}
+                                className="bg-app-card p-8 rounded-[32px] shadow-sm border border-app hover:shadow-xl hover:border-brand-yellow/30 transition-all cursor-pointer group"
+                            >
+                                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                                    <div className="flex items-center gap-6">
+                                        <div className="w-16 h-16 bg-app-secondary rounded-2xl flex items-center justify-center text-2xl">
+                                            {job.icon}
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl font-bold text-app-main mb-1 group-hover:text-brand-yellow transition-colors">{job.title}</h3>
+                                            <div className="flex flex-wrap gap-4 text-app-muted font-medium text-sm">
+                                                <span className="flex items-center gap-1"><MapPin size={14} /> {job.location}</span>
+                                                <span className="flex items-center gap-1"><Clock size={14} /> {job.type}</span>
+                                                <span className="text-brand-green">{job.department}</span>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div className="flex items-center gap-2 font-medium text-app-muted bg-gray-100 px-6 py-3 rounded-xl cursor-not-allowed">
+                                        Not available
+                                    </div>
                                 </div>
-                                <div className="flex items-center gap-2 font-medium text-app-muted bg-gray-100 px-6 py-3 rounded-xl cursor-not-allowed">
-                                    Not available
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
+                            </motion.div>
+                        ))
+                    )}
                 </div>
             </section>
         </div>
