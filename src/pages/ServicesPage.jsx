@@ -76,7 +76,7 @@ const ServiceSection = ({ service, index }) => {
             className={`flex items-center py-12 lg:py-16 ${index % 2 === 0 ? 'bg-app-secondary' : 'bg-app-main'} transition-colors duration-300`}
         >
             <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full">
-                <div className={`grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8 xl:gap-10 items-stretch lg:min-h-[320px] ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
+                <div className={`grid gap-6 lg:gap-8 xl:gap-10 items-stretch lg:min-h-[320px] ${isTextLeft ? 'lg:grid-cols-[1.4fr_1fr]' : 'lg:grid-cols-[1fr_1.4fr] lg:grid-flow-dense'}`}>
                     {/* Text Content */}
                     <div className={`${isTextLeft ? 'lg:order-1' : 'lg:col-start-2'} text-left min-w-0 flex flex-col h-full relative z-10`}>
                         <motion.div
@@ -84,7 +84,7 @@ const ServiceSection = ({ service, index }) => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className="flex flex-col justify-between h-full min-h-0"
+                            className={`flex flex-col h-full min-h-0 ${service.id === 'capacity' || service.id === 'sustainable' ? 'justify-start' : 'justify-between'}`}
                         >
                             <div>
                                 <div className="flex items-center gap-4 mb-4">
@@ -98,7 +98,7 @@ const ServiceSection = ({ service, index }) => {
                                 <p className="text-app-muted text-base lg:text-lg leading-relaxed mb-4">
                                     {service.intro}
                                 </p>
-                                <ul className="space-y-2 mb-4">
+                                <ul className={`space-y-2 ${service.id === 'capacity' || service.id === 'sustainable' ? 'mb-3' : 'mb-4'}`}>
                                 {service.bullets.map((bullet, i) => (
                                     <motion.li
                                         key={i}
@@ -122,14 +122,14 @@ const ServiceSection = ({ service, index }) => {
                         </motion.div>
                     </div>
 
-                    {/* Image - same size as first section (1fr column); constrain when in wider column */}
-                    <div className={`${isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'} min-w-0 h-full flex items-center ${!isTextLeft ? 'lg:justify-start' : ''}`}>
+                    {/* Image - same size and alignment as first section (1fr column) */}
+                    <div className={`${isTextLeft ? 'lg:order-2' : 'lg:col-start-1 lg:row-start-1'} min-w-0 h-full flex items-center`}>
                         <motion.div
                             initial={{ opacity: 0, x: isTextLeft ? 40 : -40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
-                            className={`relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] ${!isTextLeft ? 'w-full max-w-[72%]' : 'w-full'}`}
+                            className="relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/3] w-full"
                         >
                             <img
                                 src={service.image}
