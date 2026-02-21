@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, CheckCircle, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import cap1Img from '../assets/cap1.jpeg';
@@ -96,18 +96,20 @@ const ProjectsPage = () => {
     ];
 
     const location = useLocation();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
-        if (location.state?.selectedProjectId) {
-            const project = projects.find(p => p.id === location.state.selectedProjectId);
+        const projectId = searchParams.get('project');
+        if (projectId) {
+            const id = parseInt(projectId, 10);
+            const project = projects.find(p => p.id === id);
             if (project) {
                 setSelectedProject(project);
+                setCurrentImageIndex(0);
+                setSearchParams({}, { replace: true });
             }
-            // Optional: Clear state so it doesn't reopen on refresh, 
-            // but strictly speaking not required by prompt. 
-            // Leaving it persistent is often fine for "back" navigation.
         }
-    }, [location]);
+    }, [location.search]);
 
     const openProject = (project) => {
         setSelectedProject(project);

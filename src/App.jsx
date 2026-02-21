@@ -149,95 +149,101 @@ const HomePage = () => (
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-          >
-            <motion.img
-              src={solarImg}
-              className="w-full h-full object-cover transition-all duration-700"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.7 }}
-            />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-white font-bold text-xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-              >
-                120KWp Hybrid Solar Mini Grid Installation in Abia State
-              </motion.p>
-            </div>
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-            </div>
-          </motion.div>
+          <Link to="/projects?project=1" className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
+            >
+              <motion.img
+                src={solarImg}
+                className="w-full h-full object-cover transition-all duration-700"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7 }}
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8 pointer-events-none">
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-white font-bold text-xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                >
+                  120KWp Hybrid Solar Mini Grid Installation in Abia State
+                </motion.p>
+              </div>
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </div>
+            </motion.div>
+          </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-          >
-            <motion.img
-              src={adamImg}
-              className="w-full h-full object-cover transition-all duration-700"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.7 }}
-            />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-              >
-                Adamawa State Electricity Policy
-              </motion.p>
-            </div>
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-            </div>
-          </motion.div>
+          <Link to="/projects?project=2" className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
+            >
+              <motion.img
+                src={adamImg}
+                className="w-full h-full object-cover transition-all duration-700"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7 }}
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                >
+                  Adamawa State Electricity Policy
+                </motion.p>
+              </div>
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </div>
+            </motion.div>
+          </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            whileHover={{ y: -10, scale: 1.02 }}
-            className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-          >
-            <motion.img
-              src={cap1Img}
-              className="w-full h-full object-cover transition-all duration-700"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.7 }}
-            />
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
-              <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-              >
-                Solar PV Technical Training Program
-              </motion.p>
-            </div>
-            {/* Shine effect on hover */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-            </div>
-          </motion.div>
+          <Link to="/projects?project=3" className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
+            >
+              <motion.img
+                src={cap1Img}
+                className="w-full h-full object-cover transition-all duration-700"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7 }}
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                >
+                  Solar PV Technical Training Program
+                </motion.p>
+              </div>
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </div>
+            </motion.div>
+          </Link>
         </div>
       </div>
     </section>
