@@ -94,8 +94,8 @@ const Footer = () => {
                 <div className="pt-8 border-t border-app flex flex-col md:flex-row justify-between items-center text-sm text-app-muted gap-4">
                     <p>© 2026 Premplus. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <a href="#" className="hover:text-brand-yellow transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-brand-yellow transition-colors">Terms of Service</a>
+                        <Link to="/privacy#privacy" className="hover:text-brand-yellow transition-colors">Privacy Policy</Link>
+                        <Link to="/privacy#terms" className="hover:text-brand-yellow transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

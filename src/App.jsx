@@ -17,6 +17,7 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 
 import officeImg from './assets/office.png';
 import img1 from './assets/1.jpeg';
@@ -263,6 +264,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
