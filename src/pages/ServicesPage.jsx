@@ -11,7 +11,7 @@ const servicesData = [
         id: 'renewable',
         title: "Renewable Energy Solutions",
         icon: Zap,
-        image: "https://images.unsplash.com/photo-1509391366360-fe09a921881b?w=800&q=80",
+        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
         intro: "We develop and deploy renewable and distributed energy systems tailored to commercial, industrial, public-sector, private and community applications. Our portfolio includes:",
         bullets: [
             "Solar mini-grids and hybrid power systems",
