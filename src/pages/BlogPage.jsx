@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import mouImg from '../assets/mou.png';
 import nextGenImg from '../assets/nextgen.png';
 import b3Img from '../assets/b3.png';
@@ -109,10 +109,19 @@ const blogPosts = [
 ];
 
 const BlogPage = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const pageFromUrl = parseInt(searchParams.get('page') || '1', 10);
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(pageFromUrl);
     const postsPerPage = 6;
+
+    // Sync currentPage with URL when pageFromUrl changes (e.g. when navigating back)
+    React.useEffect(() => {
+        if (pageFromUrl >= 1 && pageFromUrl !== currentPage) {
+            setCurrentPage(pageFromUrl);
+        }
+    }, [pageFromUrl]);
 
     const filteredPosts = blogPosts
         .filter(post =>
@@ -130,6 +139,7 @@ const BlogPage = () => {
     // Change page
     const paginate = (pageNumber) => {
         setCurrentPage(pageNumber);
+        setSearchParams(pageNumber > 1 ? { page: pageNumber } : {});
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
@@ -198,7 +208,7 @@ const BlogPage = () => {
                             transition={{ delay: index * 0.1 }}
                             className="group"
                         >
-                            <Link to={`/blog/${post.id}`}>
+                            <Link to={`/blog/${post.id}`} state={{ from: '/blog', page: currentPage }}>
                                 <div className="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
                                     <img src={post.img} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                                     <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur text-brand-green text-xs font-bold rounded-full">

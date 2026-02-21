@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useLocation, Link } from 'react-router-dom';
 import { Calendar, User, Share2, Heart, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -256,7 +256,17 @@ const blogPosts = [
 
 const BlogDetailPage = () => {
     const { id } = useParams();
+    const location = useLocation();
     const post = blogPosts.find(p => p.id === parseInt(id)) || blogPosts[0];
+
+    // Back destination: from blog page 2+ go to /blog?page=N, from homepage go to /, else /blog
+    const backTo = (() => {
+        const from = location.state?.from;
+        const page = location.state?.page;
+        if (from === '/blog' && page && page > 1) return `/blog?page=${page}`;
+        if (from) return from;
+        return '/blog';
+    })();
 
     // Get related posts (same category, excluding current post)
     const relatedPosts = blogPosts
@@ -267,7 +277,7 @@ const BlogDetailPage = () => {
         <div className="pt-24 pb-24 bg-app-main min-h-screen transition-colors duration-300">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Back Button */}
-                <Link to="/blog">
+                <Link to={backTo}>
                     <motion.button
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
@@ -374,7 +384,7 @@ const BlogDetailPage = () => {
                         <h2 className="text-3xl font-bold text-app-main mb-8">Related Articles</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {relatedPosts.map((relatedPost, idx) => (
-                                <Link to={`/blog/${relatedPost.id}`} key={relatedPost.id}>
+                                <Link to={`/blog/${relatedPost.id}`} state={{ from: location.state?.from, page: location.state?.page }} key={relatedPost.id}>
                                     <motion.div
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}

@@ -123,7 +123,7 @@ const Blog = () => {
                         viewport={{ once: true }}
                         className="lg:col-span-7 group"
                     >
-                        <Link to={`/blog/${latestPosts[0].id}`} className="block cursor-pointer">
+                        <Link to={`/blog/${latestPosts[0].id}`} state={{ from: '/' }} className="block cursor-pointer">
                             <div className="relative h-[450px] rounded-3xl overflow-hidden mb-8 shadow-xl cursor-pointer">
                                 <img src={latestPosts[0].img} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer" />
                                 <div className="absolute top-6 left-6 px-4 py-1.5 bg-brand-yellow text-brand-dark text-xs font-bold rounded-full">
@@ -148,7 +148,7 @@ const Blog = () => {
                     {/* Side Posts - Fixed spacing */}
                     <div className="lg:col-span-5 flex flex-col gap-6">
                         {latestPosts.slice(1).map((post, index) => (
-                            <Link to={`/blog/${post.id}`} key={post.id} className="cursor-pointer">
+                            <Link to={`/blog/${post.id}`} state={{ from: '/' }} key={post.id} className="cursor-pointer">
                                 <motion.div
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
