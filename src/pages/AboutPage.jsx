@@ -339,9 +339,9 @@ const AboutPage = () => {
                             Choose us for an innovative, reliable and modern approach for your energy needs.
                         </p>
                     </div>
-                    <button className="mt-12 md:mt-0 bg-white text-brand-dark px-12 py-5 rounded-2xl font-black text-xl shadow-xl hover:scale-105 hover:bg-brand-dark hover:text-white transition-all duration-300">
+                    <Link to="/contact" className="mt-12 md:mt-0 inline-block bg-white text-brand-dark px-12 py-5 rounded-2xl font-black text-xl shadow-xl hover:scale-105 hover:bg-brand-dark hover:text-white transition-all duration-300">
                         Get started
-                    </button>
+                    </Link>
                 </motion.div>
             </section>
 
