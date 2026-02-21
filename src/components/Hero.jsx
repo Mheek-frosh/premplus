@@ -20,7 +20,7 @@ const slides = [
         id: 2,
         tag: 'Engineering Services',
         title: 'Premium engineering and consultancy services',
-        desc: 'Expert design and deployment of high-voltage power transmission and distribution networks.',
+        desc: 'End-to-end engineering and consultancy services across the energy value chain',
         img: img2,
         highlight: 'consultancy'
     },

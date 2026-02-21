@@ -90,8 +90,8 @@ const HomePage = () => (
     <ServiceSection />
 
 
-    {/* Completed Projects */}
-    <section id="completed-projects" className="py-24 bg-app-main transition-colors duration-300 relative overflow-hidden">
+    {/* Featured Projects */}
+    <section id="featured-projects" className="py-24 bg-app-main transition-colors duration-300 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <motion.div
         animate={{
@@ -134,7 +134,7 @@ const HomePage = () => (
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-5xl font-bold mt-4 text-app-main"
           >
-            Completed Projects
+            Featured Projects
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -143,7 +143,7 @@ const HomePage = () => (
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-app-muted max-w-2xl mx-auto mt-6 text-lg"
           >
-            Watch our story in action - various projects that we have successfully delivered with excellence and precision.
+            Each project we deliver contributes to a cleaner future—reducing emissions, enabling sustainable growth, and expanding energy access.
           </motion.p>
         </motion.div>
 

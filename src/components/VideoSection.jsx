@@ -194,7 +194,6 @@ const VideoSection = () => {
                     className="text-center text-app-muted text-lg mt-8 max-w-3xl mx-auto leading-relaxed"
                 >
                     Discover how we're transforming the energy landscape through innovation, sustainability, and excellence.
-                    Watch our journey as we power communities and businesses with reliable, clean energy solutions.
                 </motion.p>
             </div>
         </section>
