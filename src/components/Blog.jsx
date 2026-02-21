@@ -18,20 +18,22 @@ const blogPosts = [
         id: 1,
         title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
         excerpt: 'The newly envisioned hub will serve as a national center for technical training, applied research, and enterprise development in the renewable.',
-        date: 'August 15, 2024',
+        date: 'November 14, 2025',
         category: 'Innovation',
         img: mouImg
     },
     {
         id: 2,
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
-        date: 'July 10, 2024',
+        excerpt: 'This forward-looking initiative, led by the Rural Electrification Agency (REA), aims to address a critical gap in Nigeria\'s renewable energy sector.',
+        date: 'May 23, 2025',
         category: 'Renewable Energy',
         img: nextGenImg
     },
     {
         id: 3,
         title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
+        excerpt: 'Premplus proudly participated in the REA State-by-State Roundtable with Adamawa State, focusing on enhancing renewable energy access.',
         date: 'February 08, 2026',
         category: 'Innovation',
         img: b3Img
@@ -39,18 +41,63 @@ const blogPosts = [
     {
         id: 4,
         title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
-        date: 'February 08, 2026',
+        date: 'February 19, 2025',
+        excerpt: 'The Adamawa State Ministry hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework.',
         category: 'Innovation',
         img: b4Img
     },
     {
         id: 5,
         title: 'Premplus CEO receives Award of Excellence',
-        date: 'February 08, 2026',
+        excerpt: 'Engr. Zaharadeen Usman has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria.',
+        date: 'January 14, 2025',
         category: 'Consultation',
         img: b5Img
+    },
+    {
+        id: 6,
+        title: 'Premplus CEO receives Distinguished Merit Award',
+        excerpt: 'Our CEO has been honored with the Distinguished Merit Award by NANNS for his contributions to national development.',
+        date: 'January 9, 2025',
+        category: 'Innovation',
+        img: b6Img
+    },
+    {
+        id: 7,
+        title: 'Premplus signs partnership deal with Aurora',
+        excerpt: 'Premplus is excited to announce the signing of a MoU with Aurora, a leading solar energy company.',
+        date: 'December 26, 2024',
+        category: 'Consultation',
+        img: b7Img
+    },
+    {
+        id: 8,
+        title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
+        excerpt: 'Premplus is pleased to share insights from our participation in SEW2024, focusing on sustainable energy access and innovation.',
+        date: 'December 18, 2024',
+        category: 'Consultation',
+        img: b8Img
+    },
+    {
+        id: 9,
+        title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
+        excerpt: 'Premplus attended a landmark event organized by NERC, focused on accelerating the adoption of renewable energy in Nigeria.',
+        date: 'July 24, 2024',
+        category: 'Innovation',
+        img: b9Img
+    },
+    {
+        id: 10,
+        title: 'Growing Green Job Career Fair',
+        excerpt: 'Premplus participated in the Growing Green Job Career Fair, featuring career clinics and networking opportunities.',
+        date: 'July 8, 2024',
+        category: 'Innovation',
+        img: b10Img
     }
 ];
+
+// Sort by date (newest first) for Latest News and Insights - show top 5
+const latestPosts = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 5);
 
 const Blog = () => {
     return (
@@ -77,21 +124,21 @@ const Blog = () => {
                         className="lg:col-span-7 group"
                     >
                         <div className="relative h-[450px] rounded-3xl overflow-hidden mb-8 shadow-xl">
-                            <img src={blogPosts[0].img} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <img src={latestPosts[0].img} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                             <div className="absolute top-6 left-6 px-4 py-1.5 bg-brand-yellow text-brand-dark text-xs font-bold rounded-full">
-                                {blogPosts[0].category}
+                                {latestPosts[0].category}
                             </div>
                         </div>
                         <div className="flex items-center gap-4 text-app-muted text-sm mb-4">
-                            <span className="flex items-center gap-1"><Calendar size={14} /> {blogPosts[0].date}</span>
+                            <span className="flex items-center gap-1"><Calendar size={14} /> {latestPosts[0].date}</span>
                         </div>
                         <h3 className="text-3xl font-bold mb-6 group-hover:text-brand-green transition-colors text-app-main">
-                            {blogPosts[0].title}
+                            {latestPosts[0].title}
                         </h3>
                         <p className="text-app-muted text-lg mb-8 leading-relaxed">
-                            {blogPosts[0].excerpt}
+                            {latestPosts[0].excerpt}
                         </p>
-                        <Link to={`/blog/${blogPosts[0].id}`}>
+                        <Link to={`/blog/${latestPosts[0].id}`}>
                             <button className="flex items-center gap-2 text-app-main font-bold border-b-2 border-brand-yellow pb-1 hover:border-brand-green transition-all">
                                 Read Article
                             </button>
@@ -100,7 +147,7 @@ const Blog = () => {
 
                     {/* Side Posts - Fixed spacing */}
                     <div className="lg:col-span-5 flex flex-col gap-6">
-                        {blogPosts.slice(1).map((post, index) => (
+                        {latestPosts.slice(1).map((post, index) => (
                             <Link to={`/blog/${post.id}`} key={post.id}>
                                 <motion.div
                                     initial={{ opacity: 0, x: 50 }}

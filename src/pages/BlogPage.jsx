@@ -21,7 +21,7 @@ const blogPosts = [
         title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
         category: 'Innovation',
         author: 'Dr. Anya Sharma',
-        date: 'August 15, 2024',
+        date: 'November 14, 2025',
         excerpt: 'The newly envisioned hub will serve as a national center for technical training, applied research, and enterprise development in the renewable.',
         img: mouImg
     },
@@ -30,7 +30,7 @@ const blogPosts = [
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
         category: 'Renewable Energy',
         author: 'John Doe',
-        date: 'July 10, 2024',
+        date: 'May 23, 2025',
         excerpt: 'This forward-looking initiative, led by the Rural Electrification Agency (REA) in partnership with NAPTIN and Eco Innovation Empowerment',
         img: nextGenImg
     },
@@ -48,7 +48,7 @@ const blogPosts = [
         title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
         category: 'Innovation',
         author: 'Engr. Zaharadeen Usman Ibrahim',
-        date: 'February 08, 2026',
+        date: 'February 19, 2025',
         excerpt: 'The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework.',
         img: b4Img
     },
@@ -57,7 +57,7 @@ const blogPosts = [
         title: 'Premplus CEO receives Award of Excellence',
         category: 'Consultation',
         author: 'NYAN Press',
-        date: 'February 08, 2026',
+        date: 'January 14, 2025',
         excerpt: 'Engr. Zaharadeen Usman, the esteemed CEO of Premplus, has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria.',
         img: b5Img
     },
@@ -66,7 +66,7 @@ const blogPosts = [
         title: 'Premplus CEO receives Distinguished Merit Award',
         category: 'Innovation',
         author: 'NANNS Press',
-        date: 'February 08, 2026',
+        date: 'January 9, 2025',
         excerpt: 'Premplus is proud to announce that our CEO, Engr. Zaharadeen Usman, has been honored with the Distinguished Merit Award by the National Association of Northern Nigerian Students (NANNS).',
         img: b6Img
     },
@@ -75,7 +75,7 @@ const blogPosts = [
         title: 'Premplus signs partnership deal with Aurora',
         category: 'Consultation',
         author: 'Corporate Communications',
-        date: 'February 08, 2026',
+        date: 'December 26, 2024',
         excerpt: 'Premplus is excited to announce the signing of a Memorandum of Understanding (MoU) with Aurora, a leading solar energy company, to enhance our renewable energy solutions.',
         img: b7Img
     },
@@ -84,7 +84,7 @@ const blogPosts = [
         title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
         category: 'Consultation',
         author: 'REA Communications',
-        date: 'February 08, 2026',
+        date: 'December 18, 2024',
         excerpt: 'Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), focusing on sustainable energy access and innovation.',
         img: b8Img
     },
@@ -93,7 +93,7 @@ const blogPosts = [
         title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
         category: 'Innovation',
         author: 'Policy & Strategy Team',
-        date: 'February 08, 2026',
+        date: 'July 24, 2024',
         excerpt: 'Premplus recently had the privilege of attending a landmark event organized by NERC, focused on accelerating the adoption of renewable energy in Nigeria.',
         img: b9Img
     },
@@ -102,7 +102,7 @@ const blogPosts = [
         title: 'Growing Green Job Career Fair',
         category: 'Innovation',
         author: 'Human Resources',
-        date: 'February 08, 2026',
+        date: 'July 8, 2024',
         excerpt: 'Premplus participated in the Growing Green Job Career Fair, featuring career clinics and networking opportunities for the next generation of energy professionals.',
         img: b10Img
     }
@@ -114,10 +114,12 @@ const BlogPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 6;
 
-    const filteredPosts = blogPosts.filter(post =>
-        (activeCategory === 'All' || post.category === activeCategory) &&
-        (post.title.toLowerCase().includes(searchQuery.toLowerCase()) || post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()))
-    );
+    const filteredPosts = blogPosts
+        .filter(post =>
+            (activeCategory === 'All' || post.category === activeCategory) &&
+            (post.title.toLowerCase().includes(searchQuery.toLowerCase()) || post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()))
+        )
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // Calculate pagination details
     const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
