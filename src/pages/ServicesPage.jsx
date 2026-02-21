@@ -173,7 +173,7 @@ const ServicesPage = () => {
                         Integrated Energy Solutions
                     </h1>
                     <p className="text-app-muted max-w-2xl mx-auto text-lg leading-relaxed">
-                        Competently repurpose go forward benefits without goal-oriented conveniently target opportunities whereas parallel services.
+                        Our multidisciplinary expertise enables us to design, implement, and support energy systems and policies that are scalable and future-ready.
                     </p>
                 </div>
             </div>

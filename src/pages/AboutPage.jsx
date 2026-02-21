@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { Target, Eye, ArrowUpRight, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
 import officeImg from '../assets/office.png';
 import aboutusImg from '../assets/aboutus.png';
-import handlampImg from '../assets/handlamp.png';
-import hwomanImg from '../assets/hwoman.png';
-import groupImg from '../assets/group.png';
+import n1Img from '../assets/n1.jpeg';
+import n2Img from '../assets/n2.jpeg';
+import n3Img from '../assets/n3.jpeg';
 import missionImg from '../assets/mission.png';
 import visionImg from '../assets/vision.png';
 
@@ -98,13 +98,13 @@ const AboutPage = () => {
                         <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80" alt="Solar Energy Engineer" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.1 }} className="h-80 md:translate-y-12 rounded-3xl overflow-hidden shadow-xl">
-                        <img src={handlampImg} alt="Green Energy Summit" className="w-full h-full object-cover" />
+                        <img src={n1Img} alt="Green Energy Summit" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }} className="h-80 rounded-3xl overflow-hidden shadow-xl">
-                        <img src={hwomanImg} alt="Tech Professional" className="w-full h-full object-cover" />
+                        <img src={n2Img} alt="Tech Professional" className="w-full h-full object-cover" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }} className="h-80 md:translate-y-12 rounded-3xl overflow-hidden shadow-xl">
-                        <img src={groupImg} alt="Renewable Energy Collaboration" className="w-full h-full object-cover" />
+                        <img src={n3Img} alt="Renewable Energy Collaboration" className="w-full h-full object-cover" />
                     </motion.div>
                 </div>
 
