@@ -108,8 +108,8 @@ const Blog = () => {
                         <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Blog</span>
                         <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">Latest News and Insights</h2>
                     </div>
-                    <Link to="/blog">
-                        <button className="hidden sm:flex items-center gap-2 text-app-main font-bold hover:text-brand-green transition-colors">
+                    <Link to="/blog" className="cursor-pointer">
+                        <button className="hidden sm:flex items-center gap-2 text-app-main font-bold hover:text-brand-green transition-colors cursor-pointer">
                             View All Posts <ArrowUpRight size={20} />
                         </button>
                     </Link>
@@ -123,32 +123,32 @@ const Blog = () => {
                         viewport={{ once: true }}
                         className="lg:col-span-7 group"
                     >
-                        <div className="relative h-[450px] rounded-3xl overflow-hidden mb-8 shadow-xl">
-                            <img src={latestPosts[0].img} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                            <div className="absolute top-6 left-6 px-4 py-1.5 bg-brand-yellow text-brand-dark text-xs font-bold rounded-full">
-                                {latestPosts[0].category}
+                        <Link to={`/blog/${latestPosts[0].id}`} className="block cursor-pointer">
+                            <div className="relative h-[450px] rounded-3xl overflow-hidden mb-8 shadow-xl cursor-pointer">
+                                <img src={latestPosts[0].img} alt="" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer" />
+                                <div className="absolute top-6 left-6 px-4 py-1.5 bg-brand-yellow text-brand-dark text-xs font-bold rounded-full">
+                                    {latestPosts[0].category}
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex items-center gap-4 text-app-muted text-sm mb-4">
-                            <span className="flex items-center gap-1"><Calendar size={14} /> {latestPosts[0].date}</span>
-                        </div>
-                        <h3 className="text-3xl font-bold mb-6 group-hover:text-brand-green transition-colors text-app-main">
-                            {latestPosts[0].title}
-                        </h3>
-                        <p className="text-app-muted text-lg mb-8 leading-relaxed">
-                            {latestPosts[0].excerpt}
-                        </p>
-                        <Link to={`/blog/${latestPosts[0].id}`}>
-                            <button className="flex items-center gap-2 text-app-main font-bold border-b-2 border-brand-yellow pb-1 hover:border-brand-green transition-all">
+                            <div className="flex items-center gap-4 text-app-muted text-sm mb-4">
+                                <span className="flex items-center gap-1"><Calendar size={14} /> {latestPosts[0].date}</span>
+                            </div>
+                            <h3 className="text-3xl font-bold mb-6 group-hover:text-brand-green transition-colors text-app-main">
+                                {latestPosts[0].title}
+                            </h3>
+                            <p className="text-app-muted text-lg mb-8 leading-relaxed">
+                                {latestPosts[0].excerpt}
+                            </p>
+                            <span className="inline-flex items-center gap-2 text-app-main font-bold border-b-2 border-brand-yellow pb-1 hover:border-brand-green transition-all cursor-pointer">
                                 Read Article
-                            </button>
+                            </span>
                         </Link>
                     </motion.div>
 
                     {/* Side Posts - Fixed spacing */}
                     <div className="lg:col-span-5 flex flex-col gap-6">
                         {latestPosts.slice(1).map((post, index) => (
-                            <Link to={`/blog/${post.id}`} key={post.id}>
+                            <Link to={`/blog/${post.id}`} key={post.id} className="cursor-pointer">
                                 <motion.div
                                     initial={{ opacity: 0, x: 50 }}
                                     whileInView={{ opacity: 1, x: 0 }}
@@ -156,8 +156,8 @@ const Blog = () => {
                                     transition={{ delay: index * 0.15 }}
                                     className="flex gap-5 group cursor-pointer"
                                 >
-                                    <div className="flex-shrink-0 w-36 h-36 rounded-2xl overflow-hidden border border-app shadow-sm">
-                                        <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                                    <div className="flex-shrink-0 w-36 h-36 rounded-2xl overflow-hidden border border-app shadow-sm cursor-pointer">
+                                        <img src={post.img} alt="" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 cursor-pointer" />
                                     </div>
                                     <div className="flex flex-col justify-center flex-1 min-w-0">
                                         <span className="text-brand-green font-bold text-xs uppercase tracking-wider mb-2">{post.category}</span>
