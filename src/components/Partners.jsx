@@ -35,8 +35,8 @@ const logoAssets = [
 
 const Partners = () => {
     return (
-        <section className="py-28 md:py-36 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
-            <div className="max-w-7xl mx-auto px-4 text-center mb-12">
+        <section className="py-12 md:py-16 bg-app-secondary overflow-hidden transition-colors duration-300 border-y border-app">
+            <div className="max-w-7xl mx-auto px-4 text-center mb-8">
                 <p className="text-app-muted text-xs font-bold uppercase tracking-[0.4em] mb-2">
                     Our Clients & Partners
                 </p>
