@@ -92,7 +92,7 @@ const Navbar = () => {
                                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                                className="absolute left-0 mt-2 w-56 bg-app-card/95 backdrop-blur-xl border border-app rounded-2xl shadow-2xl overflow-hidden py-2"
+                                                className={`absolute left-0 mt-2 w-56 rounded-2xl shadow-2xl overflow-hidden py-2 border ${darkMode ? 'bg-slate-800 border-slate-600' : 'bg-white border-gray-200'}`}
                                             >
                                                 {link.dropdown.map((sub, idx) => (
                                                     <motion.div
@@ -103,7 +103,7 @@ const Navbar = () => {
                                                     >
                                                         <Link
                                                             to={sub.href}
-                                                            className="block px-6 py-3 text-sm font-semibold text-app-main hover:bg-brand-yellow/10 transition-colors"
+                                                            className={`block px-6 py-3 text-sm font-semibold transition-colors hover:bg-brand-yellow/10 ${darkMode ? 'text-slate-100 hover:bg-brand-yellow/20' : 'text-gray-900'}`}
                                                         >
                                                             {sub.name}
                                                         </Link>
