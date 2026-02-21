@@ -1,74 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Lightbulb, ShieldCheck } from 'lucide-react';
-import mouLogo from '../assets/mou.png';
+import { Award, Shield, Lightbulb } from 'lucide-react';
 
 const benefitItems = [
     {
         title: 'Excellence and professionalism',
-        img: mouLogo,
-        desc: 'We uphold the highest standards of quality and professional ethics in every project we undertake.'
-    },
-    {
-        title: 'Innovation with purpose',
-        icon: Lightbulb,
-        desc: 'Driving meaningful change through creative solutions that address real-world energy challenges.'
+        desc: 'We uphold the highest standards of quality and professional ethics in every project we undertake.',
+        icon: Award,
+        color: 'bg-emerald-500/10 text-emerald-600'
     },
     {
         title: 'Integrity and result orientation',
-        icon: ShieldCheck,
-        desc: 'Commitment to transparency and delivering measurable value for our partners and clients.'
+        desc: 'Commitment to transparency and delivering measurable value for our partners and clients.',
+        icon: Shield,
+        color: 'bg-amber-500/10 text-amber-600'
+    },
+    {
+        title: 'Innovation with purpose',
+        desc: 'Driving meaningful change through creative solutions that address real-world energy challenges.',
+        icon: Lightbulb,
+        color: 'bg-blue-500/10 text-blue-600'
     }
 ];
 
 const Benefits = () => {
     return (
-        <section className="bg-app-secondary py-10 overflow-hidden transition-colors duration-300">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-6 gap-6">
-                    <div className="max-w-2xl text-left">
-                        <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
-                        <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">The Advantages of <br /> Partnering with <span className="text-brand-green">US</span></h2>
-                    </div>
-                    <p className="text-app-muted lg:max-w-md text-lg italic border-l-4 border-brand-yellow pl-8 py-2">
-                        "Tailored energy solutions that maximize efficiency and sustainability for your global operations."
-                    </p>
+        <section className="py-24 bg-app-secondary relative overflow-hidden transition-colors duration-300">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-brand-green/5 rounded-full blur-3xl -z-10" />
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-20">
+                    <span className="text-brand-green font-bold text-sm uppercase tracking-widest">Benefits</span>
+                    <h2 className="text-4xl md:text-5xl font-bold mt-4 text-app-main">Why choose <span className="text-brand-green">Us</span></h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 h-full">
-                    {benefitItems.map((item, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {benefitItems.map((item, idx) => (
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: index * 0.1 }}
+                            key={idx}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ delay: idx * 0.1 }}
                             viewport={{ once: true }}
-                            className={`group bg-app-card rounded-3xl overflow-hidden border border-app shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col ${index === 0 ? 'lg:row-span-2 h-full' : 'h-full'
-                                }`}
+                            className="group p-8 rounded-[40px] bg-app-card border border-app shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500"
                         >
-                            <div className={`relative overflow-hidden ${index === 0 ? 'h-40 md:h-56 lg:h-64' : 'h-20 md:h-24 flex items-center justify-center bg-brand-dark/5'
-                                }`}>
-                                {item.img ? (
-                                    <>
-                                        <img
-                                            src={item.img}
-                                            alt={item.title}
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                        />
-                                        <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-brand-dark/10 transition-colors" />
-                                    </>
-                                ) : (
-                                    <item.icon className="w-10 h-10 md:w-12 md:h-12 text-brand-green group-hover:scale-110 transition-transform duration-500" />
-                                )}
+                            <div className={`w-14 h-14 ${item.color} rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6`}>
+                                <item.icon size={28} />
                             </div>
-                            <div className="p-5 md:p-6 flex-1 flex flex-col justify-center">
-                                <h3 className="font-bold mb-2 group-hover:text-brand-green transition-colors leading-tight text-app-main text-xl md:text-2xl">
-                                    {item.title}
-                                </h3>
-                                <p className="text-app-muted leading-relaxed text-sm md:text-base">
-                                    {item.desc}
-                                </p>
-                            </div>
+                            <h3 className="text-2xl font-bold text-app-main group-hover:text-brand-green transition-colors mb-4">{item.title}</h3>
+                            <p className="text-app-muted leading-relaxed">
+                                {item.desc}
+                            </p>
                         </motion.div>
                     ))}
                 </div>

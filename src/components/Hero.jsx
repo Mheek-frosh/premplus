@@ -11,10 +11,10 @@ const slides = [
     {
         id: 1,
         tag: 'Solar Energy',
-        title: 'Shaping the future through solar innovation',
-        desc: 'Advanced solar solutions designed for maximum efficiency and sustainable growth.',
+        title: 'Shaping the future through solar technology',
+        desc: 'Advanced solar solutions designed for maximum efficiency and sustainable growth',
         img: img1,
-        highlight: 'innovation'
+        highlight: 'technology'
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const slides = [
         id: 3,
         tag: 'Renewable Power',
         title: 'Sustainable energy for a resilient tomorrow',
-        desc: 'Harnessing renewable technologies to meet the diverse energy requirements of modern businesses.',
+        desc: 'Harnessing renewable technologies to meet the evolving energy needs of communities, institutions, and industries',
         img: img3,
         highlight: 'resilient'
     }
