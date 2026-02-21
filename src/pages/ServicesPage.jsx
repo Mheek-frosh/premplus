@@ -67,7 +67,7 @@ const servicesData = [
 ];
 
 const ServiceSection = ({ service, index }) => {
-    const isTextLeft = index % 2 === 0; // 0, 2: text left, image right | 1, 3: image left, text right
+    const isTextLeft = index % 2 === 0 || index === 3; // 0, 2, 3: text left, image right | 1: image left, text right
 
     return (
         <section
@@ -75,27 +75,29 @@ const ServiceSection = ({ service, index }) => {
             className={`py-12 lg:py-16 flex items-center ${index % 2 === 0 ? 'bg-app-secondary' : 'bg-app-main'} transition-colors duration-300`}
         >
             <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 w-full">
-                <div className={`grid lg:grid-cols-2 gap-6 lg:gap-10 xl:gap-12 items-stretch ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
+                <div className={`grid lg:grid-cols-[1.4fr_1fr] gap-6 lg:gap-8 xl:gap-10 items-stretch lg:min-h-[320px] ${!isTextLeft ? 'lg:grid-flow-dense' : ''}`}>
                     {/* Text Content */}
-                    <div className={`${isTextLeft ? 'lg:order-1' : 'lg:col-start-2'} text-left min-w-0 flex flex-col justify-center`}>
+                    <div className={`${isTextLeft ? 'lg:order-1' : 'lg:col-start-2'} text-left min-w-0 flex flex-col h-full relative z-10`}>
                         <motion.div
                             initial={{ opacity: 0, x: isTextLeft ? -40 : 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-100px" }}
                             transition={{ duration: 0.6 }}
+                            className="flex flex-col justify-between h-full min-h-0"
                         >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="w-14 h-14 flex-shrink-0 rounded-2xl bg-brand-green/15 flex items-center justify-center text-brand-green">
-                                    <service.icon size={28} />
-                                </div>
-                                <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-app-main">
+                            <div>
+                                <div className="flex items-center gap-4 mb-4">
+                                    <div className="w-14 h-14 flex-shrink-0 rounded-2xl bg-brand-green/15 flex items-center justify-center text-brand-green">
+                                        <service.icon size={28} />
+                                    </div>
+                                <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold text-app-main">
                                     {service.title}
                                 </h2>
-                            </div>
-                            <p className="text-app-muted text-lg leading-relaxed mb-6">
-                                {service.intro}
-                            </p>
-                            <ul className="space-y-3 mb-6">
+                                </div>
+                                <p className="text-app-muted text-base lg:text-lg leading-relaxed mb-4">
+                                    {service.intro}
+                                </p>
+                                <ul className="space-y-2 mb-4">
                                 {service.bullets.map((bullet, i) => (
                                     <motion.li
                                         key={i}
@@ -108,11 +110,12 @@ const ServiceSection = ({ service, index }) => {
                                         <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green/15 flex items-center justify-center mt-0.5">
                                             <Check className="w-3.5 h-3.5 text-brand-green" strokeWidth={3} />
                                         </span>
-                                        <span className="text-app-main font-medium leading-relaxed">{bullet}</span>
+                                        <span className="text-app-main font-medium leading-relaxed text-sm lg:text-base">{bullet}</span>
                                     </motion.li>
                                 ))}
-                            </ul>
-                            <p className="text-app-muted text-lg leading-relaxed border-l-4 border-brand-green pl-6 py-2 bg-brand-green/5 rounded-r-lg">
+                                </ul>
+                            </div>
+                            <p className="text-app-muted text-base lg:text-lg leading-relaxed border-l-4 border-brand-green pl-6 py-2 bg-brand-green/5 rounded-r-lg flex-shrink-0">
                                 {service.closing}
                             </p>
                         </motion.div>
