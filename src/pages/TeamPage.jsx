@@ -205,7 +205,7 @@ const TeamPage = () => {
                         >
                             <button
                                 onClick={() => setSelectedMember(null)}
-                                className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-colors shadow-lg"
+                                className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30 w-10 h-10 sm:w-12 sm:h-12 bg-black/60 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-brand-yellow hover:text-brand-dark transition-colors shadow-lg"
                             >
                                 <X size={20} className="sm:w-6 sm:h-6" />
                             </button>
