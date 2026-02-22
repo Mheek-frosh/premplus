@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 // Import local logos
 import zenithBank from '../assets/zenithbank.png';
-import abiaLogo from '../assets/ABIA-WEB-WHITE-LOGO-1.png';
+import goaLogo from '../assets/goa.PNG';
 import arktikLogo from '../assets/Arktik Logo copy.png';
 import brunelLogo from '../assets/Brunel-University-London.png';
 import midgardLogo from '../assets/Midgard.png';
@@ -22,7 +22,7 @@ const logoAssets = [
     zenithBank,
     signatureBank,
     accessBank,
-    abiaLogo,
+    goaLogo,
     arktikLogo,
     brunelLogo,
     midgardLogo,
@@ -54,18 +54,20 @@ const Partners = () => {
                     style={{ width: "fit-content" }}
                 >
                     {[...logoAssets, ...logoAssets].map((logo, i) => {
-                        // Big logos (don't touch): signatureBank, abiaLogo, midgardLogo, auroraLogo
-                        const isBigLogo = logo === signatureBank || logo === abiaLogo || logo === midgardLogo || logo === auroraLogo;
+                        // Big logos (don't touch): signatureBank, goaLogo, midgardLogo, auroraLogo
+                        const isBigLogo = logo === signatureBank || logo === goaLogo || logo === midgardLogo || logo === auroraLogo;
                         const heightClass = isBigLogo ? "h-16 md:h-20" : "h-20 md:h-28";
                         const additionalScale = logo === signatureBank ? "scale-105" : "";
                         const containerWidth = isBigLogo ? "w-40 md:w-64" : "w-48 md:w-72";
+                        // GOA is white logo - invert in light mode so it's visible on light background
+                        const goaLightModeFix = logo === goaLogo ? "invert dark:invert-0" : "";
 
                         return (
                             <div key={i} className={`flex-shrink-0 flex items-center justify-center ${containerWidth}`}>
                                 <img
                                     src={logo}
                                     alt="Partner Logo"
-                                    className={`${heightClass} ${additionalScale} w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500`}
+                                    className={`${heightClass} ${additionalScale} ${goaLightModeFix} w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-500`}
                                 />
                             </div>
                         );
