@@ -6,30 +6,19 @@ import ed from '../assets/ed.png';
 import fadil from '../assets/fadil.png';
 import sule from '../assets/sule.png';
 
-const teamMembers = [
+const existingProfiles = [
     {
         id: 1,
         name: 'Engr. Zaharadeen Usman',
         position: 'MD/CEO',
-        category: 'Executive',
         bio: 'Engr. Zaharadeen Usman, a distinguished leader with a multifaceted background, brings a wealth of experience to the intersection of public service, engineering, renewable energy, sustainable designs, and information technology. With a robust history in public service, he has honed his skills in navigating complex regulatory landscapes and fostering collaboration between public and private sectors. Holding a degree in Metallurgical and Materials Engineering from the prestigious Ahmadu Bello University Zaria, Engr. Usman has amassed nearly 14 years of experience in the engineering domain and public service, earning recognition as a COREN certified Engineer.',
         img: ceo,
         quote: 'Leading with vision and integrity to power the future.'
     },
     {
-        id: 2,
-        name: 'Engr. Suleiman Modu Maina',
-        position: 'Chief Operating Officer',
-        category: 'Executive',
-        bio: 'Engr. Suleiman Modu Maina leads the operational excellence of Premplus, ensuring seamless execution of our projects and strategic initiatives across the organization.',
-        img: null,
-        quote: 'Excellence in operations drives sustainable impact.'
-    },
-    {
         id: 3,
         name: 'Ahmed Ishaku Adamu',
         position: 'Chief Finance Officer',
-        category: 'Executive',
         bio: 'Ahmed Ishaku Adamu oversees the financial strategy and stewardship of Premplus, ensuring robust fiscal management and sustainable growth.',
         img: null,
         quote: 'Financial discipline enables lasting value creation.'
@@ -38,7 +27,6 @@ const teamMembers = [
         id: 4,
         name: 'Engr. Usman Dauda',
         position: 'Head of Operations and Maintenance',
-        category: 'Executive',
         bio: 'Engr. Usman Dauda plays a pivotal role in steering the strategic direction of Premplus. With deep expertise in engineering management and operations, he ensures our projects meet the highest standards of quality and efficiency.',
         img: ed,
         quote: 'Excellence is not an act, but a habit.'
@@ -47,55 +35,45 @@ const teamMembers = [
         id: 5,
         name: 'Muhammad Fadil Yakubu',
         position: 'Business Development Manager',
-        category: 'Technical',
         bio: 'Muhammad Fadil Yakubu drives business growth and strategic partnerships, expanding Premplus\'s reach and impact in the sustainable energy sector.',
         img: fadil,
         quote: 'Technology is the bridge to our future.'
     },
     {
-        id: 6,
-        name: 'Zubaida Ibrahim',
-        position: 'Head of Admin',
-        category: 'Management',
-        bio: 'Zubaida Ibrahim leads administrative operations, ensuring smooth coordination and support across the organization.',
-        img: null,
-        quote: 'Efficiency in administration enables excellence in execution.'
-    },
-    {
         id: 7,
         name: 'Suleiman M. Jaji, Esq.',
         position: 'Legal Advisor',
-        category: 'Legal',
         bio: 'Suleiman M. Jaji serves as our trusted Legal Advisor, providing expert counsel on corporate governance, regulatory compliance, and strategic partnerships, safeguarding the integrity of our operations.',
         img: sule,
         quote: 'Justice and integrity form the bedrock of our success.'
     },
-    {
-        id: 8,
-        name: 'Fawziyyah Usman',
-        position: 'Head, Community and Stakeholder Engagement',
-        category: 'Management',
-        bio: 'Fawziyyah Usman leads community and stakeholder engagement initiatives, building strong relationships and ensuring inclusive participation in our projects.',
-        img: null,
-        quote: 'Community engagement is the foundation of sustainable development.'
-    },
-    {
-        id: 9,
-        name: 'Ruwaida Kabir',
-        position: 'Head, Project Management',
-        category: 'Management',
-        bio: 'Ruwaida Kabir oversees project delivery, ensuring timely execution and high-quality outcomes across all Premplus initiatives.',
-        img: null,
-        quote: 'Effective project management turns vision into reality.'
-    }
+
+];
+
+const boardMembers = [
+    { ...existingProfiles.find(member => member.id === 1), position: 'Executive Director' },
+    { ...existingProfiles.find(member => member.id === 4), position: 'Executive Director' },
+    { ...existingProfiles.find(member => member.id === 5), position: 'Non-Executive Director' },
+    { id: 10, name: 'Jemimah Jatau-Kyari', position: 'Non-Executive Director', img: null },
+    { ...existingProfiles.find(member => member.id === 7), position: 'Non-Executive Director' },
+    { ...existingProfiles.find(member => member.id === 3), position: 'Non-Executive Director' },
+];
+
+const managementMembers = [
+    { ...existingProfiles.find(member => member.id === 1), position: 'MD/CEO' },
+    { ...existingProfiles.find(member => member.id === 4), position: 'Technical Director' },
+    { id: 11, name: 'OMEIZA ABDULAZEEZ', position: 'Head of Finance and Admin', img: null },
+    { id: 12, name: 'FAITH OGWU', position: 'Legal Adviser', img: null },
+    { id: 13, name: 'Amira Musa', position: 'Finance and Admin Manager', img: null },
+];
+
+const memberSections = [
+    { title: 'Board of Directors', members: boardMembers },
+    { title: 'Management', members: managementMembers },
 ];
 
 const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
-    const [filter, setFilter] = useState('All');
-
-    const categories = ['All', 'Executive', 'Management', 'Legal', 'Technical'];
-    const filteredMembers = filter === 'All' || filter === 'Management' ? teamMembers : teamMembers.filter(m => m.category === filter);
 
     return (
         <div className="pt-24 bg-app-main min-h-screen transition-colors duration-300">
@@ -116,7 +94,7 @@ const TeamPage = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-4 mb-6 md:mb-8"
                     >
-                        Meet Our <span className="text-brand-yellow">Leadership</span>
+                        BOARD OF DIRECTORS <span className="text-brand-yellow">AND MANAGEMENT</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
@@ -129,26 +107,13 @@ const TeamPage = () => {
                 </div>
             </section>
 
-            {/* Filter */}
-            <section className="py-6 sm:py-8 md:py-12 border-b border-app sticky top-16 sm:top-20 bg-app-card/80 backdrop-blur-md z-40 transition-colors duration-300">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-center gap-3 sm:gap-4">
-                    {categories.map((cat) => (
-                        <button
-                            key={cat}
-                            onClick={() => setFilter(cat)}
-                            className={`px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all ${filter === cat ? 'bg-app-main text-app-main shadow-xl border-2 border-brand-yellow' : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'}`}
-                        >
-                            {cat}
-                        </button>
-                    ))}
-                </div>
-            </section>
-
             {/* Team Grid */}
-            <section className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {memberSections.map(({ title, members }) => (
+            <section key={title} className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl sm:text-4xl font-bold text-app-main mb-8 sm:mb-12">{title}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
                     <AnimatePresence mode="popLayout">
-                        {filteredMembers.map((member) => (
+                        {members.map((member) => (
                             <motion.div
                                 key={member.id}
                                 layout
@@ -171,22 +136,24 @@ const TeamPage = () => {
                                     )}
                                 </div>
                                 <div className="p-6 sm:p-8 md:p-10 relative">
-                                    <span className="text-brand-green font-bold text-xs uppercase tracking-widest mb-2 block">{member.category}</span>
                                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-app-main mb-1 transition-colors duration-300 line-clamp-2">{member.name}</h3>
                                     <p className="text-brand-yellow font-bold text-xs sm:text-sm uppercase mb-4 md:mb-6 line-clamp-2">{member.position}</p>
 
-                                    <button
+                                    {member.bio && <button
+                                        aria-label={`Read about ${member.name}`}
                                         onClick={() => setSelectedMember(member)}
                                         className="w-12 h-12 sm:w-14 sm:h-14 bg-brand-yellow rounded-2xl flex items-center justify-center text-brand-dark shadow-lg hover:scale-110 transition-transform"
                                     >
                                         <ChevronRight size={24} />
-                                    </button>
+                                    </button>}
                                 </div>
                             </motion.div>
                         ))}
                     </AnimatePresence>
                 </div>
             </section>
+
+            ))}
 
             {/* Biography Overlay */}
             <AnimatePresence>
