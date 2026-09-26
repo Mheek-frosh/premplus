@@ -74,6 +74,8 @@ const memberSections = [
 
 const TeamPage = () => {
     const [selectedMember, setSelectedMember] = useState(null);
+    const [filter, setFilter] = useState('Board of Directors');
+    const members = memberSections.find(section => section.title === filter).members;
 
     return (
         <div className="pt-24 bg-app-main min-h-screen transition-colors duration-300">
@@ -107,15 +109,30 @@ const TeamPage = () => {
                 </div>
             </section>
 
+            {/* Category Filters */}
+            <section aria-label="Team categories" className="py-6 sm:py-8 md:py-12 border-b border-app sticky top-16 sm:top-20 bg-app-card/80 backdrop-blur-md z-40 transition-colors duration-300">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap justify-center gap-3 sm:gap-4">
+                    {memberSections.map(({ title }) => (
+                        <button
+                            key={title}
+                            type="button"
+                            aria-pressed={filter === title}
+                            onClick={() => setFilter(title)}
+                            className={`px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all ${filter === title ? 'bg-app-main text-app-main shadow-xl border-2 border-brand-yellow' : 'bg-app-secondary text-app-muted hover:bg-app-main hover:text-app-main'}`}
+                        >
+                            {title}
+                        </button>
+                    ))}
+                </div>
+            </section>
+
             {/* Team Grid */}
-            {memberSections.map(({ title, members }) => (
-            <section key={title} className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl sm:text-4xl font-bold text-app-main mb-8 sm:mb-12">{title}</h2>
+            <section aria-label={filter} className="py-12 sm:py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
                     <AnimatePresence mode="popLayout">
                         {members.map((member) => (
                             <motion.div
-                                key={member.id}
+                                key={`${filter}-${member.id}`}
                                 layout
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
@@ -136,6 +153,7 @@ const TeamPage = () => {
                                     )}
                                 </div>
                                 <div className="p-6 sm:p-8 md:p-10 relative">
+                                    <span className="text-brand-green font-bold text-xs uppercase tracking-widest mb-2 block">{filter}</span>
                                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-app-main mb-1 transition-colors duration-300 line-clamp-2">{member.name}</h3>
                                     <p className="text-brand-yellow font-bold text-xs sm:text-sm uppercase mb-4 md:mb-6 line-clamp-2">{member.position}</p>
 
@@ -152,8 +170,6 @@ const TeamPage = () => {
                     </AnimatePresence>
                 </div>
             </section>
-
-            ))}
 
             {/* Biography Overlay */}
             <AnimatePresence>
