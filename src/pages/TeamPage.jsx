@@ -5,6 +5,7 @@ import ceo from '../assets/ceo.png';
 import ed from '../assets/ed.png';
 import fadil from '../assets/fadil.png';
 import sule from '../assets/sule.png';
+import omeiza from '../assets/Abdulazeez-Omeiza.png';
 
 const existingProfiles = [
     {
@@ -62,7 +63,7 @@ const boardMembers = [
 const managementMembers = [
     { ...existingProfiles.find(member => member.id === 1), position: 'MD/CEO' },
     { ...existingProfiles.find(member => member.id === 4), position: 'Technical Director' },
-    { id: 11, name: 'OMEIZA ABDULAZEEZ', position: 'Head of Finance and Admin', img: null },
+    { id: 11, name: 'OMEIZA ABDULAZEEZ', position: 'Head of Finance and Admin', img: omeiza },
     { id: 12, name: 'FAITH OGWU', position: 'Legal Adviser', img: null },
     { id: 13, name: 'Amira Musa', position: 'Finance and Admin Manager', img: null },
 ];
