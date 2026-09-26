@@ -7,6 +7,7 @@ import fadil from '../assets/fadil.png';
 import sule from '../assets/sule.png';
 import omeiza from '../assets/Abdulazeez-Omeiza.png';
 import amira from '../Amira-Musa.png';
+import jemimah from '../assets/jemimah.jpg';
 
 const existingProfiles = [
     {
@@ -56,7 +57,7 @@ const boardMembers = [
     { ...existingProfiles.find(member => member.id === 1), position: 'Executive Director' },
     { ...existingProfiles.find(member => member.id === 4), position: 'Executive Director' },
     { ...existingProfiles.find(member => member.id === 5), position: 'Non-Executive Director' },
-    { id: 10, name: 'Jemimah Jatau-Kyari', position: 'Non-Executive Director', img: null },
+    { id: 10, name: 'Jemimah Jatau-Kyari', position: 'Non-Executive Director', img: jemimah },
     { ...existingProfiles.find(member => member.id === 7), position: 'Non-Executive Director' },
     { ...existingProfiles.find(member => member.id === 3), position: 'Non-Executive Director' },
 ];
