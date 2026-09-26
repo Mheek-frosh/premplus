@@ -96,7 +96,7 @@ const TeamPage = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mt-4 mb-6 md:mb-8"
                     >
-                        BOARD OF DIRECTORS <span className="text-brand-yellow">AND MANAGEMENT</span>
+                        Meet Our <span className="text-brand-yellow">Leadership</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0 }}
