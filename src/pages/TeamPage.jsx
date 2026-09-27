@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Linkedin, Mail, User } from 'lucide-react';
-import ceo from '../assets/ceo.png';
+import ceo from '../assets/Engr. Zaharadeen-Usman.JPG';
 import ed from '../assets/ed.png';
 import fadil from '../assets/Fadil-Yakubu.png';
 import sule from '../assets/sule.png';
@@ -143,11 +143,16 @@ const TeamPage = () => {
                                 whileHover={{ y: -10 }}
                                 className="relative bg-app-card rounded-[40px] overflow-hidden border border-app shadow-xl group transition-colors duration-300"
                             >
-                                <div className="h-64 sm:h-72 md:h-80 overflow-hidden relative bg-gray-100 dark:bg-gray-800">
+                                <div className="h-64 sm:h-72 md:h-80 overflow-hidden relative bg-gradient-to-b from-white to-gray-100 dark:from-gray-800 dark:to-gray-900">
                                     {member.img ? (
                                         <>
-                                            <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
-                                            <div className="absolute inset-0 bg-brand-dark/20 group-hover:bg-transparent transition-colors" />
+                                            <img
+                                                src={member.img}
+                                                alt={member.name}
+                                                className="w-full h-full object-cover object-center bg-white/60 grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                                                style={{ objectPosition: 'center 18%' }}
+                                            />
+                                            <div className="absolute inset-0 bg-brand-dark/10 group-hover:bg-transparent transition-colors" />
                                         </>
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 group-hover:from-gray-300 group-hover:to-gray-400 dark:group-hover:from-gray-600 dark:group-hover:to-gray-700 transition-colors duration-500">
