@@ -30,10 +30,10 @@ const ProjectsPage = () => {
         },
         {
             id: 2,
-            title: "Adamawa State Electricity Policy",
+            title: "Adamawa State Electricity Policy & Electricity Law 2025",
             category: "Policy & Regulation",
-            desc: "Premplus successfully developed the Adamawa State Electricity Policy framework, which has now been passed into a bill by the Adamawa State House of Assembly.",
-            details: "This landmark initiative establishes a modern legal and institutional structure for improving electricity access across Adamawa State. The Adamawa State Electricity Bill provides a comprehensive framework for electricity generation, transmission, distribution, supply, and trading within the state. It also strengthens consumer protection through the establishment of regulatory and grievance redress mechanisms. The bill repeals the Gongola Basin Energy Development Company Law of 2009 and introduces a more modern electricity market structure designed to improve power availability, reduce reliance on external energy supply, and encourage investments in solar, hydro, and gas-based electricity generation.",
+            desc: "Client: Adamawa State Government. Premplus provided specialist electricity-sector consultancy to the Adamawa State Government, leading the development of the State Electricity Policy and drafting the Adamawa State Electricity Bill 2025. The assignment established a legal and institutional framework for developing a competitive and sustainable state electricity market.",
+            details: "The assignment involved analysing the State's electricity-sector requirements and developing a framework covering electricity market development, regulatory governance, private-sector participation, renewable energy, electricity access, consumer protection and sustainable power supply. The draft legislation translates the policy objectives into a proposed legal and institutional framework for the development and regulation of electricity activities within Adamawa State, supporting the State's transition towards a more decentralised and investment-oriented electricity market.",
             image: adamImg,
             gallery: [
                 adamImg

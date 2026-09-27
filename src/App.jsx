@@ -203,7 +203,7 @@ const HomePage = () => (
                   transition={{ delay: 0.2 }}
                   className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                 >
-                  Adamawa State Electricity Policy
+                  Adamawa State Electricity Policy & Electricity Law 2025
                 </motion.p>
               </div>
               {/* Shine effect on hover */}
