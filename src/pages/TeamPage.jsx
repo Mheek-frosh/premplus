@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Linkedin, Mail, User } from 'lucide-react';
 import ceo from '../assets/ceo.png';
 import ed from '../assets/ed.png';
-import fadil from '../assets/fadil.png';
+import fadil from '../assets/Fadil-Yakubu.png';
 import sule from '../assets/sule.png';
 import omeiza from '../assets/Abdulazeez-Omeiza.png';
 import amira from '../Amira-Musa.png';
