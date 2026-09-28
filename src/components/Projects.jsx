@@ -17,20 +17,6 @@ import euImg from '../assets/eu.png';
 
 const projects = [
     {
-        id: 1,
-        title: "120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)",
-        category: "Renewable energy solutions",
-        desc: "Premplus delivered a 120kW peak hybrid solar power system for the Broadcasting Corporation of Abia (BCA), Umuahia.",
-        details: "The system integrates solar photovoltaic generation with high-capacity battery storage and hybrid power management to provide reliable electricity for BCA's critical broadcasting and operational loads. The battery system enables energy storage and dispatch during periods of low solar availability, improving power continuity and reducing dependence on conventional generation.\n\nSystem Capacity: 120kWp Solar PV\nEnergy Storage: 215kWh BESS\nSystem Type: Hybrid Solar + Battery Energy Storage",
-        client: "Abia State Government (Ministry of Power and Public Utilities)",
-        image: solarImg,
-        gallery: [
-            solarImg,
-            img120,
-            gworkImg
-        ]
-    },
-    {
         id: 2,
         title: "Adamawa State Electricity Policy & Electricity Law 2025",
         category: "Policy & Regulation",
@@ -40,21 +26,6 @@ const projects = [
         image: adamImg,
         gallery: [
             adamImg
-        ]
-    },
-    {
-        id: 3,
-        title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
-        category: "Capacity Development",
-        desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
-        details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
-        client: "Abia State Government (Ministry of Power and Public Utilities)",
-        status: "Completed",
-        image: cap1Img,
-        gallery: [
-            cap1Img,
-            cap2Img,
-            cap3Img
         ]
     },
     {
@@ -68,6 +39,20 @@ const projects = [
         image: adamImg,
         gallery: [
             adamImg
+        ]
+    },
+    {
+        id: 1,
+        title: "120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)",
+        category: "Renewable energy solutions",
+        desc: "Premplus delivered a 120kW peak hybrid solar power system for the Broadcasting Corporation of Abia (BCA), Umuahia.",
+        details: "The system integrates solar photovoltaic generation with high-capacity battery storage and hybrid power management to provide reliable electricity for BCA's critical broadcasting and operational loads. The battery system enables energy storage and dispatch during periods of low solar availability, improving power continuity and reducing dependence on conventional generation.\n\nSystem Capacity: 120kWp Solar PV\nEnergy Storage: 215kWh BESS\nSystem Type: Hybrid Solar + Battery Energy Storage",
+        client: "Abia State Government (Ministry of Power and Public Utilities)",
+        image: solarImg,
+        gallery: [
+            solarImg,
+            img120,
+            gworkImg
         ]
     },
     {
@@ -87,16 +72,18 @@ const projects = [
         ]
     },
     {
-        id: 5,
-        title: "EU-Funded Solar for Health — Project Management Consultancy",
-        category: "Consultancy",
-        desc: "Premplus is providing Project Management Consultancy (PMC) to support the Abia State Government in implementing the EU-funded Solar for Health Project (NIHSP).",
-        details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
+        id: 3,
+        title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
+        category: "Capacity Development",
+        desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
+        details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
         client: "Abia State Government (Ministry of Power and Public Utilities)",
-        status: "In Progress",
-        image: euImg,
+        status: "Completed",
+        image: cap1Img,
         gallery: [
-            euImg
+            cap1Img,
+            cap2Img,
+            cap3Img
         ]
     },
     {
@@ -109,6 +96,19 @@ const projects = [
         status: "In Progress",
         image: null,
         gallery: []
+    },
+    {
+        id: 5,
+        title: "EU-Funded Solar for Health — Project Management Consultancy",
+        category: "Consultancy",
+        desc: "Premplus is providing Project Management Consultancy (PMC) to support the Abia State Government in implementing the EU-funded Solar for Health Project (NIHSP).",
+        details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
+        client: "Abia State Government (Ministry of Power and Public Utilities)",
+        status: "In Progress",
+        image: euImg,
+        gallery: [
+            euImg
+        ]
     }
 ];
 

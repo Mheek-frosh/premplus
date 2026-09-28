@@ -25,20 +25,6 @@ const ProjectsPage = () => {
 
     const projects = [
         {
-            id: 1,
-            title: "120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)",
-            category: "Renewable energy solutions",
-            desc: "Premplus delivered a 120kW peak hybrid solar power system for the Broadcasting Corporation of Abia (BCA), Umuahia.",
-            details: "The system integrates solar photovoltaic generation with high-capacity battery storage and hybrid power management to provide reliable electricity for BCA's critical broadcasting and operational loads. The battery system enables energy storage and dispatch during periods of low solar availability, improving power continuity and reducing dependence on conventional generation.\n\nSystem Capacity: 120kWp Solar PV\nEnergy Storage: 215kWh BESS\nSystem Type: Hybrid Solar + Battery Energy Storage",
-            client: "Abia State Government (Ministry of Power and Public Utilities)",
-            image: solarImg,
-            gallery: [
-                solarImg,
-                img120,
-                gworkImg
-            ]
-        },
-        {
             id: 2,
             title: "Adamawa State Electricity Policy & Electricity Law 2025",
             category: "Policy & Regulation",
@@ -48,21 +34,6 @@ const ProjectsPage = () => {
             image: adamImg,
             gallery: [
                 adamImg
-            ]
-        },
-        {
-            id: 3,
-            title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
-            category: "Capacity Development",
-            desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
-            details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
-            client: "Abia State Government (Ministry of Power and Public Utilities)",
-            status: "Completed",
-            image: cap1Img,
-            gallery: [
-                cap1Img,
-                cap2Img,
-                cap3Img
             ]
         },
         {
@@ -82,6 +53,20 @@ const ProjectsPage = () => {
             ]
         },
         {
+            id: 1,
+            title: "120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)",
+            category: "Renewable energy solutions",
+            desc: "Premplus delivered a 120kW peak hybrid solar power system for the Broadcasting Corporation of Abia (BCA), Umuahia.",
+            details: "The system integrates solar photovoltaic generation with high-capacity battery storage and hybrid power management to provide reliable electricity for BCA's critical broadcasting and operational loads. The battery system enables energy storage and dispatch during periods of low solar availability, improving power continuity and reducing dependence on conventional generation.\n\nSystem Capacity: 120kWp Solar PV\nEnergy Storage: 215kWh BESS\nSystem Type: Hybrid Solar + Battery Energy Storage",
+            client: "Abia State Government (Ministry of Power and Public Utilities)",
+            image: solarImg,
+            gallery: [
+                solarImg,
+                img120,
+                gworkImg
+            ]
+        },
+        {
             id: 7,
             title: "Hybrid Solar Power for 17 Court Halls Across Abia State",
             category: "Renewable energy solutions",
@@ -98,16 +83,18 @@ const ProjectsPage = () => {
             ]
         },
         {
-            id: 5,
-            title: "EU-Funded Solar for Health — Project Management Consultancy",
-            category: "Consultancy",
-            desc: "Premplus is providing Project Management Consultancy (PMC) to support the Abia State Government in implementing the EU-funded Solar for Health Project (NIHSP).",
-            details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
+            id: 3,
+            title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
+            category: "Capacity Development",
+            desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
+            details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
             client: "Abia State Government (Ministry of Power and Public Utilities)",
-            status: "In Progress",
-            image: euImg,
+            status: "Completed",
+            image: cap1Img,
             gallery: [
-                euImg
+                cap1Img,
+                cap2Img,
+                cap3Img
             ]
         },
         {
@@ -121,7 +108,22 @@ const ProjectsPage = () => {
             image: null,
             gallery: []
         },
-        /*
+        {
+            id: 5,
+            title: "EU-Funded Solar for Health — Project Management Consultancy",
+            category: "Consultancy",
+            desc: "Premplus is providing Project Management Consultancy (PMC) to support the Abia State Government in implementing the EU-funded Solar for Health Project (NIHSP).",
+            details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
+            client: "Abia State Government (Ministry of Power and Public Utilities)",
+            status: "In Progress",
+            image: euImg,
+            gallery: [
+                euImg
+            ]
+        }
+    ];
+
+    /*
                 {
                     id: 4,
                     title: "Offshore Wind Study",
@@ -162,7 +164,6 @@ const ProjectsPage = () => {
                     ]
                 }
                 */
-    ];
 
     const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
@@ -186,14 +187,16 @@ const ProjectsPage = () => {
     };
 
     const nextImage = () => {
-        if (!selectedProject) return;
+        if (!selectedProject || !selectedProject.gallery || selectedProject.gallery.length === 0) return;
         setCurrentImageIndex((prev) => (prev + 1) % selectedProject.gallery.length);
     };
 
     const prevImage = () => {
-        if (!selectedProject) return;
+        if (!selectedProject || !selectedProject.gallery || selectedProject.gallery.length === 0) return;
         setCurrentImageIndex((prev) => (prev - 1 + selectedProject.gallery.length) % selectedProject.gallery.length);
     };
+
+    const currentGalleryImage = selectedProject?.gallery?.[currentImageIndex];
 
     return (
         <div className="pt-32 pb-24 bg-app-secondary min-h-screen transition-colors duration-300">
@@ -280,36 +283,56 @@ const ProjectsPage = () => {
                                 {/* Image Slider Section (Left/Top) */}
                                 <div className="w-full lg:w-2/3 h-[400px] lg:h-auto relative bg-black">
                                     <AnimatePresence mode="wait">
-                                        <motion.img
-                                            key={currentImageIndex}
-                                            src={selectedProject.gallery[currentImageIndex]}
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            exit={{ opacity: 0 }}
-                                            transition={{ duration: 0.5 }}
-                                            className="w-full h-full object-cover"
-                                            alt="Project"
-                                        />
+                                        {currentGalleryImage ? (
+                                            <motion.img
+                                                key={currentImageIndex}
+                                                src={currentGalleryImage}
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="w-full h-full object-cover"
+                                                alt="Project"
+                                            />
+                                        ) : (
+                                            <motion.div
+                                                key="project-placeholder"
+                                                initial={{ opacity: 0 }}
+                                                animate={{ opacity: 1 }}
+                                                exit={{ opacity: 0 }}
+                                                transition={{ duration: 0.5 }}
+                                                className="w-full h-full bg-gradient-to-br from-[#0D1B2A] via-[#1B3A4B] to-[#0F172A] flex items-center justify-center p-10"
+                                            >
+                                                <div className="text-center text-white max-w-md">
+                                                    <p className="text-sm uppercase tracking-[0.25em] text-brand-green mb-4">Project Update</p>
+                                                    <p className="text-2xl md:text-3xl font-bold leading-tight">{selectedProject.title}</p>
+                                                </div>
+                                            </motion.div>
+                                        )}
                                     </AnimatePresence>
 
                                     {/* Slider Controls */}
                                     <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent flex justify-between items-end">
-                                        <div className="flex gap-2">
-                                            {selectedProject.gallery.map((_, idx) => (
-                                                <div
-                                                    key={idx}
-                                                    className={`h-1 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'w-8 bg-brand-yellow' : 'w-4 bg-white/50'}`}
-                                                />
-                                            ))}
-                                        </div>
-                                        <div className="flex gap-4">
-                                            <button onClick={prevImage} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
-                                                <ChevronLeft size={24} />
-                                            </button>
-                                            <button onClick={nextImage} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
-                                                <ChevronRight size={24} />
-                                            </button>
-                                        </div>
+                                        {selectedProject.gallery && selectedProject.gallery.length > 0 && (
+                                            <>
+                                                <div className="flex gap-2">
+                                                    {selectedProject.gallery.map((_, idx) => (
+                                                        <div
+                                                            key={idx}
+                                                            className={`h-1 rounded-full transition-all duration-300 ${idx === currentImageIndex ? 'w-8 bg-brand-yellow' : 'w-4 bg-white/50'}`}
+                                                        />
+                                                    ))}
+                                                </div>
+                                                <div className="flex gap-4">
+                                                    <button onClick={prevImage} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
+                                                        <ChevronLeft size={24} />
+                                                    </button>
+                                                    <button onClick={nextImage} className="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
+                                                        <ChevronRight size={24} />
+                                                    </button>
+                                                </div>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
 

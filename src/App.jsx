@@ -27,6 +27,9 @@ import img3 from './assets/3.jpeg';
 import solarImg from './assets/solar.png';
 import adamImg from './assets/adam.jpeg';
 import cap1Img from './assets/cap1.jpeg';
+import reaTech3Img from './assets/REA-TECH-3.JPG';
+import court1Img from './assets/ABIA-COURT-1.jpeg';
+import euImg from './assets/eu.png';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -149,7 +152,7 @@ const HomePage = () => (
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Link to="/projects?project=1" className="block">
+          <Link to="/projects?project=2" className="block">
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -159,7 +162,7 @@ const HomePage = () => (
               className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
             >
               <motion.img
-                src={solarImg}
+                src={adamImg}
                 className="w-full h-full object-cover transition-all duration-700"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
@@ -171,71 +174,7 @@ const HomePage = () => (
                   transition={{ delay: 0.2 }}
                   className="text-white font-bold text-xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                 >
-                  120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)
-                </motion.p>
-              </div>
-              {/* Shine effect on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-              </div>
-            </motion.div>
-          </Link>
-
-          <Link to="/projects?project=2" className="block">
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-            >
-              <motion.img
-                src={adamImg}
-                className="w-full h-full object-cover transition-all duration-700"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.7 }}
-              />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-                >
                   Adamawa State Electricity Policy & Electricity Law 2025
-                </motion.p>
-              </div>
-              {/* Shine effect on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-              </div>
-            </motion.div>
-          </Link>
-
-          <Link to="/projects?project=3" className="block">
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-            >
-              <motion.img
-                src={cap1Img}
-                className="w-full h-full object-cover transition-all duration-700"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.7 }}
-              />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-                >
-                  Basic Solar PV & O&M Training for Abia State Ministry of Power
                 </motion.p>
               </div>
               {/* Shine effect on hover */}
@@ -250,12 +189,12 @@ const HomePage = () => (
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
             >
               <motion.img
-                src={adamImg}
+                src={reaTech3Img}
                 className="w-full h-full object-cover transition-all duration-700"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
@@ -270,6 +209,39 @@ const HomePage = () => (
                   Independent Technical & Financial Evaluation of REA Mini-Grids – Northern Nigeria
                 </motion.p>
               </div>
+              {/* Shine effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </div>
+            </motion.div>
+          </Link>
+
+          <Link to="/projects?project=1" className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
+            >
+              <motion.img
+                src={solarImg}
+                className="w-full h-full object-cover transition-all duration-700"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7 }}
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                >
+                  120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)
+                </motion.p>
+              </div>
+              {/* Shine effect on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
               </div>
@@ -281,12 +253,12 @@ const HomePage = () => (
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.7, delay: 0.45, ease: "easeOut" }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
             >
               <motion.img
-                src={solarImg}
+                src={court1Img}
                 className="w-full h-full object-cover transition-all duration-700"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
@@ -307,6 +279,37 @@ const HomePage = () => (
             </motion.div>
           </Link>
 
+          <Link to="/projects?project=3" className="block">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
+            >
+              <motion.img
+                src={cap1Img}
+                className="w-full h-full object-cover transition-all duration-700"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.7 }}
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
+                <motion.p
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+                >
+                  Basic Solar PV & O&M Training for Abia State Ministry of Power
+                </motion.p>
+              </div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </div>
+            </motion.div>
+          </Link>
+
           <Link to="/projects?project=5" className="block">
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -317,7 +320,7 @@ const HomePage = () => (
               className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
             >
               <motion.img
-                src={solarImg}
+                src={euImg}
                 className="w-full h-full object-cover transition-all duration-700"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.7 }}
@@ -338,36 +341,6 @@ const HomePage = () => (
             </motion.div>
           </Link>
 
-          <Link to="/projects?project=6" className="block">
-            <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="h-96 rounded-[40px] overflow-hidden shadow-2xl relative group cursor-pointer"
-            >
-              <div className="w-full h-full bg-gradient-to-br from-[#0D1B2A] via-[#1B3A4B] to-[#0F172A] flex items-center justify-center p-8">
-                <div className="text-center text-white">
-                  <p className="text-sm uppercase tracking-[0.25em] text-brand-green mb-3">Energy Sector Advisory</p>
-                  <p className="text-xl md:text-2xl font-bold leading-tight">Public-Sector Solar Sustainability & Asset Management Framework</p>
-                </div>
-              </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 pointer-events-none">
-                <motion.p
-                  initial={{ y: 20, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: 0.2 }}
-                  className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
-                >
-                  Public-Sector Solar Sustainability & Asset Management Framework
-                </motion.p>
-              </div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-              </div>
-            </motion.div>
-          </Link>
         </div>
       </div>
     </section>
