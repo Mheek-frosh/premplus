@@ -21,10 +21,11 @@ const ProjectsPage = () => {
     const projects = [
         {
             id: 1,
-            title: "120KWp Hybrid Solar Mini Grid Installation in Abia State",
-            category: "Rural Electrification",
-            desc: "Installation of a 120KWp Hybrid Solar Mini Grid to provide reliable power.",
-            details: "This project showcases our expertise in renewable energy solutions with the successful installation of a 120KWp Hybrid Solar Mini Grid in Abia State. The system is designed to provide clean, reliable, and sustainable energy to the community, significantly reducing reliance on fossil fuel generators and promoting environmental sustainability.",
+            title: "120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)",
+            category: "Renewable energy solutions",
+            desc: "Premplus delivered a 120kW peak hybrid solar power system for the Broadcasting Corporation of Abia (BCA), Umuahia.",
+            details: "The system integrates solar photovoltaic generation with high-capacity battery storage and hybrid power management to provide reliable electricity for BCA's critical broadcasting and operational loads. The battery system enables energy storage and dispatch during periods of low solar availability, improving power continuity and reducing dependence on conventional generation.\n\nSystem Capacity: 120kWp Solar PV\nEnergy Storage: 215kWh BESS\nSystem Type: Hybrid Solar + Battery Energy Storage",
+            client: "Abia State Government (Ministry of Power and Public Utilities)",
             image: solarImg,
             gallery: [
                 solarImg,

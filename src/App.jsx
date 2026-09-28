@@ -171,7 +171,7 @@ const HomePage = () => (
                   transition={{ delay: 0.2 }}
                   className="text-white font-bold text-xl leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                 >
-                  120KWp Hybrid Solar Mini Grid Installation in Abia State
+                  120kWp Hybrid Solar Project – Broadcasting Corporation of Abia (BCA)
                 </motion.p>
               </div>
               {/* Shine effect on hover */}
