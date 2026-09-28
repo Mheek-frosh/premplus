@@ -75,6 +75,17 @@ const projects = [
         status: "In Progress",
         image: null,
         gallery: []
+    },
+    {
+        id: 6,
+        title: "Public-Sector Solar Sustainability & Asset Management Framework",
+        category: "Energy Sector Advisory",
+        desc: "Premplus provides renewable-energy advisory and project management services to the Abia State Ministry of Power and Public Utilities, supporting the State Government in improving the long-term performance and sustainability of its renewable-energy investments.",
+        details: "Premplus is developing a State-wide sustainability framework for public-sector solar installations across Abia State. The framework will establish a structured approach to the lifecycle management of solar assets, with the aim to addressing:\n\n• Operations and Maintenance (O&M) requirements\n• Preventive and corrective maintenance\n• Asset ownership and institutional responsibilities\n• System performance monitoring\n• Technical inspections and reporting\n• Asset management and lifecycle planning\n• Capacity requirements for technical personnel\n• Sustainability and long-term operational performance\n\nThe framework is designed to help the State transition from a project-by-project approach to a coordinated lifecycle asset-management model, protecting the value and performance of its renewable-energy infrastructure.",
+        client: "Abia State Government (Ministry of Power and Public Utilities)",
+        status: "In Progress",
+        image: null,
+        gallery: []
     }
 ];
 
