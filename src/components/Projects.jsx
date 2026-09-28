@@ -48,6 +48,19 @@ const projects = [
             cap2Img,
             cap3Img
         ]
+    },
+    {
+        id: 4,
+        title: "Independent Technical & Financial Evaluation of REA Mini-Grids – Northern Nigeria",
+        category: "Rural Electrification",
+        desc: "Premplus undertook an independent technical evaluation and financial valuation of REA-funded renewable energy mini-grid assets across Northern Nigeria, assessing their physical condition, technical performance, operational status and financial value.",
+        details: "The technical due diligence covered the assessment of installed generation and distribution assets, system condition, operational status, performance and infrastructure requirements. This was complemented by financial and asset valuation to establish the underlying value and investment characteristics of the portfolio. The resulting technical and financial intelligence provided an important basis for transitioning from project-level deployment to professional lifecycle management and optimisation of publicly funded renewable-energy assets, contributing to the broader framework that led to the establishment of Renewable Asset Management Company (RAMCO).",
+        client: "Rural Electrification Agency (REA)",
+        status: "In Progress",
+        image: adamImg,
+        gallery: [
+            adamImg
+        ]
     }
 ];
 

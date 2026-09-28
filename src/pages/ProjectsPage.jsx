@@ -9,6 +9,10 @@ import solarImg from '../assets/solar.png';
 import img120 from '../assets/120.png';
 import gworkImg from '../assets/gwork.jpeg';
 import adamImg from '../assets/adam.jpeg';
+import reaTech1 from '../assets/REA-TECH-1.JPG';
+import reaTech2 from '../assets/REA-TECH-2.JPG';
+import reaTech3 from '../assets/REA-TECH-3.JPG';
+import reaTech4 from '../assets/REA-TECH-4.JPG';
 
 const ProjectsPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -51,6 +55,22 @@ const ProjectsPage = () => {
                 cap1Img,
                 cap2Img,
                 cap3Img
+            ]
+        },
+        {
+            id: 4,
+            title: "Independent Technical & Financial Evaluation of REA Mini-Grids – Northern Nigeria",
+            category: "Rural Electrification",
+            desc: "Premplus undertook an independent technical evaluation and financial valuation of REA-funded renewable energy mini-grid assets across Northern Nigeria, assessing their physical condition, technical performance, operational status and financial value.",
+            details: "The technical due diligence covered the assessment of installed generation and distribution assets, system condition, operational status, performance and infrastructure requirements. This was complemented by financial and asset valuation to establish the underlying value and investment characteristics of the portfolio. The resulting technical and financial intelligence provided an important basis for transitioning from project-level deployment to professional lifecycle management and optimisation of publicly funded renewable-energy assets, contributing to the broader framework that led to the establishment of Renewable Asset Management Company (RAMCO).",
+            client: "Rural Electrification Agency (REA)",
+            status: "In Progress",
+            image: reaTech3,
+            gallery: [
+                reaTech3,
+                reaTech1,
+                reaTech2,
+                reaTech4
             ]
         },
         /*
@@ -273,7 +293,7 @@ const ProjectsPage = () => {
                                         <div className="pt-8 border-t border-app">
                                             <div className="flex items-center gap-2 text-brand-green font-bold">
                                                 <CheckCircle size={20} />
-                                                <span>Project Completed</span>
+                                                <span>{selectedProject.status || 'Project Completed'}</span>
                                             </div>
                                         </div>
                                     </div>
