@@ -88,7 +88,7 @@ const ProjectsPage = () => {
             title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
             category: "Capacity Development",
             desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
-            details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
+            details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.",
             client: "Abia State Government (Ministry of Power and Public Utilities)",
             status: "Completed",
             image: cap1Img,
@@ -365,7 +365,7 @@ const ProjectsPage = () => {
 
                                         <div>
                                             <h4 className="text-lg font-bold text-app-main mb-2">Technical Details</h4>
-                                            <p className="text-app-muted leading-relaxed">
+                                            <p className="text-app-muted leading-relaxed whitespace-pre-line">
                                                 {selectedProject.details}
                                             </p>
                                         </div>
