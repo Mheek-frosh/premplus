@@ -235,7 +235,7 @@ const HomePage = () => (
                   transition={{ delay: 0.2 }}
                   className="text-white font-bold lg:text-lg leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                 >
-                  Solar PV Technical Training Program
+                  Basic Solar PV & O&M Training for Abia State Ministry of Power
                 </motion.p>
               </div>
               {/* Shine effect on hover */}

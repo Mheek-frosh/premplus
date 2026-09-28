@@ -39,10 +39,12 @@ const projects = [
     },
     {
         id: 3,
-        title: "Solar PV Technical Training Program",
-        category: "Human Capital Development",
-        desc: "Premplus successfully delivered a Basic Solar PV System Operation and Maintenance training program for staff of the Ministry of Power and Public Utilities and the Broadcasting Corporation of Abia State.",
-        details: "The training was designed to strengthen technical capacity and improve the sustainability of solar power infrastructure across public institutions in the state. The Basic Solar PV System Operation and Maintenance training focused on equipping participants with practical knowledge and hands-on skills required to operate, troubleshoot, and maintain solar photovoltaic systems effectively. Through interactive sessions and practical demonstrations, Premplus ensured participants gained the technical competence to support reliable solar installations, reduce system downtime, and enhance long-term energy efficiency.",
+        title: "Basic Solar PV & O&M Training for Abia State Ministry of Power",
+        category: "Capacity Development",
+        desc: "Premplus delivered a one-week Basic Solar PV Training Programme for technical and relevant staff of the Ministry of Power and Public Utilities, Abia State.",
+        details: "The training covered the fundamental principles of solar PV technology, system components and configurations, electrical safety, basic system operation, fault identification and routine maintenance practices.\n\nA key component of the programme was practical orientation on the operation and maintenance (O&M) requirements of the 120kWp hybrid solar power system installed at the Broadcasting Corporation of Abia (BCA). Participants were introduced to essential practices for routine inspection, system monitoring, battery and inverter management, preventive maintenance and identification of common operational issues.\n\nThe programme was structured to strengthen the State's institutional capacity to understand, supervise and sustain renewable-energy infrastructure, supporting better long-term performance and asset management.\n\nClassification – human capital development → CAPACITY DEVELOPMENT",
+        client: "Abia State Government (Ministry of Power and Public Utilities)",
+        status: "Completed",
         image: cap1Img,
         gallery: [
             cap1Img,
