@@ -161,7 +161,6 @@ const TeamPage = () => {
                                     )}
                                 </div>
                                 <div className="p-6 sm:p-8 md:p-10 relative">
-                                    <span className="text-brand-green font-bold text-xs uppercase tracking-widest mb-2 block">{filter}</span>
                                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-app-main mb-1 transition-colors duration-300 line-clamp-2">{member.name}</h3>
                                     <p className="text-brand-yellow font-bold text-xs sm:text-sm uppercase mb-4 md:mb-6 line-clamp-2">{member.position}</p>
 
