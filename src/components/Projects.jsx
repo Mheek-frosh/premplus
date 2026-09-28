@@ -14,6 +14,7 @@ import court2Img from '../assets/ABIA-COURT-2.jpeg';
 import court3Img from '../assets/ABIA-COURT-3.jpeg';
 import court4Img from '../assets/ABIA-COURT-4.jpeg';
 import euImg from '../assets/eu.png';
+import abiaLogoImg from '../assets/Abia-Logo.webp';
 
 const projects = [
     {
@@ -94,8 +95,10 @@ const projects = [
         details: "Premplus is developing a State-wide sustainability framework for public-sector solar installations across Abia State. The framework will establish a structured approach to the lifecycle management of solar assets, with the aim to addressing:\n\n• Operations and Maintenance (O&M) requirements\n• Preventive and corrective maintenance\n• Asset ownership and institutional responsibilities\n• System performance monitoring\n• Technical inspections and reporting\n• Asset management and lifecycle planning\n• Capacity requirements for technical personnel\n• Sustainability and long-term operational performance\n\nThe framework is designed to help the State transition from a project-by-project approach to a coordinated lifecycle asset-management model, protecting the value and performance of its renewable-energy infrastructure.",
         client: "Abia State Government (Ministry of Power and Public Utilities)",
         status: "In Progress",
-        image: null,
-        gallery: []
+        image: abiaLogoImg,
+        gallery: [
+            abiaLogoImg
+        ]
     },
     {
         id: 5,
