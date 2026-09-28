@@ -17,6 +17,7 @@ import court1Img from '../assets/ABIA-COURT-1.jpeg';
 import court2Img from '../assets/ABIA-COURT-2.jpeg';
 import court3Img from '../assets/ABIA-COURT-3.jpeg';
 import court4Img from '../assets/ABIA-COURT-4.jpeg';
+import euImg from '../assets/eu.png';
 
 const ProjectsPage = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -104,8 +105,10 @@ const ProjectsPage = () => {
             details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
             client: "Abia State Government (Ministry of Power and Public Utilities)",
             status: "In Progress",
-            image: null,
-            gallery: []
+            image: euImg,
+            gallery: [
+                euImg
+            ]
         },
         {
             id: 6,
