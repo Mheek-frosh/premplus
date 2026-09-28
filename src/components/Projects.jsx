@@ -70,6 +70,22 @@ const projects = [
         ]
     },
     {
+        id: 7,
+        title: "Hybrid Solar Power for 17 Court Halls Across Abia State",
+        category: "Renewable energy solutions",
+        desc: "Premplus delivered 17 hybrid solar power systems for newly constructed Court Halls across all 17 Local Government Areas of Abia State.",
+        details: "Each facility is equipped with a 22kWp solar PV system integrated with a 30kWh Battery Energy Storage System (BESS). The systems are designed to provide reliable renewable electricity for essential court operations, with battery storage supporting continuity of supply beyond periods of solar generation.\n\nCollectively, the programme represents 374kWp of installed solar PV capacity and 510kWh of battery storage across the State.\n\nNumber of Sites: 17 Court Halls\nSolar Capacity/Site: 22kWp\nBattery Storage/Site: 30kWh\nAggregate Solar Capacity: 374kWp\nAggregate Battery Storage: 510kWh\nSystem Type: Hybrid Solar + BESS",
+        client: "Abia State Government (Ministry of Justice)",
+        status: "Completed",
+        image: court1Img,
+        gallery: [
+            court1Img,
+            court2Img,
+            court3Img,
+            court4Img
+        ]
+    },
+    {
         id: 5,
         title: "EU-Funded Solar for Health — Project Management Consultancy",
         category: "Consultancy",
@@ -90,22 +106,6 @@ const projects = [
         status: "In Progress",
         image: null,
         gallery: []
-    },
-    {
-        id: 7,
-        title: "Hybrid Solar Power for 17 Court Halls Across Abia State",
-        category: "Renewable energy solutions",
-        desc: "Premplus delivered 17 hybrid solar power systems for newly constructed Court Halls across all 17 Local Government Areas of Abia State.",
-        details: "Each facility is equipped with a 22kWp solar PV system integrated with a 30kWh Battery Energy Storage System (BESS). The systems are designed to provide reliable renewable electricity for essential court operations, with battery storage supporting continuity of supply beyond periods of solar generation.\n\nCollectively, the programme represents 374kWp of installed solar PV capacity and 510kWh of battery storage across the State.\n\nNumber of Sites: 17 Court Halls\nSolar Capacity/Site: 22kWp\nBattery Storage/Site: 30kWh\nAggregate Solar Capacity: 374kWp\nAggregate Battery Storage: 510kWh\nSystem Type: Hybrid Solar + BESS",
-        client: "Abia State Government (Ministry of Justice)",
-        status: "Completed",
-        image: court1Img,
-        gallery: [
-            court1Img,
-            court2Img,
-            court3Img,
-            court4Img
-        ]
     }
 ];
 
