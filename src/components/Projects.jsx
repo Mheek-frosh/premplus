@@ -62,6 +62,17 @@ const projects = [
         gallery: [
             adamImg
         ]
+    },
+    {
+        id: 5,
+        title: "EU-Funded Solar for Health — Project Management Consultancy",
+        category: "Consultancy",
+        desc: "Premplus is providing Project Management Consultancy (PMC) to support the Abia State Government in implementing the EU-funded Solar for Health Project (NIHSP).",
+        details: "The PMC scope includes technical coordination, implementation oversight, stakeholder coordination, quality assurance, progress monitoring and support for effective delivery of the programme in accordance with project requirements.",
+        client: "Abia State Government (Ministry of Power and Public Utilities)",
+        status: "In Progress",
+        image: null,
+        gallery: []
     }
 ];
 
