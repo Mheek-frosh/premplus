@@ -28,8 +28,9 @@ const projects = [
         id: 2,
         title: "Adamawa State Electricity Policy & Electricity Law 2025",
         category: "Policy & Regulation",
-        desc: "Client: Adamawa State Government. Premplus provided specialist electricity-sector consultancy to the Adamawa State Government, leading the development of the State Electricity Policy and drafting the Adamawa State Electricity Bill 2025. The assignment established a legal and institutional framework for developing a competitive and sustainable state electricity market.",
+        desc: "Premplus provided specialist electricity-sector consultancy to the Adamawa State Government, leading the development of the State Electricity Policy and drafting the Adamawa State Electricity Bill 2025. The assignment established a legal and institutional framework for developing a competitive and sustainable state electricity market.",
         details: "The assignment involved analysing the State's electricity-sector requirements and developing a framework covering electricity market development, regulatory governance, private-sector participation, renewable energy, electricity access, consumer protection and sustainable power supply. The draft legislation translates the policy objectives into a proposed legal and institutional framework for the development and regulation of electricity activities within Adamawa State, supporting the State's transition towards a more decentralised and investment-oriented electricity market.",
+        client: "Adamawa State Government",
         image: adamImg,
         gallery: [
             adamImg
