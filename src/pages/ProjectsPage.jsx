@@ -324,9 +324,15 @@ const ProjectsPage = () => {
 
                                     <div className="space-y-6">
                                         <div>
+                                            <h4 className="text-lg font-bold text-app-main mb-2">Client</h4>
+                                            <p className="text-app-muted leading-relaxed text-lg">
+                                                {selectedProject.client || 'N/A'}
+                                            </p>
+                                        </div>
+
+                                        <div>
                                             <h4 className="text-lg font-bold text-app-main mb-2">Project Overview</h4>
                                             <p className="text-app-muted leading-relaxed text-lg">
-                                                <span className="font-bold text-app-main">Client: {selectedProject.client || 'N/A'}.</span>{' '}
                                                 {selectedProject.desc}
                                             </p>
                                         </div>
