@@ -23,12 +23,13 @@ import standImg from '../assets/stand.png';
 import b10Img from '../assets/b10.png';
 import usBlogImg from '../assets/usblog.jpeg';
 import usBlog2Img from '../assets/usblog2.jpeg';
+import { newsArticles } from '../data/newsArticles';
 
 const blogPosts = [
     {
         id: 1,
         title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'November 14, 2025',
         content: `
@@ -44,7 +45,7 @@ const blogPosts = [
     {
         id: 2,
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme to Strengthen Renewable Energy Workforce',
-        category: 'Renewable Energy',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'May 23, 2025',
         content: `
@@ -69,7 +70,7 @@ const blogPosts = [
     {
         id: 3,
         title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'March 4, 2025',
         content: `
@@ -92,7 +93,7 @@ const blogPosts = [
     {
         id: 4,
         title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'February 19, 2025',
         content: `
@@ -119,7 +120,7 @@ const blogPosts = [
     {
         id: 5,
         title: 'Premplus CEO receives Award of Excellence',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'January 14, 2025',
         content: `
@@ -136,7 +137,7 @@ const blogPosts = [
     {
         id: 6,
         title: 'Premplus CEO receives Distinguished Merit Award',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'January 9, 2025',
         content: `
@@ -153,7 +154,7 @@ const blogPosts = [
     {
         id: 7,
         title: 'Premplus signs partnership deal with Aurora',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'December 26, 2024',
         content: `
@@ -174,7 +175,7 @@ const blogPosts = [
     {
         id: 8,
         title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'December 18, 2024',
         content: `
@@ -196,7 +197,7 @@ const blogPosts = [
     {
         id: 9,
         title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'July 24, 2024',
         content: `
@@ -227,7 +228,7 @@ const blogPosts = [
     {
         id: 10,
         title: 'Growing Green Job Career Fair',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'July 8, 2024',
         content: `
@@ -252,6 +253,7 @@ const blogPosts = [
         `,
         img: b10Img
     },
+    ...newsArticles
 ];
 
 const BlogDetailPage = () => {
@@ -332,7 +334,7 @@ const BlogDetailPage = () => {
                     transition={{ delay: 0.3 }}
                     className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-12 shadow-2xl"
                 >
-                    <img src={post.img} alt={post.title} className="w-full h-full object-cover" />
+                    <img src={post.img} alt={post.title} className={`w-full h-full ${post.imgContain ? 'object-contain bg-white p-16' : 'object-cover'}`} />
                 </motion.div>
 
                 {/* Content */}
@@ -350,17 +352,21 @@ const BlogDetailPage = () => {
                     {/* Image Gallery for Posts that have it (like MoU) */}
                     {post.gallery && (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                            {post.gallery.map((imgSrc, idx) => (
+                            {post.gallery.map((item, idx) => {
+                                const imgSrc = typeof item === 'string' ? item : item.src;
+                                const contain = typeof item === 'object' && item.contain;
+                                return (
                                 <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="rounded-2xl overflow-hidden shadow-lg h-64 border border-app"
+                                    className="rounded-2xl overflow-hidden shadow-lg h-64 border border-app bg-white"
                                 >
-                                    <img src={imgSrc} alt="Gallery" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                                    <img src={imgSrc} alt="Gallery" className={`w-full h-full hover:scale-105 transition-transform duration-500 ${contain ? 'object-contain p-6' : 'object-cover'}`} />
                                 </motion.div>
-                            ))}
+                                );
+                            })}
                         </div>
                     )}
                 </motion.article>
@@ -395,7 +401,7 @@ const BlogDetailPage = () => {
                                             <img
                                                 src={relatedPost.img}
                                                 alt={relatedPost.title}
-                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                className={`w-full h-full transition-transform duration-700 group-hover:scale-110 ${relatedPost.imgContain ? 'object-contain bg-white p-4' : 'object-cover'}`}
                                             />
                                         </div>
                                         <span className="text-brand-green font-bold text-xs uppercase tracking-wider mb-2 block">

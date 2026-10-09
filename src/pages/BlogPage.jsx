@@ -12,14 +12,15 @@ import b7Img from '../assets/b7.png';
 import b8Img from '../assets/b8.png';
 import b9Img from '../assets/b9.png';
 import b10Img from '../assets/b10.png';
+import { newsArticles } from '../data/newsArticles';
 
-const categories = ['All', 'Innovation', 'Renewable Energy', 'Startup Advice', 'Consultation'];
+const categories = ['All', 'Premplus', 'Nigeria', 'Africa', 'Global'];
 
 const blogPosts = [
     {
         id: 1,
         title: 'Premplus Signs Strategic MoU with REA to Establish National Energy Innovation Hub',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'November 14, 2025',
         excerpt: 'The newly envisioned hub will serve as a national center for technical training, applied research, and enterprise development in the renewable.',
@@ -28,7 +29,7 @@ const blogPosts = [
     {
         id: 2,
         title: 'Premplus Participates in Launch of NEXTGEN RESCO Programme',
-        category: 'Renewable Energy',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'May 23, 2025',
         excerpt: 'This forward-looking initiative, led by the Rural Electrification Agency (REA) in partnership with NAPTIN and Eco Innovation Empowerment',
@@ -37,7 +38,7 @@ const blogPosts = [
     {
         id: 3,
         title: 'Premplus Participates in REA-Adamawa State Roundtable to Advance Renewable Energy Initiatives',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'March 4, 2025',
         excerpt: 'Premplus Nig. Ltd proudly participated in the REA State-by-State Roundtable with Adamawa State, held in Abuja, focusing on enhancing renewable energy access and fostering economic growth.',
@@ -46,7 +47,7 @@ const blogPosts = [
     {
         id: 4,
         title: 'Adamawa State Ministry of Works and Energy Development partners with Premplus for a three-day stakeholders’ workshop on electricity policy framework',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'February 19, 2025',
         excerpt: 'The Adamawa State Ministry of Works and Energy Development, in collaboration with Premplus Nig. Ltd, recently hosted a three-day workshop dedicated to formulating a Sustainable and Inclusive Electricity Policy Framework.',
@@ -55,7 +56,7 @@ const blogPosts = [
     {
         id: 5,
         title: 'Premplus CEO receives Award of Excellence',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'January 14, 2025',
         excerpt: 'Engr. Zaharadeen Usman, the esteemed CEO of Premplus, has been awarded the prestigious Award of Excellence by the National Youth Assembly of Nigeria.',
@@ -64,7 +65,7 @@ const blogPosts = [
     {
         id: 6,
         title: 'Premplus CEO receives Distinguished Merit Award',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'January 9, 2025',
         excerpt: 'Premplus is proud to announce that our CEO, Engr. Zaharadeen Usman, has been honored with the Distinguished Merit Award by the National Association of Northern Nigerian Students (NANNS).',
@@ -73,7 +74,7 @@ const blogPosts = [
     {
         id: 7,
         title: 'Premplus signs partnership deal with Aurora',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'December 26, 2024',
         excerpt: 'Premplus is excited to announce the signing of a Memorandum of Understanding (MoU) with Aurora, a leading solar energy company, to enhance our renewable energy solutions.',
@@ -82,7 +83,7 @@ const blogPosts = [
     {
         id: 8,
         title: 'Premplus at the REA Stakeholders Engagement Workshop (SEW2024)',
-        category: 'Consultation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'December 18, 2024',
         excerpt: 'Premplus is pleased to share insights from our participation in the Stakeholders Engagement Workshop (SEW2024), focusing on sustainable energy access and innovation.',
@@ -91,7 +92,7 @@ const blogPosts = [
     {
         id: 9,
         title: 'Premplus at the NERC Summit on Accelerated Scale-Up of Renewable and Distributed Energy Solutions',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'July 24, 2024',
         excerpt: 'Premplus recently had the privilege of attending a landmark event organized by NERC, focused on accelerating the adoption of renewable energy in Nigeria.',
@@ -100,12 +101,13 @@ const blogPosts = [
     {
         id: 10,
         title: 'Growing Green Job Career Fair',
-        category: 'Innovation',
+        category: 'Premplus',
         author: 'Muhammad Fadil Yakubu',
         date: 'July 8, 2024',
         excerpt: 'Premplus participated in the Growing Green Job Career Fair, featuring career clinics and networking opportunities for the next generation of energy professionals.',
         img: b10Img
-    }
+    },
+    ...newsArticles
 ];
 
 const BlogPage = () => {
@@ -210,7 +212,7 @@ const BlogPage = () => {
                         >
                             <Link to={`/blog/${post.id}`} state={{ from: '/blog', page: currentPage }}>
                                 <div className="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
-                                    <img src={post.img} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <img src={post.img} alt={post.title} className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${post.imgContain ? 'object-contain bg-white p-10' : 'object-cover'}`} />
                                     <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur text-brand-green text-xs font-bold rounded-full">
                                         {post.category}
                                     </div>
