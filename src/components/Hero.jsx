@@ -164,8 +164,8 @@ const Hero = () => {
                 <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl px-3 py-4 md:p-6 grid grid-cols-3 md:flex md:justify-center items-center gap-2 md:gap-12 lg:gap-20">
                     {[
                         { label: 'Founded', value: '2024' },
-                        { label: 'Locations', value: '15' },
-                        { label: 'Projects', value: '18' }
+                        { label: 'Locations', value: '19' },
+                        { label: 'Projects', value: '38' }
                     ].map((stat, i) => (
                         <div key={i} className="text-center group min-w-0">
                             <p className="text-white/50 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
