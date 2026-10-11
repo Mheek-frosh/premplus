@@ -33,7 +33,7 @@
   body {
     background-color: var(--app-bg);
     color: var(--app-text-main);
-    @apply antialiased transition-colors duration-300;
+    @apply antialiased transition-colors duration-300 overflow-x-hidden;
   }
 
   h1,

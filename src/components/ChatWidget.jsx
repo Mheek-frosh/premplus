@@ -39,7 +39,7 @@ const ChatWidget = () => {
     };
 
     return (
-        <div className="fixed bottom-8 right-8 z-[9999] flex flex-col items-end pointer-events-auto">
+        <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-[60] flex flex-col items-end pointer-events-auto">
 
             <AnimatePresence>
                 {isOpen && (
@@ -47,7 +47,7 @@ const ChatWidget = () => {
                         initial={{ opacity: 0, scale: 0.9, y: 20 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                        className="mb-4 md:mb-6 w-[calc(100vw-32px)] md:w-[380px] fixed bottom-24 md:bottom-28 right-4 md:right-8 bg-app-card rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-app"
+                        className="mb-3 md:mb-6 w-[calc(100vw-2rem)] max-w-[380px] max-h-[calc(100dvh-7rem)] fixed bottom-20 md:bottom-28 right-4 md:right-8 bg-app-card rounded-3xl shadow-2xl overflow-hidden flex flex-col font-sans border border-app"
                         style={{ boxShadow: "0 10px 40px rgba(0,0,0,0.2)" }}
                     >
                         {/* Header */}
@@ -73,7 +73,7 @@ const ChatWidget = () => {
                         </div>
 
                         {/* Messages Body */}
-                        <div className="flex-1 bg-app-secondary p-4 h-[350px] overflow-y-auto space-y-4">
+                        <div className="flex-1 bg-app-secondary p-4 h-[min(350px,42dvh)] overflow-y-auto space-y-4">
                             {messages.map((msg) => (
                                 <div key={msg.id} className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}>
                                     {msg.isBot && (
@@ -125,7 +125,7 @@ const ChatWidget = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-16 h-16 rounded-full shadow-2xl flex items-center justify-center text-white transition-all duration-300 ${isOpen ? 'bg-gray-400 rotate-90' : 'bg-brand-yellow hover:bg-brand-dark'}`}
+                className={`w-14 h-14 md:w-16 md:h-16 rounded-full shadow-2xl flex items-center justify-center text-white transition-all duration-300 ${isOpen ? 'bg-gray-400 rotate-90' : 'bg-brand-yellow hover:bg-brand-dark'}`}
             >
                 {isOpen ? <X size={28} /> : <MessageCircle size={28} />}
             </motion.button>

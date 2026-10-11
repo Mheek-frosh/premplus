@@ -305,7 +305,7 @@ const BlogDetailPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-2xl md:text-5xl font-bold text-app-main mb-6 leading-tight"
+                    className="text-2xl sm:text-3xl md:text-5xl font-bold text-app-main mb-6 leading-tight break-words"
                 >
                     {post.title}
                 </motion.h1>
@@ -332,9 +332,9 @@ const BlogDetailPage = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-12 shadow-2xl"
+                    className="relative h-56 sm:h-[400px] md:h-[500px] rounded-3xl overflow-hidden mb-8 md:mb-12 shadow-2xl"
                 >
-                    <img src={post.img} alt={post.title} className={`w-full h-full ${post.imgContain ? 'object-contain bg-white p-16' : 'object-cover'}`} />
+                    <img src={post.img} alt={post.title} className={`w-full h-full ${post.imgContain ? 'object-contain bg-white p-6 sm:p-10 md:p-16' : 'object-cover'}`} />
                 </motion.div>
 
                 {/* Content */}
@@ -361,7 +361,7 @@ const BlogDetailPage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.1 }}
-                                    className="rounded-2xl overflow-hidden shadow-lg h-64 border border-app bg-white"
+                                    className="rounded-2xl overflow-hidden shadow-lg h-52 sm:h-64 border border-app bg-white"
                                 >
                                     <img src={imgSrc} alt="Gallery" className={`w-full h-full hover:scale-105 transition-transform duration-500 ${contain ? 'object-contain p-6' : 'object-cover'}`} />
                                 </motion.div>

@@ -211,7 +211,7 @@ const BlogPage = () => {
                             className="group"
                         >
                             <Link to={`/blog/${post.id}`} state={{ from: '/blog', page: currentPage }}>
-                                <div className="relative h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
+                                <div className="relative h-56 sm:h-72 md:h-80 rounded-3xl overflow-hidden mb-6 shadow-xl">
                                     <img src={post.img} alt={post.title} className={`w-full h-full transition-transform duration-700 group-hover:scale-105 ${post.imgContain ? 'object-contain bg-white p-10' : 'object-cover'}`} />
                                     <div className="absolute top-6 left-6 px-4 py-1.5 bg-white/90 backdrop-blur text-brand-green text-xs font-bold rounded-full">
                                         {post.category}

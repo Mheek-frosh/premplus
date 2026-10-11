@@ -147,7 +147,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-app-card border-b border-app overflow-hidden"
+                        className="md:hidden bg-app-card border-b border-app overflow-y-auto max-h-[calc(100dvh-4.5rem)]"
                     >
                         <div className="px-4 pt-4 pb-6 space-y-2">
                             {navLinks.map((link) => (

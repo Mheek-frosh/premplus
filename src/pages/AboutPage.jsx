@@ -76,7 +76,7 @@ const AboutPage = () => {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-6xl md:text-8xl font-bold text-white mb-8 tracking-tighter"
+                        className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 md:mb-8 tracking-tighter px-2"
                     >
                         About Us
                     </motion.h1>
@@ -84,7 +84,7 @@ const AboutPage = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.3 }}
-                        className="text-white/90 max-w-2xl mx-auto text-xl leading-relaxed font-light"
+                        className="text-white/90 max-w-2xl mx-auto text-base sm:text-xl leading-relaxed font-light px-2"
                     >
                         Sustainable energy solutions for a cleaner future. Join us in our mission to create a zero-carbon world with cutting-edge renewable technology.
                     </motion.p>

@@ -20,7 +20,7 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className="bg-app-card pt-20 pb-10 border-t border-app transition-colors duration-300">
+        <footer className="bg-app-card pt-16 pb-28 md:pt-20 md:pb-10 border-t border-app transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Logo & Info */}
