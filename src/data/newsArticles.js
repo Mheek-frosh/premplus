@@ -10,7 +10,6 @@ import abuja1Img from '../assets/3mw-abuja-1.jpg';
 import abuja2Img from '../assets/3mw-abuja-2.jpg';
 import abuja3Img from '../assets/3mw-abuja-3.jpg';
 import nepLogoImg from '../assets/rea-nep-logo.png';
-import ramcoLogoImg from '../assets/RAMCO.png';
 import ramco2Img from '../assets/ramco-2.jpg';
 import harjit1Img from '../assets/Harjit-1.JPG';
 import harjit2Img from '../assets/Harjit-2.JPG';
@@ -101,7 +100,6 @@ export const newsArticles = [
         date: 'August 26, 2026',
         excerpt: 'The Rural Electrification Agency (REA), with the Ministry of Finance Incorporated (MOFI) and the Infrastructure Corporation of Nigeria (InfraCorp), has launched the Renewable Asset Management Company (RAMCO).',
         img: ramco2Img,
-        gallery: [ramco2Img, { src: ramcoLogoImg, contain: true }],
         content: `
             <p><strong>The Rural Electrification Agency (REA), in collaboration with the Ministry of Finance Incorporated (MOFI) and the Infrastructure Corporation of Nigeria (InfraCorp), has officially launched the Renewable Asset Management Company (RAMCO), a specialised platform established to strengthen the professional management, optimisation and long-term sustainability of renewable-energy infrastructure across Nigeria.</strong></p>
             <p>RAMCO was formally launched on 26 August 2026 at the Transcorp Hilton, Abuja, marking a shift in focus from renewable-energy infrastructure deployment alone towards ensuring that publicly funded assets remain operational, productive and capable of delivering sustained value throughout their lifecycle.</p>
