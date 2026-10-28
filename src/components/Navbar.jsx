@@ -4,7 +4,7 @@ import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 import lightModeLogo from '../assets/lightmode.png';
-import darkModeLogo from '../assets/dark.png';
+import darkModeLogo from '../assets/dark.webp';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

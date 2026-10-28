@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Zap, ShieldCheck, GraduationCap, Building2, Check } from 'lucide-react';
-import lookbackImg from '../assets/lookback.png';
-import roundtableImg from '../assets/roundtable.png';
-import innovationImg from '../assets/innovation.png';
+import lookbackImg from '../assets/lookback.webp';
+import roundtableImg from '../assets/roundtable.webp';
+import innovationImg from '../assets/innovation.webp';
 
 const servicesData = [
     {

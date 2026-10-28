@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
-import img1 from '../assets/s.jpeg';
-import img2 from '../assets/2.png.jpg';
-import img3 from '../assets/light.png';
+import img1 from '../assets/s.webp';
+import img2 from '../assets/2.png.webp';
+import img3 from '../assets/light.webp';
 import ChatWidget from './ChatWidget';
 
 const slides = [
@@ -28,7 +28,7 @@ const slides = [
         id: 3,
         tag: 'Renewable Power',
         title: 'Sustainable energy for a resilient tomorrow',
-        desc: 'Harnessing renewable technologies to meet the evolving energy needs of communities, institutions, and industries',
+        desc: 'Harnessing renewable technologies for communities, institutions, and industries',
         img: img3,
         highlight: 'resilient'
     }
@@ -60,7 +60,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative min-h-screen flex flex-col overflow-hidden bg-black">
+        <section className="relative h-[100dvh] min-h-[560px] flex flex-col overflow-hidden bg-black">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={current}
@@ -87,7 +87,7 @@ const Hero = () => {
                 className="absolute w-[420px] h-[420px] md:w-[800px] md:h-[800px] rounded-full border border-white/10 z-0"
             />
 
-            <div className="relative z-10 text-center px-5 max-w-7xl mx-auto flex-1 flex flex-col items-center justify-center pt-28 pb-6">
+            <div className="relative z-10 text-center px-5 sm:px-8 lg:px-16 xl:px-20 max-w-7xl mx-auto w-full flex-1 flex flex-col items-center justify-center pt-20 sm:pt-24 md:pt-28 pb-3 sm:pb-4 min-h-0">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={current}
@@ -95,11 +95,12 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -30 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="w-full"
                     >
-                        <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-brand-yellow uppercase bg-brand-yellow/10 rounded-full border border-brand-yellow/20">
+                        <span className="inline-block px-4 py-1.5 mb-3 sm:mb-5 [@media(max-height:700px)]:mb-2 text-xs font-bold tracking-widest text-brand-yellow uppercase bg-brand-yellow/10 rounded-full border border-brand-yellow/20">
                             {slides[current].tag}
                         </span>
-                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-5 md:mb-8 leading-[1.2] md:leading-[1.1]">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl [@media(max-height:700px)]:text-3xl [@media(max-height:700px)]:sm:text-4xl [@media(max-height:700px)]:md:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 [@media(max-height:700px)]:mb-2 leading-[1.2] md:leading-[1.1]">
                             {slides[current].title.split(slides[current].highlight).map((part, i, arr) => (
                                 <React.Fragment key={i}>
                                     {part}
@@ -107,7 +108,7 @@ const Hero = () => {
                                 </React.Fragment>
                             ))}
                         </h1>
-                        <p className="text-base md:text-xl text-white/70 mb-6 md:mb-8 max-w-2xl mx-auto leading-relaxed md:leading-loose px-2">
+                        <p className="text-[clamp(0.8125rem,0.1rem+1.7vw,1.25rem)] text-white/70 mb-4 sm:mb-5 md:mb-6 [@media(max-height:700px)]:mb-3 mx-auto leading-normal px-1 whitespace-normal sm:whitespace-nowrap">
                             {slides[current].desc}
                         </p>
                     </motion.div>
@@ -135,45 +136,48 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Navigation Arrows — desktop only, so they don't cross the headline on a phone */}
-            <button onClick={prevSlide} className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
-                <ChevronLeft strokeWidth={1} className="w-12 h-12" />
+            {/* Navigation Arrows — large screens only, kept clear of the bottom stats bar */}
+            <button onClick={prevSlide} className="hidden xl:flex absolute left-4 2xl:left-8 top-[42%] -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
+                <ChevronLeft strokeWidth={1} className="w-10 h-10 2xl:w-12 2xl:h-12" />
             </button>
-            <button onClick={nextSlide} className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
-                <ChevronRight strokeWidth={1} className="w-12 h-12" />
+            <button onClick={nextSlide} className="hidden xl:flex absolute right-4 2xl:right-8 top-[42%] -translate-y-1/2 z-20 text-white/50 hover:text-white transition-colors p-2">
+                <ChevronRight strokeWidth={1} className="w-10 h-10 2xl:w-12 2xl:h-12" />
             </button>
 
-            {/* Dash Indicators */}
-            <div className="relative z-20 flex justify-center gap-3 mt-8 mb-6 md:mt-0 md:mb-0 md:absolute md:bottom-[180px] md:left-1/2 md:-translate-x-1/2">
-                {slides.map((_, i) => (
-                    <button
-                        key={i}
-                        onClick={() => setCurrent(i)}
-                        className={`h-1 transition-all duration-500 rounded-full ${i === current ? 'w-12 bg-brand-yellow' : 'w-6 bg-white/30'}`}
-                    />
-                ))}
-            </div>
-
-            {/* Stats bar floating at bottom */}
-            <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="relative z-20 w-full max-w-5xl mx-auto px-4 pb-24 md:pb-0 md:absolute md:bottom-10 md:left-1/2 md:-translate-x-1/2"
-            >
-                <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl px-3 py-4 md:p-6 grid grid-cols-3 md:flex md:justify-center items-center gap-2 md:gap-12 lg:gap-20">
-                    {[
-                        { label: 'Founded', value: '2024' },
-                        { label: 'Locations', value: '19' },
-                        { label: 'Projects', value: '38' }
-                    ].map((stat, i) => (
-                        <div key={i} className="text-center group min-w-0">
-                            <p className="text-white/50 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1">{stat.label}</p>
-                            <p className="text-white text-lg md:text-2xl font-bold group-hover:text-brand-yellow transition-colors">{stat.value}</p>
-                        </div>
+            {/* Carousel + stats stay stacked in normal flow so they never overlap on any screen */}
+            <div className="relative z-20 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-20 sm:pb-6 md:pb-8 lg:pb-10 flex flex-col items-center gap-3 sm:gap-4 md:gap-5 [@media(max-height:700px)]:gap-2.5 [@media(max-height:700px)]:pb-5 shrink-0">
+                <div className="flex justify-center gap-2.5 sm:gap-3" aria-label="Carousel slides">
+                    {slides.map((_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setCurrent(i)}
+                            aria-label={`Go to slide ${i + 1}`}
+                            aria-current={i === current ? 'true' : undefined}
+                            className={`h-1 transition-all duration-500 rounded-full ${i === current ? 'w-10 sm:w-12 bg-brand-yellow' : 'w-5 sm:w-6 bg-white/30'}`}
+                        />
                     ))}
                 </div>
-            </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1, duration: 0.8 }}
+                    className="w-full"
+                >
+                    <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl sm:rounded-3xl px-3 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 grid grid-cols-3 items-center gap-2 sm:gap-8 md:gap-12 lg:gap-20">
+                        {[
+                            { label: 'Founded', value: '2024' },
+                            { label: 'Locations', value: '19' },
+                            { label: 'Projects', value: '38' }
+                        ].map((stat, i) => (
+                            <div key={i} className="text-center group min-w-0">
+                                <p className="text-white/50 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-0.5 sm:mb-1">{stat.label}</p>
+                                <p className="text-white text-base sm:text-xl md:text-2xl font-bold group-hover:text-brand-yellow transition-colors">{stat.value}</p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
 
             <ChatWidget />
         </section>

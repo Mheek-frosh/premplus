@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronRight, Linkedin, Mail, User } from 'lucide-react';
-import ceo from '../assets/Engr. Zaharadeen-Usman.JPG';
-import ed from '../assets/ed.png';
-import fadil from '../assets/Fadil-Yakubu.png';
-import sule from '../assets/sule.png';
-import omeiza from '../assets/Abdulazeez-Omeiza.png';
-import amira from '../Amira-Musa.png';
-import jemimah from '../assets/jemimah.jpg';
+import ceo from '../assets/Engr. Zaharadeen-Usman.webp';
+import ed from '../assets/ed.webp';
+import fadil from '../assets/Fadil-Yakubu.webp';
+import sule from '../assets/sule.webp';
+import omeiza from '../assets/Abdulazeez-Omeiza.webp';
+import amira from '../Amira-Musa.webp';
+import jemimah from '../assets/jemimah.webp';
 
 const existingProfiles = [
     {
@@ -66,7 +66,7 @@ const managementMembers = [
     { ...existingProfiles.find(member => member.id === 1), position: 'MD/CEO' },
     { ...existingProfiles.find(member => member.id === 4), position: 'Technical Director' },
     { id: 11, name: 'OMEIZA ABDULAZEEZ', position: 'Head of Finance and Admin', img: omeiza },
-    { id: 12, name: 'FAITH OGWU', position: 'Legal Adviser', img: '/Faith-Ogwu.png' },
+    { id: 12, name: 'FAITH OGWU', position: 'Legal Adviser', img: '/Faith-Ogwu.webp' },
     { id: 13, name: 'Amira Musa', position: 'Finance and Admin Manager', img: amira },
 ];
 

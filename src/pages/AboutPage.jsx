@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Target, Eye, ArrowUpRight, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
-import officeImg from '../assets/office.png';
-import aboutusImg from '../assets/aboutus.png';
-import n1Img from '../assets/n1.jpeg';
-import n2Img from '../assets/n2.jpeg';
-import n3Img from '../assets/n3.jpeg';
-import missionImg from '../assets/mission.png';
-import visionImg from '../assets/vision.png';
+import officeImg from '../assets/office.webp';
+import aboutusImg from '../assets/aboutus.webp';
+import n1Img from '../assets/n1.webp';
+import n2Img from '../assets/n2.webp';
+import n3Img from '../assets/n3.webp';
+import missionImg from '../assets/mission.webp';
+import visionImg from '../assets/vision.webp';
 
 
 const teamMembers = [

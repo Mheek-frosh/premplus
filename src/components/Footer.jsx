@@ -2,7 +2,7 @@ import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import lightModeLogo from '../assets/lightmode.png';
-import darkModeLogo from '../assets/dark.png';
+import darkModeLogo from '../assets/dark.webp';
 
 const Footer = () => {
     const [isDark, setIsDark] = React.useState(false);

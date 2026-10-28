@@ -19,17 +19,17 @@ import ContactPage from './pages/ContactPage';
 import ProjectsPage from './pages/ProjectsPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
 
-import officeImg from './assets/office.png';
-import img1 from './assets/1.jpeg';
-import manladderImg from './assets/manladder.png';
+import officeImg from './assets/office.webp';
+import img1 from './assets/1.webp';
+import manladderImg from './assets/manladder.webp';
 import img2 from './assets/2.jpeg';
-import img3 from './assets/3.jpeg';
-import solarImg from './assets/solar.png';
+import img3 from './assets/3.webp';
+import solarImg from './assets/solar.webp';
 import adamImg from './assets/adam.jpeg';
-import cap1Img from './assets/cap1.jpeg';
-import reaTech3Img from './assets/REA-TECH-3.JPG';
-import court1Img from './assets/ABIA-COURT-1.jpeg';
-import euImg from './assets/eu.png';
+import cap1Img from './assets/cap1.webp';
+import reaTech3Img from './assets/REA-TECH-3.webp';
+import court1Img from './assets/ABIA-COURT-1.webp';
+import euImg from './assets/eu.webp';
 
 // Scroll to top on route change
 const ScrollToTop = () => {

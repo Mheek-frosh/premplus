@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, X, Maximize2, Minimize2 } from 'lucide-react';
 import videoFile from '../assets/v1.mp4';
-import videoThumbnail from '../assets/video-thumbnail.png';
+import videoThumbnail from '../assets/video-thumbnail.webp';
 
 const formatTime = (seconds) => {
     if (!isFinite(seconds) || isNaN(seconds)) return '0:00';
