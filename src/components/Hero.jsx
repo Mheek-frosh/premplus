@@ -108,7 +108,7 @@ const Hero = () => {
                                 </React.Fragment>
                             ))}
                         </h1>
-                        <p className="text-[clamp(0.8125rem,0.1rem+1.7vw,1.25rem)] text-white/70 mb-4 sm:mb-5 md:mb-6 [@media(max-height:700px)]:mb-3 mx-auto leading-normal px-1 whitespace-normal sm:whitespace-nowrap">
+                        <p className={`text-white/70 mb-4 sm:mb-5 md:mb-6 [@media(max-height:700px)]:mb-3 mx-auto leading-normal ${slides[current].id === 2 ? 'whitespace-nowrap px-0 text-[clamp(0.5625rem,0.05rem+1.55vw,1.25rem)]' : 'whitespace-normal sm:whitespace-nowrap px-1 text-[clamp(0.8125rem,0.1rem+1.7vw,1.25rem)]'}`}>
                             {slides[current].desc}
                         </p>
                     </motion.div>
