@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Target, Eye, ArrowUpRight, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
+import { Target, Eye, Play, X, ChevronRight, Leaf, Lightbulb, Shield, Users, Award, UserPlus, Heart } from 'lucide-react';
 import officeImg from '../assets/office.webp';
 import aboutusImg from '../assets/aboutus.webp';
 import n1Img from '../assets/n1.webp';
@@ -164,9 +164,6 @@ const AboutPage = () => {
                             <p className="text-app-muted text-lg leading-relaxed mb-10">
                                 To transform policy and strategy into effective action by providing integrated renewable energy solutions, advising on electricity markets, building capacity, and developing sustainable infrastructure.
                             </p>
-                            <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-yellow pb-1 px-1 hover:border-brand-green transition-all">
-                                Read More <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            </button>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="h-[450px] rounded-[60px] overflow-hidden shadow-2xl">
                             <img src={missionImg} className="w-full h-full object-cover" />
@@ -186,9 +183,6 @@ const AboutPage = () => {
                             <p className="text-app-muted text-lg leading-relaxed mb-10">
                                 To be a reputable and reliable provider of integrated energy and sustainability solutions, contributing to the development of efficient, resilient, and sustainable energy systems in Nigeria and across Africa.
                             </p>
-                            <button className="flex items-center gap-2 group font-bold text-brand-dark border-b-2 border-brand-green pb-1 px-1 hover:border-brand-yellow transition-all">
-                                Read More <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                            </button>
                         </motion.div>
                     </div>
                 </div>
