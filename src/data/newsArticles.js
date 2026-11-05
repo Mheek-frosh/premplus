@@ -26,6 +26,7 @@ import windImg from '../assets/wind-energy.webp';
 import gridsImg from '../assets/grids-accelerator.webp';
 import batteryImg from '../assets/battery-graph.webp';
 import irenaImg from '../assets/IRENA_logo.svg';
+import abiaCourtsNewsImg from '../assets/newso.webp';
 
 const author = 'Muhammad Fadil Yakubu';
 
@@ -37,7 +38,7 @@ export const newsArticles = [
         author,
         date: 'August 15, 2026',
         excerpt: 'Premplus is making significant progress on the deployment of hybrid solar power systems across newly constructed Court Halls in the 17 Local Government Areas of Abia State.',
-        img: court1Img,
+        img: abiaCourtsNewsImg,
         gallery: [court1Img, court2Img, court3Img, court4Img],
         content: `
             <p><strong>Premplus is making significant progress on the deployment of hybrid solar power systems across newly constructed Court Halls in the 17 Local Government Areas of Abia State.</strong></p>

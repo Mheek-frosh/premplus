@@ -110,17 +110,65 @@ const ContactPage = () => {
                 </div>
 
                 {/* Map Section */}
-                <div className="rounded-[40px] overflow-hidden shadow-2xl h-[400px] grayscale hover:grayscale-0 transition-all duration-700">
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        frameBorder="0"
-                        scrolling="no"
-                        marginHeight="0"
-                        marginWidth="0"
-                        src="https://maps.google.com/maps?q=Area%2011%2C%20Annex%2C%20Suite%2032%2C%20Takum%20St%2C%20Garki%2C%20Abuja%20900103&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        title="Office Location"
-                    ></iframe>
+                <div className="grid lg:grid-cols-3 rounded-[40px] overflow-hidden shadow-2xl bg-app-card border border-app">
+                    <div className="p-8 md:p-10">
+                        <div className="flex items-start justify-between gap-4 mb-2">
+                            <h2 className="text-2xl font-bold text-app-main">Premplus</h2>
+                            <span className="text-sm font-bold text-app-main whitespace-nowrap">5.0 <span aria-label="out of 5 stars">★★★★★</span></span>
+                        </div>
+                        <a
+                            href="https://maps.app.goo.gl/jPu82ThiE91MXi5E9"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-sm text-brand-green hover:underline"
+                        >
+                            2 Google reviews
+                        </a>
+                        <p className="text-app-muted mt-3 mb-6">Engineering consultant</p>
+
+                        <div className="space-y-5 text-app-main">
+                            <div className="flex gap-3">
+                                <MapPin size={20} className="shrink-0 text-brand-green mt-1" />
+                                <p className="leading-relaxed">Area 11, Annex, Suite 32, Takum St, Garki, Abuja 900103, Federal Capital Territory</p>
+                            </div>
+                            <div className="flex gap-3">
+                                <Clock size={20} className="shrink-0 text-brand-green mt-1" />
+                                <p>Open · Closes 5:30 pm</p>
+                            </div>
+                            <div className="flex gap-3">
+                                <Phone size={20} className="shrink-0 text-brand-green mt-1" />
+                                <a href="tel:+2348036102881" className="hover:text-brand-green transition-colors">0803 610 2881</a>
+                            </div>
+                            <div className="flex gap-3">
+                                <ArrowRight size={20} className="shrink-0 text-brand-green mt-1" />
+                                <a href="https://www.premplus.com.ng/" target="_blank" rel="noreferrer" className="hover:text-brand-green transition-colors">premplus.com.ng</a>
+                            </div>
+                            <p className="text-sm text-app-muted pl-8">2FMX+QV Abuja</p>
+                        </div>
+
+                        <a
+                            href="https://maps.app.goo.gl/jPu82ThiE91MXi5E9"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-brand-dark px-5 py-3 font-bold text-white hover:bg-brand-yellow hover:text-brand-dark transition-colors"
+                        >
+                            View on Google Maps <ArrowRight size={18} />
+                        </a>
+                    </div>
+                    <div className="lg:col-span-2 min-h-[400px] lg:min-h-[520px]">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight="0"
+                            marginWidth="0"
+                            src="https://maps.google.com/maps?q=Premplus%2C%20Area%2011%2C%20Annex%2C%20Suite%2032%2C%20Takum%20St%2C%20Garki%2C%20Abuja%20900103&t=&z=17&ie=UTF8&iwloc=A&output=embed"
+                            title="Premplus Office Location"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
 
             </div>
