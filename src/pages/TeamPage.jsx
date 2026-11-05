@@ -14,7 +14,7 @@ const existingProfiles = [
         id: 1,
         name: 'Engr. Zaharadeen Usman',
         position: 'MD/CEO',
-        bio: 'Engr. Zaharadeen Usman, a distinguished leader with a multifaceted background, brings a wealth of experience to the intersection of public service, engineering, renewable energy, sustainable designs, and information technology. With a robust history in public service, he has honed his skills in navigating complex regulatory landscapes and fostering collaboration between public and private sectors. Holding a degree in Metallurgical and Materials Engineering from the prestigious Ahmadu Bello University Zaria, Engr. Usman has amassed nearly 14 years of experience in the engineering domain and public service, earning recognition as a COREN certified Engineer.',
+        bio: 'Engr. Zaharadeen Usman is a renewable energy engineer, power sector regulation specialist and energy policy advisor with over 16 years of experience across Nigeria’s public and private sectors. He holds a master’s degree in Renewable Energy Engineering from Brunel University and has attended courses at the African School of Regulation (ASR). As Managing Director and CEO of Premplus Ltd, he leads multidisciplinary teams in renewable energy development, electricity market reform and energy policy. He has supported subnational electricity sector reforms aligned with the Electricity Act 2023 and works to advance resilient, inclusive electricity systems and sustainable energy access across Africa.',
         img: ceo,
         quote: 'Leading with vision and integrity to power the future.'
     },
@@ -29,8 +29,8 @@ const existingProfiles = [
     {
         id: 4,
         name: 'Engr. Usman Dauda',
-        position: 'Head of Operations and Maintenance',
-        bio: 'Engr. Usman Dauda plays a pivotal role in steering the strategic direction of Premplus. With deep expertise in engineering management and operations, he ensures our projects meet the highest standards of quality and efficiency.',
+        position: 'Technical Director',
+        bio: 'Engr. Dauda is a civil and water resources engineer, institutional development consultant and infrastructure specialist with over 14 years of experience in Nigeria’s public utilities sector. He holds a Bachelor’s degree in Civil Engineering from Ahmadu Bello University, Zaria, and has attended specialized courses in electricity tariff design at the African School of Regulation (ASR). His expertise spans infrastructure development, utility regulation, tariff analysis, policy development and institutional capacity building. As Technical Director of Premplus, he brings extensive experience supporting major infrastructure projects funded by the World Bank, African Development Bank (AfDB), Islamic Development Bank (IsDB) and other international development partners.',
         img: ed,
         quote: 'Excellence is not an act, but a habit.'
     },
@@ -64,7 +64,7 @@ const boardMembers = [
 
 const managementMembers = [
     { ...existingProfiles.find(member => member.id === 1), position: 'MD/CEO' },
-    { ...existingProfiles.find(member => member.id === 4), position: 'Technical Director' },
+    { ...existingProfiles.find(member => member.id === 4) },
     { id: 11, name: 'OMEIZA ABDULAZEEZ', position: 'Head of Finance and Admin', img: omeiza },
     { id: 12, name: 'FAITH OGWU', position: 'Legal Adviser', img: '/Faith-Ogwu.webp' },
     { id: 13, name: 'Amira Musa', position: 'Finance and Admin Manager', img: amira },
