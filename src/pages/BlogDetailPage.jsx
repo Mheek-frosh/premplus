@@ -21,7 +21,7 @@ import b92Img from '../assets/b92.webp';
 import micImg from '../assets/mic.webp';
 import standImg from '../assets/stand.webp';
 import b10Img from '../assets/b10.webp';
-import usBlogImg from '../assets/usblog.webp';
+import usBlogImg from '../assets/us1blog.jpeg';
 import usBlog2Img from '../assets/usblog2.webp';
 import { newsArticles } from '../data/newsArticles';
 
