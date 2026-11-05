@@ -1,4 +1,4 @@
-import court1Img from '../assets/ABIA-COURT-1.webp';
+import court1Img from '../assets/newso.webp';
 import court2Img from '../assets/ABIA-COURT-2.webp';
 import court3Img from '../assets/ABIA-COURT-3.webp';
 import court4Img from '../assets/ABIA-COURT-4.webp';

@@ -9,7 +9,7 @@ import adamImg from '../assets/adam.jpeg';
 import gworkImg from '../assets/gwork.webp';
 import cap2Img from '../assets/cap2.webp';
 import cap3Img from '../assets/cap3.webp';
-import court1Img from '../assets/ABIA-COURT-1.webp';
+import court1Img from '../assets/newso.webp';
 import court2Img from '../assets/ABIA-COURT-2.webp';
 import court3Img from '../assets/ABIA-COURT-3.webp';
 import court4Img from '../assets/ABIA-COURT-4.webp';

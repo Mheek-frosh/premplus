@@ -28,7 +28,7 @@ import solarImg from './assets/solar.webp';
 import adamImg from './assets/adam.jpeg';
 import cap1Img from './assets/cap1.webp';
 import reaTech3Img from './assets/REA-TECH-3.webp';
-import court1Img from './assets/ABIA-COURT-1.webp';
+import court1Img from './assets/newso.webp';
 import euImg from './assets/eu.webp';
 
 // Scroll to top on route change

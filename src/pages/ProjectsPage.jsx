@@ -13,7 +13,7 @@ import reaTech1 from '../assets/REA-TECH-1.webp';
 import reaTech2 from '../assets/REA-TECH-2.webp';
 import reaTech3 from '../assets/REA-TECH-3.webp';
 import reaTech4 from '../assets/REA-TECH-4.webp';
-import court1Img from '../assets/ABIA-COURT-1.webp';
+import court1Img from '../assets/newso.webp';
 import court2Img from '../assets/ABIA-COURT-2.webp';
 import court3Img from '../assets/ABIA-COURT-3.webp';
 import court4Img from '../assets/ABIA-COURT-4.webp';
